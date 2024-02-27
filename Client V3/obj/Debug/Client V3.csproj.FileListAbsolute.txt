@@ -1,0 +1,47 @@
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Client V3.exe.config
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Client V3.exe
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Client V3.pdb
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Buffers.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Memory.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Text.Json.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.ValueTuple.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\WatsonTcp.dll
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Buffers.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Memory.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Text.Json.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\System.ValueTuple.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\WatsonTcp.xml
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.csproj.AssemblyReference.cache
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.csproj.SuggestedBindingRedirects.cache
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client_V3.FormMain.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client_V3.Forms.Dashboard.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client_V3.Forms.EULA.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client.Forms.Home.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client.Forms.Payment.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client_V3.Properties.Resources.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client_V3.Forms.Simulate.resources
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.csproj.GenerateResource.cache
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.csproj.CoreCompileInputs.cache
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.csproj.CopyComplete
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.exe
+C:\Users\TheCh\Source\Repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.pdb
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Client V3.exe.manifest
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\bin\Debug\Client V3.application
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.exe.manifest
+C:\Users\TheCh\source\repos\Chia-Cloud-Mining-AutoPayment-V2\Client V3\obj\Debug\Client V3.application
