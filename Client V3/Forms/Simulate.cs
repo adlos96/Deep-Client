@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client_V3.Forms
@@ -9,8 +11,15 @@ namespace Client_V3.Forms
         {
             InitializeComponent();
         }
-        private void btn_Conferma_Click(object sender, EventArgs e)
+        private async void btn_Conferma_Click(object sender, EventArgs e)
         {
+            btn_Conferma.Enabled = false;
+            btn_Aggiorna.Enabled = false;
+            if (ClientsConnection.client_Connesso == false)
+            {
+                await ClientsConnection.TestClient.InitializeClient();
+                await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}");
+            }
             int numero_Plot = 0;
             int deposit_Bonus = 0;
             double rendita_Giornaliera = 0.0;
@@ -20,13 +29,19 @@ namespace Client_V3.Forms
 
             if (radioButton_A.Checked == true) rendita_Giornaliera = 0;
             if (radioButton_B.Checked == true) rendita_Giornaliera = 1.75;
-            if (radioButton_B.Checked == true) rendita_Giornaliera = 2.75;
+            if (radioButton_C.Checked == true) rendita_Giornaliera = 2.75;
 
             txt_Plot_Anteprima.Text = numero_Plot.ToString();
-            txt_EUR_Anteprima.Text = (numero_Plot * 1).ToString("0.00");
+            txt_EUR_Anteprima.Text = (numero_Plot * 1.05).ToString("0.00");
+            txt_USDT_Anteprima.Text = "0";
 
             //Invio dati per simulazione
-            ClientsConnection.TestClient.ClientSend($"simulazione|2000|{numero_Plot}|{rendita_Giornaliera}");
+            await ClientsConnection.TestClient.ClientSend($"simulazione|2000|{numero_Plot}|{rendita_Giornaliera}");
+
+            await Wait();
+            btn_Conferma.Enabled = true;
+            btn_Aggiorna.Enabled = true;
+
         }
         private void Simulate_Load_1(object sender, EventArgs e)
         {
@@ -115,6 +130,12 @@ namespace Client_V3.Forms
                 Console.WriteLine($"Codice saltato, Comandi attuali: [{Variabili.queue_Simulate_Command.Count}]");
 
             Console.WriteLine("Fine loop");
+        }
+        public static Task Wait() {
+            return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
+            {
+                Thread.Sleep(1250);
+            });
         }
     }
 }

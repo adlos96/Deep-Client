@@ -95,7 +95,6 @@ namespace Client.Forms
             this.label21 = new System.Windows.Forms.Label();
             this.btn_Conferma_Plot = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -344,6 +343,8 @@ namespace Client.Forms
             // 
             // pnl_Subtitle
             // 
+            this.pnl_Subtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Subtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
             this.pnl_Subtitle.Controls.Add(this.label16);
             this.pnl_Subtitle.Controls.Add(this.lbl_Connessione_Server);
@@ -355,7 +356,7 @@ namespace Client.Forms
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.SeaGreen;
@@ -368,7 +369,7 @@ namespace Client.Forms
             // 
             // lbl_Connessione_Server
             // 
-            this.lbl_Connessione_Server.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Connessione_Server.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Connessione_Server.AutoSize = true;
             this.lbl_Connessione_Server.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Connessione_Server.ForeColor = System.Drawing.Color.Tomato;
@@ -381,7 +382,7 @@ namespace Client.Forms
             // 
             // lbl_Stato_Pagamento_Timer
             // 
-            this.lbl_Stato_Pagamento_Timer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Stato_Pagamento_Timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Stato_Pagamento_Timer.AutoSize = true;
             this.lbl_Stato_Pagamento_Timer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Stato_Pagamento_Timer.ForeColor = System.Drawing.Color.White;
@@ -813,7 +814,6 @@ namespace Client.Forms
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lbl_ID);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -822,26 +822,13 @@ namespace Client.Forms
             this.panel5.Size = new System.Drawing.Size(860, 28);
             this.panel5.TabIndex = 1;
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(695, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 20);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "ID:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_ID
             // 
             this.lbl_ID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_ID.AutoSize = true;
             this.lbl_ID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ID.Location = new System.Drawing.Point(717, 4);
+            this.lbl_ID.Location = new System.Drawing.Point(691, 4);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(140, 20);
             this.lbl_ID.TabIndex = 19;
@@ -850,11 +837,11 @@ namespace Client.Forms
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(290, 4);
+            this.label2.Location = new System.Drawing.Point(229, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(328, 20);
             this.label2.TabIndex = 16;
@@ -956,7 +943,6 @@ namespace Client.Forms
         private Label lbl_Stato_Pagamento_Timer;
         private Label label16;
         private Label lbl_Connessione_Server;
-        private Label label11;
         private Label lbl_ID;
         private Button button2;
         private Button button1;

@@ -51,6 +51,7 @@ namespace Client_V3.Forms
             this.lbl_Utenti_Invitati = new System.Windows.Forms.Label();
             this.lbl_Numero_Transazioni = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -249,12 +250,25 @@ namespace Client_V3.Forms
             this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 32F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(217, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(408, 71);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Work in progress";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(868, 367);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Dashboard";
@@ -264,6 +278,7 @@ namespace Client_V3.Forms
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -286,5 +301,6 @@ namespace Client_V3.Forms
         private DataGridViewTextBoxColumn ColTransaction_hash;
         private DataGridViewTextBoxColumn ColNumeroBlocco;
         private DataGridViewTextBoxColumn ColData;
+        private Label label1;
     }
 }

@@ -7,13 +7,13 @@
     <ProjectGuid>{EFC65CC1-FC48-4F7B-A097-B87D87A3469D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Client_V3</RootNamespace>
-    <AssemblyName>Client V3</AssemblyName>
+    <AssemblyName>Deep Client</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\TheCh\Desktop\Nuova cartella\19-10-23\</PublishUrl>
+    <PublishUrl>C:\Users\TheCh\Desktop\Nuova cartella\02-03-2024\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -59,6 +59,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>out-0.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
@@ -152,6 +158,18 @@
     <Compile Include="Forms\Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Staking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staking.Designer.cs">
+      <DependentUpon>Staking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Swap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Swap.Designer.cs">
+      <DependentUpon>Swap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Simulate.cs">
@@ -175,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staking.resx">
+      <DependentUpon>Staking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Swap.resx">
+      <DependentUpon>Swap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,11 +225,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="test.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="out-0.ico" />
     <Content Include="Resources\Chia.png" />
     <None Include="Resources\cronos-cro-logo.png" />
     <Content Include="Resources\ethereum_ERC_ico32.png" />

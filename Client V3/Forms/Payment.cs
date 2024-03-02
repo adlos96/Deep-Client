@@ -2,6 +2,7 @@
 using Microsoft.Data.Sqlite;
 using System;
 using System.Drawing;
+using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,11 @@ namespace Client.Forms
             comboBox_Chain_Selection.Items.Add("Polygon");
             comboBox_Chain_Selection.Items.Add("TRC-20");
             comboBox_Chain_Selection.Items.Add("Cronos");
+            if (Variabili.status_Pagamento == "Stato pagamento: Nessuno")
+                lbl_Stato_Pagamento_Timer.Text = Variabili.status_Pagamento;
+            else
+                lbl_Stato_Pagamento_Timer.Text = "Richiesta presente: " + Variabili.status_Pagamento + " Minuti " + Variabili.importo_USDT + "USDT";
+            lbl_ID.Text = "ID: " + Variabili.id_Client;
         }
 
         private void comboBox_Chain_Selection_SelectedIndexChanged(object sender, EventArgs e) // Quando cambi la chain da utilizzare
@@ -78,7 +84,6 @@ namespace Client.Forms
                 panel_Logo_Chain.BackgroundImageLayout = ImageLayout.Stretch; // --> Cronos e chia
                 lbl_Stato_Rete_Anteprima.Text = "Active";
             }
-
         }
 
         private async void btn_Conferma_Plot_Click(object sender, EventArgs e)
@@ -87,8 +92,6 @@ namespace Client.Forms
             int contatore = 0;
             int controlli = 2;
 
-            panel_Anteprima.Visible = false; // Disabilita anteprima
-            pnl_Subtitle.Visible = false; // Disabilita pannello superiore
 
             if (checkB_Plot_Manuale.Checked == true) numero_Plot = Convert.ToInt32(txt_Plot_Manuali.Text);
             else numero_Plot = Convert.ToInt32(lbl_Plot_Current_Selection.Text);
@@ -96,6 +99,9 @@ namespace Client.Forms
             lbl_Stato_Rete_Anteprima.Text = "Active";
             lbl_Stato_Rete_Anteprima.ForeColor = System.Drawing.Color.SeaGreen;
             btn_Conferma_Plot.Enabled = false;
+
+            panel_Anteprima.Visible = false; // Disabilita anteprima
+            pnl_Subtitle.Visible = false; // Disabilita pannello superiore
 
             lbl_Anteprima_Manuale.Text = numero_Plot.ToString();
 
@@ -172,36 +178,18 @@ namespace Client.Forms
                 txt_Plot_Anteprima.Text = numero_Plot.ToString();
                 lbl_Referal_Code_Anteprima.Text = Variabili.invito_Referal;
 
-                ClientsConnection.argomento_Invio = "plotPrice" + "|" + numero_Plot.ToString();
-
-                await Conferma_btn(); //Connessione al server
                 await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione
+                await ClientsConnection.TestClient.Send_Server("plotPrice" + "|" + numero_Plot.ToString());
+                await Conferma_btn(); //Connessione al server
 
                 txt_USDT_Anteprima.Text = ClientsConnection.argomento_Ricevuto;
-
-                if (comboBox_Chain_Selection.Text == "TRC-20")
-                {
-                    lbl_Stato_Rete_Anteprima.Text = "Failed";
-                    lbl_Stato_Rete_Anteprima.ForeColor = System.Drawing.Color.Red;
-                    
-                    lbl_Avviso_Campi_Incompleti.Text = "RETE NON SUPPORTATA";
-                    lbl_Avviso_Campi_Incompleti.Visible = true;
-                    btn_Pay.Enabled = false;
-
-                }
+                
                 if (comboBox_Chain_Selection.Text != "TRC-20")
                 {
                     btn_Pay.Enabled = true;
                     pnl_Subtitle.Visible = true;
                 }
 
-                if (ClientsConnection.argomento_Ricevuto != "")
-                    if (Convert.ToDouble(ClientsConnection.argomento_Ricevuto) > 1) //Controllo che il prezzo sia superiore ad 1$
-                        panel_Anteprima.Visible = true;
-                    else
-                        MessageBox.Show("Qualcosa è andato storto!...");
-                else
-                    Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
                 Console.WriteLine("[] Messaggio Ricevuto: " + ClientsConnection.argomento_Ricevuto);
 
                 if (ClientsConnection.client_Connesso == true)
@@ -215,6 +203,22 @@ namespace Client.Forms
                 }
                 btn_Conferma_Plot.Enabled = true;
 
+                if (comboBox_Chain_Selection.Text == "TRC-20" || comboBox_Chain_Selection.Text == "ERC-20" || comboBox_Chain_Selection.Text == "Cronos")
+                {
+                    lbl_Stato_Rete_Anteprima.Text = "Failed";
+                    lbl_Stato_Rete_Anteprima.ForeColor = System.Drawing.Color.Red;
+                    
+                    lbl_Avviso_Campi_Incompleti.Text = "RETE NON SUPPORTATA";
+                    lbl_Avviso_Campi_Incompleti.Visible = true;
+                    btn_Pay.Enabled = false;
+
+                }
+
+                if (ClientsConnection.argomento_Ricevuto != "")
+                    if (Convert.ToDouble(ClientsConnection.argomento_Ricevuto) > 1) //Controllo che il prezzo sia superiore ad 1$
+                        panel_Anteprima.Visible = true;
+                    else MessageBox.Show("Qualcosa è andato storto!...");
+                else Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
                 /*
                 if (ClientsConnection.client_Connesso == true)
                     ClientsConnection.TestClient.Disconnetti();
@@ -228,11 +232,11 @@ namespace Client.Forms
             {   if (ClientsConnection.client_Connesso == false)
                 {
                     ClientsConnection.TestClient.InitializeClient(); //Connessione Client al server
-                    Thread.Sleep(1000);
+                    Thread.Sleep(1250);
                     ClientsConnection.TestClient.ComunicazioneServer(); //Invio dati al server
                 } else
                     ClientsConnection.TestClient.ComunicazioneServer(); //Invio dati al server
-                Thread.Sleep(1000);
+                Thread.Sleep(1250);
             });
         }
         private async void btn_Pay_Click(object sender, EventArgs e)
@@ -244,7 +248,7 @@ namespace Client.Forms
             avvenuto_Pagamento = true;
             Variabili.pagamento_Somma_USDT = txt_USDT_Anteprima.Text;
             Variabili.numero_Plot = txt_Plot_Anteprima.Text;
-            Variabili.wallet_USDT = txt_Wallet_USDT_User.Text;
+            Variabili.wallet_USDT = txt_Wallet_USDT_User.Text.ToLower();
             Variabili.chain = comboBox_Chain_Selection.Text;
 
             if (avvenuto_Pagamento == true)
@@ -337,12 +341,21 @@ namespace Client.Forms
 
         private void btn_Sqlite_Click(object sender, EventArgs e) // Refresh
         {
+            Console.WriteLine($"[Payment] > Comandi ricevuti: {Variabili.queue_Payment_Command.Count}");
             int x = 0;
-            if (Variabili.queue_Payment_Command.Count != 0) {
-                while (x <= Variabili.queue_Payment_Command.Count + 1)
+            int comandi = Variabili.queue_Payment_Command.Count;
+            Console.WriteLine($"[Payment] > Comandi ricevuti: {Variabili.queue_Payment_Command.Count}");
+
+            if (Variabili.queue_Payment_Command.Count > 0) {
+                while (x < comandi)
                 {
+                    if (Variabili.queue_Payment_Command.Count == 0) return;
+
                     string messaggio = Variabili.queue_Payment_Command.Dequeue();
+                    Console.WriteLine($"[Payment] > Argomento: {messaggio}");
                     string[] args = messaggio.Split('|');
+                    Console.WriteLine($"[Payment] > Argomento Split: {args[0]}");
+                    Console.WriteLine($"[Payment] > Argomento Split: {args[1]}");
 
                     if (args[0] == "plotSwap") txt_USDT_Anteprima.Text = args[1];
                     if (args[0] == "timerUSDT") lbl_Stato_Pagamento_Timer.Text = $"Age for make USDT payment: {args[1]} Minutes";

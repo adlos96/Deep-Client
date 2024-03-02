@@ -392,7 +392,7 @@ namespace Client_V3.Forms
             this.groupBox1.Size = new System.Drawing.Size(399, 406);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Simulazione Mining";
+            this.groupBox1.Text = "Simulazione";
             // 
             // groupBox4
             // 
@@ -441,10 +441,10 @@ namespace Client_V3.Forms
             this.Txt_Totale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Totale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Totale.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Totale.Location = new System.Drawing.Point(251, 4);
+            this.Txt_Totale.Location = new System.Drawing.Point(226, 4);
             this.Txt_Totale.Name = "Txt_Totale";
             this.Txt_Totale.ReadOnly = true;
-            this.Txt_Totale.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Totale.Size = new System.Drawing.Size(111, 18);
             this.Txt_Totale.TabIndex = 45;
             this.Txt_Totale.Text = "0";
             this.Txt_Totale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -464,6 +464,7 @@ namespace Client_V3.Forms
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.Txt_Bonus);
             this.panel8.Controls.Add(this.label13);
@@ -485,14 +486,14 @@ namespace Client_V3.Forms
             // 
             // Txt_Bonus
             // 
-            this.Txt_Bonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.Txt_Bonus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.Txt_Bonus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Bonus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Bonus.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Bonus.Location = new System.Drawing.Point(252, 4);
+            this.Txt_Bonus.Location = new System.Drawing.Point(227, 4);
             this.Txt_Bonus.Name = "Txt_Bonus";
             this.Txt_Bonus.ReadOnly = true;
-            this.Txt_Bonus.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Bonus.Size = new System.Drawing.Size(111, 18);
             this.Txt_Bonus.TabIndex = 45;
             this.Txt_Bonus.Text = "0";
             this.Txt_Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -512,6 +513,7 @@ namespace Client_V3.Forms
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.Txt_Chia_Reward_2000);
             this.panel7.Controls.Add(this.label15);
@@ -533,14 +535,14 @@ namespace Client_V3.Forms
             // 
             // Txt_Chia_Reward_2000
             // 
-            this.Txt_Chia_Reward_2000.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.Txt_Chia_Reward_2000.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.Txt_Chia_Reward_2000.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_2000.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_2000.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_2000.Location = new System.Drawing.Point(250, 4);
+            this.Txt_Chia_Reward_2000.Location = new System.Drawing.Point(225, 4);
             this.Txt_Chia_Reward_2000.Name = "Txt_Chia_Reward_2000";
             this.Txt_Chia_Reward_2000.ReadOnly = true;
-            this.Txt_Chia_Reward_2000.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Chia_Reward_2000.Size = new System.Drawing.Size(111, 18);
             this.Txt_Chia_Reward_2000.TabIndex = 42;
             this.Txt_Chia_Reward_2000.Text = "0";
             this.Txt_Chia_Reward_2000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -585,10 +587,10 @@ namespace Client_V3.Forms
             this.Txt_Deposito_Bonus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Deposito_Bonus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Deposito_Bonus.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Deposito_Bonus.Location = new System.Drawing.Point(252, 4);
+            this.Txt_Deposito_Bonus.Location = new System.Drawing.Point(227, 4);
             this.Txt_Deposito_Bonus.Name = "Txt_Deposito_Bonus";
             this.Txt_Deposito_Bonus.ReadOnly = true;
-            this.Txt_Deposito_Bonus.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Deposito_Bonus.Size = new System.Drawing.Size(111, 18);
             this.Txt_Deposito_Bonus.TabIndex = 44;
             this.Txt_Deposito_Bonus.Text = "0";
             this.Txt_Deposito_Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -608,6 +610,7 @@ namespace Client_V3.Forms
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.txt_Rendita);
             this.panel4.Controls.Add(this.label23);
@@ -629,14 +632,14 @@ namespace Client_V3.Forms
             // 
             // txt_Rendita
             // 
-            this.txt_Rendita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Rendita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.txt_Rendita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Rendita.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txt_Rendita.ForeColor = System.Drawing.Color.YellowGreen;
-            this.txt_Rendita.Location = new System.Drawing.Point(252, 4);
+            this.txt_Rendita.Location = new System.Drawing.Point(227, 4);
             this.txt_Rendita.Name = "txt_Rendita";
             this.txt_Rendita.ReadOnly = true;
-            this.txt_Rendita.Size = new System.Drawing.Size(86, 18);
+            this.txt_Rendita.Size = new System.Drawing.Size(111, 18);
             this.txt_Rendita.TabIndex = 45;
             this.txt_Rendita.Text = "0";
             this.txt_Rendita.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -681,10 +684,10 @@ namespace Client_V3.Forms
             this.Txt_Daily_Reward.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Daily_Reward.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Daily_Reward.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Daily_Reward.Location = new System.Drawing.Point(250, 3);
+            this.Txt_Daily_Reward.Location = new System.Drawing.Point(225, 3);
             this.Txt_Daily_Reward.Name = "Txt_Daily_Reward";
             this.Txt_Daily_Reward.ReadOnly = true;
-            this.Txt_Daily_Reward.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Daily_Reward.Size = new System.Drawing.Size(111, 18);
             this.Txt_Daily_Reward.TabIndex = 43;
             this.Txt_Daily_Reward.Text = "0";
             this.Txt_Daily_Reward.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -729,10 +732,10 @@ namespace Client_V3.Forms
             this.Txt_Chia_Reward_7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_7.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_7.Location = new System.Drawing.Point(250, 4);
+            this.Txt_Chia_Reward_7.Location = new System.Drawing.Point(225, 4);
             this.Txt_Chia_Reward_7.Name = "Txt_Chia_Reward_7";
             this.Txt_Chia_Reward_7.ReadOnly = true;
-            this.Txt_Chia_Reward_7.Size = new System.Drawing.Size(86, 18);
+            this.Txt_Chia_Reward_7.Size = new System.Drawing.Size(111, 18);
             this.Txt_Chia_Reward_7.TabIndex = 42;
             this.Txt_Chia_Reward_7.Text = "0";
             this.Txt_Chia_Reward_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -752,6 +755,7 @@ namespace Client_V3.Forms
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.Txt_Chia_Reward_1);
             this.panel2.Controls.Add(this.label9);
@@ -773,14 +777,14 @@ namespace Client_V3.Forms
             // 
             // Txt_Chia_Reward_1
             // 
-            this.Txt_Chia_Reward_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.Txt_Chia_Reward_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
             this.Txt_Chia_Reward_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_1.Location = new System.Drawing.Point(249, 4);
+            this.Txt_Chia_Reward_1.Location = new System.Drawing.Point(224, 4);
             this.Txt_Chia_Reward_1.Name = "Txt_Chia_Reward_1";
             this.Txt_Chia_Reward_1.ReadOnly = true;
-            this.Txt_Chia_Reward_1.Size = new System.Drawing.Size(87, 18);
+            this.Txt_Chia_Reward_1.Size = new System.Drawing.Size(112, 18);
             this.Txt_Chia_Reward_1.TabIndex = 37;
             this.Txt_Chia_Reward_1.Text = "0";
             this.Txt_Chia_Reward_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -816,7 +820,7 @@ namespace Client_V3.Forms
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.txt_Prezzo_Chia_Euro);
             this.panel9.Controls.Add(this.label19);
-            this.panel9.Location = new System.Drawing.Point(2, 9);
+            this.panel9.Location = new System.Drawing.Point(3, 11);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(258, 26);
             this.panel9.TabIndex = 52;
@@ -995,6 +999,7 @@ namespace Client_V3.Forms
             this.groupBox5.TabIndex = 35;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Simulazione Staking";
+            this.groupBox5.Visible = false;
             // 
             // Simulate
             // 

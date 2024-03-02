@@ -17,7 +17,8 @@ namespace Client_V3
 
         internal class TestClient
         {
-            private static string _ServerIp = "localhost"; // adly.xed.im
+            //private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = false;
             private static string _CertFile = "";
@@ -44,18 +45,13 @@ namespace Client_V3
                     Thread.Sleep(1500);
                 });
             }
-            public static Task InitializeClient()
-            {
+            public static Task InitializeClient() {
                 return Task.Run(async () => //Crea un task e gli assegna un blocco istruzioni da eseguire.
                 {
                     bool runForever = true;
                     bool success;
 
                     Console.WriteLine("Client partito");
-
-                    _ServerIp = "localhost";
-                    _ServerPort = 8443;
-                    _Ssl = false;
                     Console.WriteLine($"Use SSL: {_Ssl}");
 
                     if (_Ssl)
@@ -135,6 +131,7 @@ namespace Client_V3
                 return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
                 {
                     if (!_Client.Send(Encoding.UTF8.GetBytes(argomento))) Console.WriteLine("Failed");
+                    Thread.Sleep(5);
                 });
             }
 
@@ -159,19 +156,63 @@ namespace Client_V3
                 Console.WriteLine("Messaggio Ricevuto");
                 Console.WriteLine("Ricevuto: " + messaggio_Ricevuto);
 
-                if(messaggio_Ricevuto.Contains("plotSwap") || messaggio_Ricevuto.Contains("statusPayment"))
-                    Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto);
+                var msgArgs = messaggio_Ricevuto.Split('|');
+                
+                if (msgArgs.Length < 0)
+                { Console.WriteLine("[Errore|ServerConnection] >> needed 1 args"); return; }
 
-                if (messaggio_Ricevuto.Contains("simulazione") )
-                    Variabili.queue_Simulate_Command.Enqueue(messaggio_Ricevuto);
-
-
-                var msgArgs = messaggio_Ricevuto.Split('|'); // Composto da 3 part1 0|1|2 -> 0 = percorso file
-                if (msgArgs.Length < 2)
+                switch (msgArgs[0])
                 {
-                    Console.WriteLine("[Errore|ServerConnection] >> needed 1 args");
-                    return;
+                    case "simulazione": Variabili.queue_Simulate_Command.Enqueue(messaggio_Ricevuto); break;
+                    case "plotSwap": Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto); break;
+                    case "home_fee":
+                        Variabili.fee_A = msgArgs[1];
+                        Variabili.fee_B = msgArgs[2];
+                        Variabili.fee_C = msgArgs[3];
+                        break;
+                    case "balance_P_Update":
+                        Variabili.CHIA              = msgArgs[1];
+                        Variabili.ATOM              = msgArgs[2];
+                        Variabili.CRO               = msgArgs[3];
+                        Variabili.LUNA              = msgArgs[4];
+                        Variabili.TIA               = msgArgs[5];
+                        Variabili.USDT              = msgArgs[6];
+                        Variabili.USDC              = msgArgs[7];
+                        Variabili.axlUSDC           = msgArgs[8];
+                        Variabili.XDLS              = msgArgs[9];
+                        Variabili.XUSDT             = msgArgs[10];
+                        Variabili.xch_Prelevabili   = Convert.ToDouble(msgArgs[11]).ToString("0.0000000000");
+                        Variabili.xch_Pending       = Convert.ToDouble(msgArgs[12]).ToString("0.0000000000");
+                        Variabili.chia_prelevati    = msgArgs[13];
+                        break;
+                    case "timerUSDT":
+                        Variabili.status_Pagamento = msgArgs[1];
+                        Variabili.importo_USDT = (msgArgs[1]).ToString();
+                        break;
+                    case "ID":
+                        Variabili.id_Client = msgArgs[1];
+                        break;
+                    case "validate": // Imposta true o false a seconda di se corrisponde o meno
+                        Variabili.seed_Phrase = Convert.ToBoolean(msgArgs[1]);
+                        break;
+                    //case "balance_P_Update":
+                    //    Variabili.CHIA = msgArgs[1];
+                    //    Variabili.ATOM = msgArgs[2];
+                    //    Variabili.CRO = msgArgs[3];
+                    //    Variabili.LUNA = msgArgs[4];
+                    //    Variabili.TIA = msgArgs[5];
+                    //    Variabili.USDT = msgArgs[6];
+                    //    Variabili.USDC = msgArgs[7];
+                    //    Variabili.axlUSDC = msgArgs[8];
+                    //    Variabili.XDLS = msgArgs[9];
+                    //    Variabili.XUSDT = msgArgs[10];
+                    //    Variabili.xch_Prelevabili = Convert.ToDouble(msgArgs[11]).ToString("0.0000000000");
+                    //    Variabili.xch_Pending = Convert.ToDouble(msgArgs[12]).ToString("0.0000000000");
+                    //    break;
+
+                    default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;
                 }
+
                 var comando = msgArgs[0];
                 Console.WriteLine("");
                 Console.WriteLine("-----------------------------");
@@ -228,6 +269,14 @@ namespace Client_V3
                 }
             }
 
+            public static async Task Connessione() {
+                if (client_Connesso == false)
+                {
+                    await InitializeClient();
+                    await Send_Server($"auth|{Variabili.wallet}");
+                    client_Connesso = true;
+                }
+            }
         }
     }
 }
