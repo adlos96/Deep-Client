@@ -10,6 +10,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Media;
+using System.Xml.Linq;
+using Color = System.Drawing.Color;
+using System.ComponentModel;
+using System.Xml;
+using System.Collections.Generic;
+using System.Windows.Markup;
 
 namespace Client_V3
 {
@@ -20,6 +28,7 @@ namespace Client_V3
         public static Form currentChildForm;
         static int contatore_Timer = 0;
         static bool loop = false;
+        static bool add_Wallet = false;
 
         public FormMain()
         {
@@ -84,25 +93,26 @@ namespace Client_V3
         {
             Variabili.Impostazioni();
             Btn_Sync.Enabled = false;
-            Gbox_Reset_Password.Visible = true;
+            Gbox_Reset_Password.Visible = false;  // <-- Seed Phrase
+            txt_Password.Visible = false; // <-- password main
 
             if (Client_V3.Properties.Settings.Default.Salvataggio == false)
                 Menu_First_Register();
             else
             {
-                Menu_Coming_Soon();
                 goupB_Main_Form.Visible = false;
-
-                Variabili.invito_Referal = Client_V3.Properties.Settings.Default.Referal_Code;
-                Variabili.wallet = Client_V3.Properties.Settings.Default.Wallet_Chia;
+                Menu_Coming_Soon();
+                load_data();
 
                 lbl_PopUp_Main_Conferma.Text = "Grazie per la registrazione, hai un accesso parziale al software";
                 lbl_Avviso_Password.Text = "Per avere pieno accesso al software, inserisci una password e salvati la Seed Phrase";
                 lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet; //INDIRIZZO CHIA
+
                 lbl_PopUp_Main_Conferma.Visible = true;
                 lbl_PopUp_Main_XCH_Address.Visible = true;
-                lbl_Avviso_Password.Visible = true;
-                txt_Password_Post.Visible = true;
+                lbl_Avviso_Password.Visible = false;         // <-- txt password POST
+                txt_Password_Post.Visible = false;          // <-- lbl Password post
+                btn_Conferma_Password.Visible = false;      // <-- btn password post
             }
             
             await Update_Data(); //Aggiornamento dati
@@ -111,7 +121,7 @@ namespace Client_V3
         {
             if (loop == true)
             { contatore_Timer = 0; return; }
-            if(txt_User_Address.Text.Contains("xch"))
+            if(!txt_User_Address.Text.Contains("xch"))
             {
                 lbl_Avviso_Main_Titolo.Text = "Per continuare:";
                 lbl_Avviso_Main.Text = "Il wallet Chia deve inziare con xch";
@@ -157,10 +167,11 @@ namespace Client_V3
                     lbl_Avviso_Password.Text = "Per avere pieno accesso al software, inserisci una password e salvati la Seed Phrase";
                     lbl_PopUp_Main_XCH_Address.Text = txt_User_Address.Text; //INDIRIZZO CHIA
                     lbl_PopUp_Main_Conferma.Visible = true;
-                    lbl_Avviso_Password.Visible = true;
+                    //lbl_Avviso_Password.Visible = false;        // <-- Insedrimento post password
                     lbl_PopUp_Main_XCH_Address.Visible = true;
                     Variabili.invito_Referal = txt_Referal_Code.Text;
                     Variabili.wallet = txt_User_Address.Text;
+                    Add_on_List();
 
                     //Salvataggio impostazioni dati utente
                     Client_V3.Properties.Settings.Default.Salvataggio = true;
@@ -171,28 +182,7 @@ namespace Client_V3
                     Menu_Coming_Soon();
                 } else
                 {
-                    loop = true;
-                    btn_Conferma_Main.Enabled = false;
-                    txt_Avviso.Text = txt_Seed_Phrase.Text;
-                    lbl_Avviso.Visible = true;
-                    txt_Avviso.Visible = true;
-                    btn_Conferma_Main.Text = "ATTENDERE";
-                    Gbox_Seed_Phrase.Visible = true;
-                    await Sleep(2);
-                    btn_Conferma_Main.ForeColor = Color.Red;
-                    btn_Conferma_Main.Enabled = true;
-                    btn_Conferma_Main.ForeColor = Color.ForestGreen;
-                    btn_Conferma_Main.Text = "Attenzione!! Se mi clicchi, resetti il timer";
-                    await Sleep(5);
-                    btn_Conferma_Main.Text = "Pronto?";
-                    await Sleep(1);
-                    btn_Conferma_Main.Text = "Non sò se hai capito, ma devi segnarmi da qualche parte...?";
-                    await Sleep(3);
-                    await Sleep_Timer(3, "");
-                    btn_Conferma_Password.Visible = true;
-                    await Sleep_Timer(20, "Assicurati di aver salvato il Seed Phrase");
-                    Gbox_Reset_Password_Post.Visible = true;
-                    txt_Password_Post.Visible = false;
+                    //Lock_Seed_Phrase();
 
                     lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false;
                     /*
@@ -222,6 +212,8 @@ namespace Client_V3
                     Variabili.invito_Referal = txt_Referal_Code.Text;
                     Variabili.wallet = txt_User_Address.Text;
 
+                    Add_on_List();
+
                     //Salvataggio impostazioni dati utente
                     Client_V3.Properties.Settings.Default.Salvataggio = true;
                     Client_V3.Properties.Settings.Default.Wallet_Chia = Variabili.wallet;
@@ -245,6 +237,83 @@ namespace Client_V3
                     lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
                 }
             }
+            radioBtn_EULA_1.Checked = false;
+            radioBtn_EULA_2.Checked = false;
+        }
+        void Add_on_List() {
+            var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
+
+            if (System.IO.Directory.Exists(percorso_profili) == false)
+                System.IO.Directory.CreateDirectory(percorso_profili);
+            if (System.IO.Directory.Exists(percorso_profili + @"Wallet\") == false)
+                System.IO.Directory.CreateDirectory(percorso_profili + @"Wallet\");
+
+            int id = 1;
+            string password = txt_Password.Text;
+            string wallet = txt_User_Address.Text;
+            string referal = txt_Referal_Code.Text;
+            if (wallet == "Inserisci Password (Opzionale)") wallet = "Null";
+
+            XDocument Salvataggio_Xml = new XDocument(new XElement("Wallet_Data",
+                new XElement("Wallet", wallet),
+                new XElement("Password", password),
+                new XElement("Referal", referal)
+                ));
+
+            while (System.IO.File.Exists($"{percorso_profili}Wallet\\{id}.xml") == true)
+                id++; //Se già esiste incrementa di 1 e riprova
+            Salvataggio_Xml.Save($"{percorso_profili}Wallet\\{id}.xml"); //Crea - Salva file | Database _path
+
+            comboBox_Load_Wallet.Items.Clear();
+            string[] elementi_passati = new string[conta_numero__transazioni()];
+            elementi_passati = carica_transazioni();
+            for (int x = 0; x < elementi_passati.Length; x++)
+            {   //Assegna ad una "stringa" nodo il valore del file .xml
+                XmlDocument DocumentoXml = new XmlDataDocument();
+                DocumentoXml.Load(elementi_passati[x]);
+                XmlNode nodeWallet = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Wallet");
+                XmlNode nodePassword = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Password");
+                XmlNode nodeReferal = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Referal");
+                comboBox_Load_Wallet.Items.Add(nodeWallet.InnerText);
+            }
+            comboBox_Load_Wallet.Text = comboBox_Load_Wallet.Items[0].ToString();
+        }
+        public static int conta_numero__transazioni()
+        {
+            var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\Wallet";
+            return System.IO.Directory.GetFiles(percorso_profili).Length;
+        }//Conta il numero di elementi all'interno della cartella database, restituendo un valore numerico
+        public static string[] carica_transazioni()
+        {
+            var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\Wallet\";
+            string[] transazioni_trovate = System.IO.Directory.GetFiles(percorso_profili);
+            return transazioni_trovate;
+        }
+
+        async void Lock_Seed_Phrase ()
+        {
+            loop = true;
+            btn_Conferma_Main.Enabled = false;
+            txt_Avviso.Text = txt_Seed_Phrase.Text;
+            lbl_Avviso.Visible = true;
+            txt_Avviso.Visible = true;
+            btn_Conferma_Main.Text = "ATTENDERE";
+            Gbox_Seed_Phrase.Visible = true;
+            await Sleep(2);
+            btn_Conferma_Main.ForeColor = Color.Red;
+            btn_Conferma_Main.Enabled = true;
+            btn_Conferma_Main.ForeColor = Color.ForestGreen;
+            btn_Conferma_Main.Text = "Attenzione!! Se mi clicchi, resetti il timer";
+            await Sleep(5);
+            btn_Conferma_Main.Text = "Pronto?";
+            await Sleep(1);
+            btn_Conferma_Main.Text = "Non sò se hai capito, ma devi segnarmi da qualche parte...?";
+            await Sleep(3);
+            await Sleep_Timer(3, "");
+            btn_Conferma_Password.Visible = true; // <-- Bottone conferma password POST
+            await Sleep_Timer(20, "Assicurati di aver salvato il Seed Phrase");
+            Gbox_Reset_Password_Post.Visible = true;
+            txt_Password_Post.Visible = false;    // <-- Txt inserisci password POST
         }
         void Menu_Coming_Soon()
         {
@@ -449,12 +518,6 @@ namespace Client_V3
                 await Task.Delay(1000);
             }
         }
-        static Task Disconnetti() // Metodo non asyncrono
-        {   return Task.Run(async () => //Crea un task e gli assegna un blocco istruzioni da eseguire.
-            {
-                await ClientsConnection.TestClient.Disconnetti();
-            });
-        }
         private async void btn_Reset_Password_Click(object sender, EventArgs e)
         {
             Gbox_New_Password.Visible = true;
@@ -489,6 +552,70 @@ namespace Client_V3
             lbl_Avviso_Password.Visible = false;
             lbl_Avviso.Text = "Grazie per la registrazione, hai pieno accesso al software";
             btn_Conferma_Password.Visible = false;
+        }
+
+        private void btn_Add_Wallet_Click(object sender, EventArgs e)
+        {
+            int a = conta_numero__transazioni();
+            if (a >= 10) return;
+            add_Wallet = true;
+            goupB_Main_Form.Visible = true;
+            load_data();
+        }
+        async Task<List<string[]>> load_data()
+        {
+            comboBox_Load_Wallet.Items.Clear();
+            List<string[]> stato_Transazione = new List<string[]>();
+            string[] elementi_passati = new string[conta_numero__transazioni()];
+            elementi_passati = carica_transazioni();
+            for (int x = 0; x < elementi_passati.Length; x++)
+            {   //Assegna ad una "stringa" nodo il valore del file .xml
+                XmlDocument DocumentoXml = new XmlDataDocument();
+                DocumentoXml.Load(elementi_passati[x]);
+                XmlNode nodeWallet = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Wallet");
+                XmlNode nodePassword = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Password");
+                XmlNode nodeReferal = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Referal");
+                comboBox_Load_Wallet.Items.Add(nodeWallet.InnerText);
+                var txn_Data = new string[] { nodeWallet.InnerText, nodePassword.InnerText, nodeReferal.InnerText };
+                stato_Transazione.Add(txn_Data);
+                if (x == 0)
+                {
+                    Variabili.wallet = nodeWallet.InnerText;
+                    Variabili.password = nodePassword.InnerText;
+                    Variabili.invito_Referal = nodeReferal.InnerText;
+                }
+            }
+            comboBox_Load_Wallet.Text = comboBox_Load_Wallet.Items[0].ToString();
+            return stato_Transazione;
+        }
+
+        private async void btn_Load_Wallet_Click(object sender, EventArgs e)
+        {
+            string wallet = comboBox_Load_Wallet.Text;
+            var data = await load_data();
+            foreach (var dati in data) {
+                if (dati[0].Contains(wallet))
+                {
+                    Variabili.wallet = dati[0];
+                    Variabili.password = dati[1];
+                    Variabili.invito_Referal = dati[2];
+                }
+            }
+            lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
+        }
+
+        private void btn_Clear_Data_Post_Click(object sender, EventArgs e)
+        {
+            var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
+            int dato = 2;
+            while (true)
+            {
+                System.IO.File.Delete($"{percorso_profili}Wallet\\{dato}.xml");
+                int dati = conta_numero__transazioni();
+                if (dati == 1) return;
+                while (System.IO.File.Exists($"{percorso_profili}Wallet\\{dato}.xml") == false)
+                    dato++; //Se già esiste incrementa di 1 e riprova
+            }
         }
     }
 }

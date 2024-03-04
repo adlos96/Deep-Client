@@ -74,6 +74,7 @@ namespace Client_V3
         // -------------------- User Data Client -----------------------
         public static string invito_Referal         = "Null";
         public static string wallet                 = "Null";
+        public static string password = "Null";
         public static string pagamento_Somma_USDT   = "Null";
         public static string numero_Plot            = "Null";
         public static string wallet_USDT            = "Null";

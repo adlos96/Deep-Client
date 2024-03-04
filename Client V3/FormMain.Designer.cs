@@ -99,6 +99,11 @@ namespace Client_V3
             this.lbl_PopUp_Main_Conferma = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_PopUp_Main_XCH_Address = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Load_Wallet = new System.Windows.Forms.Button();
+            this.comboBox_Load_Wallet = new System.Windows.Forms.ComboBox();
+            this.btn_Add_Wallet = new System.Windows.Forms.Button();
+            this.btn_Clear_Data_Post = new System.Windows.Forms.Button();
             this.panel_Menu_Laterale.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_Superiore.SuspendLayout();
@@ -118,6 +123,7 @@ namespace Client_V3
             this.Gbox_Reset_Password_Post.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Menu_Laterale
@@ -377,6 +383,7 @@ namespace Client_V3
             this.panel_Desktop.Controls.Add(this.Gbox_Reset_Password_Post);
             this.panel_Desktop.Controls.Add(this.panel6);
             this.panel_Desktop.Controls.Add(this.panel7);
+            this.panel_Desktop.Controls.Add(this.groupBox1);
             this.panel_Desktop.Location = new System.Drawing.Point(189, 74);
             this.panel_Desktop.Name = "panel_Desktop";
             this.panel_Desktop.Size = new System.Drawing.Size(864, 447);
@@ -400,7 +407,7 @@ namespace Client_V3
             this.goupB_Main_Form.Controls.Add(this.panel2);
             this.goupB_Main_Form.Controls.Add(this.txt_User_Address);
             this.goupB_Main_Form.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.goupB_Main_Form.Location = new System.Drawing.Point(6, 4);
+            this.goupB_Main_Form.Location = new System.Drawing.Point(6, 6);
             this.goupB_Main_Form.Name = "goupB_Main_Form";
             this.goupB_Main_Form.Size = new System.Drawing.Size(849, 443);
             this.goupB_Main_Form.TabIndex = 22;
@@ -904,10 +911,11 @@ namespace Client_V3
             this.btn_Conferma_Password.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_Conferma_Password.Location = new System.Drawing.Point(502, 48);
             this.btn_Conferma_Password.Name = "btn_Conferma_Password";
-            this.btn_Conferma_Password.Size = new System.Drawing.Size(146, 30);
+            this.btn_Conferma_Password.Size = new System.Drawing.Size(346, 30);
             this.btn_Conferma_Password.TabIndex = 30;
             this.btn_Conferma_Password.Text = "Conferma";
             this.btn_Conferma_Password.UseVisualStyleBackColor = false;
+            this.btn_Conferma_Password.Visible = false;
             this.btn_Conferma_Password.Click += new System.EventHandler(this.btn_Conferma_Password_Click);
             // 
             // txt_Password_Post
@@ -929,7 +937,7 @@ namespace Client_V3
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel8.Controls.Add(this.lbl_Avviso_Password);
-            this.panel8.Location = new System.Drawing.Point(6, 259);
+            this.panel8.Location = new System.Drawing.Point(6, 302);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(643, 23);
             this.panel8.TabIndex = 29;
@@ -1097,7 +1105,7 @@ namespace Client_V3
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel6.Controls.Add(this.lbl_PopUp_Main_Conferma);
-            this.panel6.Location = new System.Drawing.Point(6, 215);
+            this.panel6.Location = new System.Drawing.Point(6, 258);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(643, 23);
             this.panel6.TabIndex = 25;
@@ -1119,7 +1127,7 @@ namespace Client_V3
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel7.Controls.Add(this.lbl_PopUp_Main_XCH_Address);
-            this.panel7.Location = new System.Drawing.Point(6, 237);
+            this.panel7.Location = new System.Drawing.Point(6, 280);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(643, 23);
             this.panel7.TabIndex = 26;
@@ -1136,6 +1144,90 @@ namespace Client_V3
             this.lbl_PopUp_Main_XCH_Address.TabIndex = 24;
             this.lbl_PopUp_Main_XCH_Address.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
             this.lbl_PopUp_Main_XCH_Address.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_Clear_Data_Post);
+            this.groupBox1.Controls.Add(this.btn_Add_Wallet);
+            this.groupBox1.Controls.Add(this.comboBox_Load_Wallet);
+            this.groupBox1.Controls.Add(this.btn_Load_Wallet);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(502, 84);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(311, 153);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Load Wallet";
+            // 
+            // btn_Load_Wallet
+            // 
+            this.btn_Load_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Load_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Load_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Load_Wallet.FlatAppearance.BorderSize = 0;
+            this.btn_Load_Wallet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Load_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Load_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Load_Wallet.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Load_Wallet.Location = new System.Drawing.Point(6, 14);
+            this.btn_Load_Wallet.Name = "btn_Load_Wallet";
+            this.btn_Load_Wallet.Size = new System.Drawing.Size(299, 30);
+            this.btn_Load_Wallet.TabIndex = 25;
+            this.btn_Load_Wallet.Text = "Load Wallet";
+            this.btn_Load_Wallet.UseVisualStyleBackColor = false;
+            this.btn_Load_Wallet.Click += new System.EventHandler(this.btn_Load_Wallet_Click);
+            // 
+            // comboBox_Load_Wallet
+            // 
+            this.comboBox_Load_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
+            this.comboBox_Load_Wallet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Load_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_Load_Wallet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comboBox_Load_Wallet.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox_Load_Wallet.FormattingEnabled = true;
+            this.comboBox_Load_Wallet.Location = new System.Drawing.Point(6, 46);
+            this.comboBox_Load_Wallet.Name = "comboBox_Load_Wallet";
+            this.comboBox_Load_Wallet.Size = new System.Drawing.Size(299, 23);
+            this.comboBox_Load_Wallet.TabIndex = 26;
+            // 
+            // btn_Add_Wallet
+            // 
+            this.btn_Add_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Add_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Add_Wallet.FlatAppearance.BorderSize = 0;
+            this.btn_Add_Wallet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Add_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Add_Wallet.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Add_Wallet.Location = new System.Drawing.Point(6, 74);
+            this.btn_Add_Wallet.Name = "btn_Add_Wallet";
+            this.btn_Add_Wallet.Size = new System.Drawing.Size(149, 30);
+            this.btn_Add_Wallet.TabIndex = 27;
+            this.btn_Add_Wallet.Text = "Add Wallet";
+            this.btn_Add_Wallet.UseVisualStyleBackColor = false;
+            this.btn_Add_Wallet.Click += new System.EventHandler(this.btn_Add_Wallet_Click);
+            // 
+            // btn_Clear_Data_Post
+            // 
+            this.btn_Clear_Data_Post.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Clear_Data_Post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Clear_Data_Post.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Clear_Data_Post.FlatAppearance.BorderSize = 0;
+            this.btn_Clear_Data_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Clear_Data_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Clear_Data_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Clear_Data_Post.ForeColor = System.Drawing.Color.Red;
+            this.btn_Clear_Data_Post.Location = new System.Drawing.Point(161, 75);
+            this.btn_Clear_Data_Post.Name = "btn_Clear_Data_Post";
+            this.btn_Clear_Data_Post.Size = new System.Drawing.Size(144, 30);
+            this.btn_Clear_Data_Post.TabIndex = 28;
+            this.btn_Clear_Data_Post.Text = "Clear Data";
+            this.btn_Clear_Data_Post.UseVisualStyleBackColor = false;
+            this.btn_Clear_Data_Post.Click += new System.EventHandler(this.btn_Clear_Data_Post_Click);
             // 
             // FormMain
             // 
@@ -1186,6 +1278,7 @@ namespace Client_V3
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1260,5 +1353,10 @@ namespace Client_V3
         private Label lbl_Avviso_Password;
         private TextBox txt_Password_Post;
         private Button btn_Conferma_Password;
+        private GroupBox groupBox1;
+        private Button btn_Load_Wallet;
+        private ComboBox comboBox_Load_Wallet;
+        private Button btn_Add_Wallet;
+        private Button btn_Clear_Data_Post;
     }
 }
