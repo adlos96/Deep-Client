@@ -17,8 +17,8 @@ namespace Client_V3
 
         internal class TestClient
         {
-            //private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
-            private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
+            private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            //private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = false;
             private static string _CertFile = "";
@@ -195,20 +195,18 @@ namespace Client_V3
                     case "validate": // Imposta true o false a seconda di se corrisponde o meno
                         Variabili.seed_Phrase = Convert.ToBoolean(msgArgs[1]);
                         break;
-                    //case "balance_P_Update":
-                    //    Variabili.CHIA = msgArgs[1];
-                    //    Variabili.ATOM = msgArgs[2];
-                    //    Variabili.CRO = msgArgs[3];
-                    //    Variabili.LUNA = msgArgs[4];
-                    //    Variabili.TIA = msgArgs[5];
-                    //    Variabili.USDT = msgArgs[6];
-                    //    Variabili.USDC = msgArgs[7];
-                    //    Variabili.axlUSDC = msgArgs[8];
-                    //    Variabili.XDLS = msgArgs[9];
-                    //    Variabili.XUSDT = msgArgs[10];
-                    //    Variabili.xch_Prelevabili = Convert.ToDouble(msgArgs[11]).ToString("0.0000000000");
-                    //    Variabili.xch_Pending = Convert.ToDouble(msgArgs[12]).ToString("0.0000000000");
-                    //    break;
+                    case "rendita": // Imposta true o false a seconda di se corrisponde o meno
+                        Variabili.Rendita_Base_A = Convert.ToDouble(msgArgs[1]);
+                        Variabili.Rendita_Base_B = Convert.ToDouble(msgArgs[2]);
+                        Variabili.Rendita_Base_C = Convert.ToDouble(msgArgs[3]);
+                        Variabili.Rendita_Base_D = Convert.ToDouble(msgArgs[4]);
+                        Variabili.Rendita_Base_E = Convert.ToDouble(msgArgs[5]);
+                        break;
+                    case "bonus": // Imposta true o false a seconda di se corrisponde o meno
+                        Variabili.bonus_Deposito = Convert.ToDouble(msgArgs[1]);
+                        Variabili.bonus_Innvito_Ref = Convert.ToDouble(msgArgs[2]);
+                        Variabili.bonus_Invitato_Ref  = Convert.ToDouble(msgArgs[3]);
+                        break;
 
                     default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;
                 }

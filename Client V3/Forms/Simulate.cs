@@ -27,9 +27,11 @@ namespace Client_V3.Forms
             if (checkB_Plot_Manuale.Checked == false) numero_Plot = Convert.ToInt32(lbl_Plot_Current_Selection.Text);
             else numero_Plot = Convert.ToInt32(txt_Plot_Manuale.Text);
 
-            if (radioButton_A.Checked == true) rendita_Giornaliera = 0;
-            if (radioButton_B.Checked == true) rendita_Giornaliera = 1.75;
-            if (radioButton_C.Checked == true) rendita_Giornaliera = 2.75;
+            if (radioButton_A.Checked == true) rendita_Giornaliera = 0.00;
+            if (radioButton_B.Checked == true) rendita_Giornaliera = 0.87;
+            if (radioButton_C.Checked == true) rendita_Giornaliera = 1.65;
+            if (radioButton_D.Checked == true) rendita_Giornaliera = 2.20;
+            if (radioButton_E.Checked == true) rendita_Giornaliera = 2.75;
 
             txt_Plot_Anteprima.Text = numero_Plot.ToString();
             txt_EUR_Anteprima.Text = (numero_Plot * 1.05).ToString("0.00");
@@ -45,6 +47,12 @@ namespace Client_V3.Forms
         }
         private void Simulate_Load_1(object sender, EventArgs e)
         {
+            radioButton_A.Text = Variabili.Rendita_Base_A.ToString() + "%";
+            radioButton_B.Text = Variabili.Rendita_Base_B.ToString() + "%";
+            radioButton_C.Text = Variabili.Rendita_Base_C.ToString() + "%";
+            radioButton_D.Text = Variabili.Rendita_Base_D.ToString() + "%";
+            radioButton_E.Text = Variabili.Rendita_Base_E.ToString() + "%";
+
             trkBar_NumeroPlot.Maximum = 100;
             trkBar_NumeroPlot.Minimum = 1;
 

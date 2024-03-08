@@ -22,6 +22,18 @@ namespace Client_V3
         public static string fee_B = "Null";
         public static string fee_C = "Null";
 
+        // -------------------- Rendita -----------------------
+        public static double Rendita_Base_A = 0.00;
+        public static double Rendita_Base_B = 0.00;
+        public static double Rendita_Base_C = 0.00;
+        public static double Rendita_Base_D = 0.00;
+        public static double Rendita_Base_E = 0.00;
+        public static double bonus_Deposito = 0.00;
+        public static double bonus_Innvito_Ref = 0.00;
+        public static double bonus_Invitato_Ref = 0.00;
+
+        // -------------------- xxx -----------------------
+
         public static string xch_Prelevabili = "0.0000000000";
         public static string xch_Pending     = "0.0000000000";
 

@@ -103,6 +103,8 @@ namespace Client_V3.Forms
             this.Txt_Giorni_Noleggio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton_D = new System.Windows.Forms.RadioButton();
+            this.radioButton_E = new System.Windows.Forms.RadioButton();
             this.goupbox_Acquisto_Plot.SuspendLayout();
             this.panel_Plot_Manuali.SuspendLayout();
             this.panel_Numero_Plot_TrackBar.SuspendLayout();
@@ -174,7 +176,7 @@ namespace Client_V3.Forms
             this.goupbox_Acquisto_Plot.ForeColor = System.Drawing.SystemColors.Control;
             this.goupbox_Acquisto_Plot.Location = new System.Drawing.Point(12, 12);
             this.goupbox_Acquisto_Plot.Name = "goupbox_Acquisto_Plot";
-            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(340, 231);
+            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(331, 231);
             this.goupbox_Acquisto_Plot.TabIndex = 28;
             this.goupbox_Acquisto_Plot.TabStop = false;
             this.goupbox_Acquisto_Plot.Text = "Simulazione Mining";
@@ -387,9 +389,9 @@ namespace Client_V3.Forms
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(358, 12);
+            this.groupBox1.Location = new System.Drawing.Point(349, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 406);
+            this.groupBox1.Size = new System.Drawing.Size(408, 406);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Simulazione";
@@ -407,7 +409,7 @@ namespace Client_V3.Forms
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox4.Location = new System.Drawing.Point(6, 140);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(387, 260);
+            this.groupBox4.Size = new System.Drawing.Size(396, 260);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Rendimento";
@@ -421,7 +423,7 @@ namespace Client_V3.Forms
             this.panel10.Controls.Add(this.label17);
             this.panel10.Location = new System.Drawing.Point(2, 227);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(384, 26);
+            this.panel10.Size = new System.Drawing.Size(393, 26);
             this.panel10.TabIndex = 58;
             // 
             // label16
@@ -470,7 +472,7 @@ namespace Client_V3.Forms
             this.panel8.Controls.Add(this.label13);
             this.panel8.Location = new System.Drawing.Point(1, 196);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(384, 26);
+            this.panel8.Size = new System.Drawing.Size(393, 26);
             this.panel8.TabIndex = 57;
             // 
             // label7
@@ -519,7 +521,7 @@ namespace Client_V3.Forms
             this.panel7.Controls.Add(this.label15);
             this.panel7.Location = new System.Drawing.Point(2, 74);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(384, 26);
+            this.panel7.Size = new System.Drawing.Size(393, 26);
             this.panel7.TabIndex = 56;
             // 
             // label14
@@ -567,7 +569,7 @@ namespace Client_V3.Forms
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(1, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(384, 26);
+            this.panel5.Size = new System.Drawing.Size(393, 26);
             this.panel5.TabIndex = 55;
             // 
             // label6
@@ -616,7 +618,7 @@ namespace Client_V3.Forms
             this.panel4.Controls.Add(this.label23);
             this.panel4.Location = new System.Drawing.Point(1, 135);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(384, 26);
+            this.panel4.Size = new System.Drawing.Size(393, 26);
             this.panel4.TabIndex = 54;
             // 
             // label22
@@ -664,7 +666,7 @@ namespace Client_V3.Forms
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(2, 104);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(384, 26);
+            this.panel3.Size = new System.Drawing.Size(393, 26);
             this.panel3.TabIndex = 53;
             // 
             // label5
@@ -712,7 +714,7 @@ namespace Client_V3.Forms
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(2, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 26);
+            this.panel1.Size = new System.Drawing.Size(393, 26);
             this.panel1.TabIndex = 52;
             // 
             // label4
@@ -761,7 +763,7 @@ namespace Client_V3.Forms
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(2, 14);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 26);
+            this.panel2.Size = new System.Drawing.Size(393, 26);
             this.panel2.TabIndex = 51;
             // 
             // label3
@@ -805,9 +807,9 @@ namespace Client_V3.Forms
             this.groupBox3.Controls.Add(this.panel9);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(131, 17);
+            this.groupBox3.Location = new System.Drawing.Point(126, 17);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 123);
+            this.groupBox3.Size = new System.Drawing.Size(276, 123);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             // 
@@ -822,7 +824,7 @@ namespace Client_V3.Forms
             this.panel9.Controls.Add(this.label19);
             this.panel9.Location = new System.Drawing.Point(3, 11);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(258, 26);
+            this.panel9.Size = new System.Drawing.Size(272, 26);
             this.panel9.TabIndex = 52;
             // 
             // textBox2
@@ -891,10 +893,12 @@ namespace Client_V3.Forms
             this.groupBox6.Controls.Add(this.radioButton_A);
             this.groupBox6.Controls.Add(this.radioButton_B);
             this.groupBox6.Controls.Add(this.radioButton_C);
+            this.groupBox6.Controls.Add(this.radioButton_D);
+            this.groupBox6.Controls.Add(this.radioButton_E);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox6.Location = new System.Drawing.Point(6, 80);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(250, 37);
+            this.groupBox6.Size = new System.Drawing.Size(264, 37);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Rendita";
@@ -905,7 +909,7 @@ namespace Client_V3.Forms
             this.radioButton_A.Checked = true;
             this.radioButton_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioButton_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.radioButton_A.Location = new System.Drawing.Point(47, 14);
+            this.radioButton_A.Location = new System.Drawing.Point(3, 14);
             this.radioButton_A.Name = "radioButton_A";
             this.radioButton_A.Size = new System.Drawing.Size(48, 17);
             this.radioButton_A.TabIndex = 9;
@@ -918,11 +922,11 @@ namespace Client_V3.Forms
             this.radioButton_B.AutoSize = true;
             this.radioButton_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioButton_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.radioButton_B.Location = new System.Drawing.Point(107, 13);
+            this.radioButton_B.Location = new System.Drawing.Point(50, 13);
             this.radioButton_B.Name = "radioButton_B";
-            this.radioButton_B.Size = new System.Drawing.Size(54, 17);
+            this.radioButton_B.Size = new System.Drawing.Size(48, 17);
             this.radioButton_B.TabIndex = 7;
-            this.radioButton_B.Text = "1,75%";
+            this.radioButton_B.Text = "0.0%";
             this.radioButton_B.UseVisualStyleBackColor = true;
             // 
             // radioButton_C
@@ -930,11 +934,11 @@ namespace Client_V3.Forms
             this.radioButton_C.AutoSize = true;
             this.radioButton_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioButton_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.radioButton_C.Location = new System.Drawing.Point(167, 13);
+            this.radioButton_C.Location = new System.Drawing.Point(103, 13);
             this.radioButton_C.Name = "radioButton_C";
-            this.radioButton_C.Size = new System.Drawing.Size(54, 17);
+            this.radioButton_C.Size = new System.Drawing.Size(48, 17);
             this.radioButton_C.TabIndex = 8;
-            this.radioButton_C.Text = "2,75%";
+            this.radioButton_C.Text = "0.0%";
             this.radioButton_C.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -950,7 +954,7 @@ namespace Client_V3.Forms
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(6, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(119, 123);
+            this.groupBox2.Size = new System.Drawing.Size(117, 123);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Costo Noleggio";
@@ -962,7 +966,7 @@ namespace Client_V3.Forms
             this.panel6.Controls.Add(this.Txt_Giorni_Noleggio);
             this.panel6.Location = new System.Drawing.Point(2, 98);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(115, 22);
+            this.panel6.Size = new System.Drawing.Size(107, 22);
             this.panel6.TabIndex = 56;
             // 
             // Txt_Giorni_Noleggio
@@ -974,7 +978,7 @@ namespace Client_V3.Forms
             this.Txt_Giorni_Noleggio.Location = new System.Drawing.Point(3, 2);
             this.Txt_Giorni_Noleggio.Name = "Txt_Giorni_Noleggio";
             this.Txt_Giorni_Noleggio.ReadOnly = true;
-            this.Txt_Giorni_Noleggio.Size = new System.Drawing.Size(110, 18);
+            this.Txt_Giorni_Noleggio.Size = new System.Drawing.Size(96, 18);
             this.Txt_Giorni_Noleggio.TabIndex = 35;
             this.Txt_Giorni_Noleggio.Text = "2000";
             this.Txt_Giorni_Noleggio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -995,11 +999,35 @@ namespace Client_V3.Forms
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox5.Location = new System.Drawing.Point(12, 249);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(340, 169);
+            this.groupBox5.Size = new System.Drawing.Size(331, 169);
             this.groupBox5.TabIndex = 35;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Simulazione Staking";
             this.groupBox5.Visible = false;
+            // 
+            // radioButton_D
+            // 
+            this.radioButton_D.AutoSize = true;
+            this.radioButton_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
+            this.radioButton_D.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.radioButton_D.Location = new System.Drawing.Point(156, 13);
+            this.radioButton_D.Name = "radioButton_D";
+            this.radioButton_D.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_D.TabIndex = 10;
+            this.radioButton_D.Text = "0.0%";
+            this.radioButton_D.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_E
+            // 
+            this.radioButton_E.AutoSize = true;
+            this.radioButton_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
+            this.radioButton_E.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.radioButton_E.Location = new System.Drawing.Point(209, 13);
+            this.radioButton_E.Name = "radioButton_E";
+            this.radioButton_E.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_E.TabIndex = 53;
+            this.radioButton_E.Text = "0.0%";
+            this.radioButton_E.UseVisualStyleBackColor = true;
             // 
             // Simulate
             // 
@@ -1123,5 +1151,7 @@ namespace Client_V3.Forms
         private TextBox txt_Rendita;
         private Label label23;
         private Button btn_Aggiorna;
+        private RadioButton radioButton_E;
+        private RadioButton radioButton_D;
     }
 }

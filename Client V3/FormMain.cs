@@ -114,7 +114,6 @@ namespace Client_V3
                 txt_Password_Post.Visible = false;          // <-- lbl Password post
                 btn_Conferma_Password.Visible = false;      // <-- btn password post
             }
-            
             await Update_Data(); //Aggiornamento dati
         }
         private async void btn_Conferma_Main_Click(object sender, EventArgs e)
@@ -290,7 +289,7 @@ namespace Client_V3
             return transazioni_trovate;
         }
 
-        async void Lock_Seed_Phrase ()
+        async void Lock_Seed_Phrase()
         {
             loop = true;
             btn_Conferma_Main.Enabled = false;
@@ -376,8 +375,10 @@ namespace Client_V3
         {
             await ClientsConnection.TestClient.Connessione();
             await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione walle/Client
-            await ClientsConnection.TestClient.Send_Server($"home|fee_Update"); //aggiorniamo dati form Home - Fee & Withdrawal
+            await ClientsConnection.TestClient.Send_Server($"home|fee_Update|{Variabili.wallet}"); //aggiorniamo dati form Home - Fee & Withdrawal
             await ClientsConnection.TestClient.Send_Server($"balance|protocol|{Variabili.wallet}"); //Aggiorniamo dati form Home - Balance protocol
+            await ClientsConnection.TestClient.Send_Server($"rendita|protocol|{Variabili.wallet}"); //Aggiorniamo dati form Home - Balance protocol
+            await ClientsConnection.TestClient.Send_Server($"bonus|protocol|{Variabili.wallet}"); //Aggiorniamo dati form Home - Balance protocol
             return true;
         }
 
