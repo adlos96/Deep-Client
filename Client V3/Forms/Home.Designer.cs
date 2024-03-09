@@ -30,7 +30,16 @@ namespace Client.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem2 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem3 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chart_Grafico_Home = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbl_Totale_Xch_Prelevati = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.radioB_Fee_C = new System.Windows.Forms.RadioButton();
@@ -96,7 +105,9 @@ namespace Client.Forms
             this.lbl_Withdrawable_Xch = new System.Windows.Forms.Label();
             this.lbl_Pending_Xch = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Grafico_Home)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -113,6 +124,7 @@ namespace Client.Forms
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,6 +132,8 @@ namespace Client.Forms
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.chart1);
+            this.groupBox1.Controls.Add(this.chart_Grafico_Home);
             this.groupBox1.Controls.Add(this.lbl_Totale_Xch_Prelevati);
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.panel1);
@@ -130,6 +144,41 @@ namespace Client.Forms
             this.groupBox1.Size = new System.Drawing.Size(817, 453);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // chart_Grafico_Home
+            // 
+            this.chart_Grafico_Home.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chart_Grafico_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.chart_Grafico_Home.BorderlineColor = System.Drawing.Color.Red;
+            this.chart_Grafico_Home.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.DarkGreen;
+            chartArea2.Name = "ChartArea1";
+            this.chart_Grafico_Home.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            legend2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            legend2.BackSecondaryColor = System.Drawing.Color.DarkOrange;
+            legend2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            legendItem1.Name = "Chia";
+            legendItem1.ToolTip = "Ciao";
+            legendItem2.Name = "Atom";
+            legendItem3.Name = "Cro";
+            legend2.CustomItems.Add(legendItem1);
+            legend2.CustomItems.Add(legendItem2);
+            legend2.CustomItems.Add(legendItem3);
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legenda";
+            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart_Grafico_Home.Legends.Add(legend2);
+            this.chart_Grafico_Home.Location = new System.Drawing.Point(267, 16);
+            this.chart_Grafico_Home.Name = "chart_Grafico_Home";
+            this.chart_Grafico_Home.Size = new System.Drawing.Size(544, 251);
+            this.chart_Grafico_Home.TabIndex = 61;
+            this.chart_Grafico_Home.Text = "chart1";
             // 
             // lbl_Totale_Xch_Prelevati
             // 
@@ -950,6 +999,22 @@ namespace Client.Forms
             this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(387, 187);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(424, 237);
+            this.chart1.TabIndex = 62;
+            this.chart1.Text = "chart1";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,6 +1027,7 @@ namespace Client.Forms
             this.Load += new System.EventHandler(this.Home_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Grafico_Home)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -994,6 +1060,7 @@ namespace Client.Forms
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1066,5 +1133,7 @@ namespace Client.Forms
         private TextBox txt_axlUSDC_Balance;
         private Label label31;
         private Label lbl_Totale_Xch_Prelevati;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_Grafico_Home;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

@@ -64,7 +64,7 @@ namespace Client_V3.Forms
             this.Txt_Bonus = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_2000_Giorni = new System.Windows.Forms.Label();
             this.Txt_Chia_Reward_2000 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -98,13 +98,13 @@ namespace Client_V3.Forms
             this.radioButton_A = new System.Windows.Forms.RadioButton();
             this.radioButton_B = new System.Windows.Forms.RadioButton();
             this.radioButton_C = new System.Windows.Forms.RadioButton();
+            this.radioButton_D = new System.Windows.Forms.RadioButton();
+            this.radioButton_E = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Txt_Giorni_Noleggio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton_D = new System.Windows.Forms.RadioButton();
-            this.radioButton_E = new System.Windows.Forms.RadioButton();
             this.goupbox_Acquisto_Plot.SuspendLayout();
             this.panel_Plot_Manuali.SuspendLayout();
             this.panel_Numero_Plot_TrackBar.SuspendLayout();
@@ -135,7 +135,7 @@ namespace Client_V3.Forms
             this.txt_Plot_Anteprima.Location = new System.Drawing.Point(6, 19);
             this.txt_Plot_Anteprima.Name = "txt_Plot_Anteprima";
             this.txt_Plot_Anteprima.ReadOnly = true;
-            this.txt_Plot_Anteprima.Size = new System.Drawing.Size(44, 18);
+            this.txt_Plot_Anteprima.Size = new System.Drawing.Size(57, 18);
             this.txt_Plot_Anteprima.TabIndex = 24;
             this.txt_Plot_Anteprima.Text = "0";
             this.txt_Plot_Anteprima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -149,7 +149,7 @@ namespace Client_V3.Forms
             this.txt_EUR_Anteprima.Location = new System.Drawing.Point(6, 59);
             this.txt_EUR_Anteprima.Name = "txt_EUR_Anteprima";
             this.txt_EUR_Anteprima.ReadOnly = true;
-            this.txt_EUR_Anteprima.Size = new System.Drawing.Size(44, 18);
+            this.txt_EUR_Anteprima.Size = new System.Drawing.Size(57, 18);
             this.txt_EUR_Anteprima.TabIndex = 27;
             this.txt_EUR_Anteprima.Text = "0";
             this.txt_EUR_Anteprima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -159,7 +159,7 @@ namespace Client_V3.Forms
             this.lbl_Plot_Anteprima.AutoSize = true;
             this.lbl_Plot_Anteprima.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Plot_Anteprima.ForeColor = System.Drawing.SystemColors.Info;
-            this.lbl_Plot_Anteprima.Location = new System.Drawing.Point(52, 17);
+            this.lbl_Plot_Anteprima.Location = new System.Drawing.Point(61, 17);
             this.lbl_Plot_Anteprima.Name = "lbl_Plot_Anteprima";
             this.lbl_Plot_Anteprima.Size = new System.Drawing.Size(45, 20);
             this.lbl_Plot_Anteprima.TabIndex = 26;
@@ -356,7 +356,7 @@ namespace Client_V3.Forms
             this.txt_USDT_Anteprima.Location = new System.Drawing.Point(6, 39);
             this.txt_USDT_Anteprima.Name = "txt_USDT_Anteprima";
             this.txt_USDT_Anteprima.ReadOnly = true;
-            this.txt_USDT_Anteprima.Size = new System.Drawing.Size(44, 18);
+            this.txt_USDT_Anteprima.Size = new System.Drawing.Size(57, 18);
             this.txt_USDT_Anteprima.TabIndex = 32;
             this.txt_USDT_Anteprima.Text = "0";
             this.txt_USDT_Anteprima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -366,7 +366,7 @@ namespace Client_V3.Forms
             this.lbl_Euro_Anteprima.AutoSize = true;
             this.lbl_Euro_Anteprima.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Euro_Anteprima.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Euro_Anteprima.Location = new System.Drawing.Point(52, 57);
+            this.lbl_Euro_Anteprima.Location = new System.Drawing.Point(61, 57);
             this.lbl_Euro_Anteprima.Name = "lbl_Euro_Anteprima";
             this.lbl_Euro_Anteprima.Size = new System.Drawing.Size(49, 20);
             this.lbl_Euro_Anteprima.TabIndex = 31;
@@ -377,7 +377,7 @@ namespace Client_V3.Forms
             this.lbl_USDT_Anteprima.AutoSize = true;
             this.lbl_USDT_Anteprima.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_USDT_Anteprima.ForeColor = System.Drawing.Color.Green;
-            this.lbl_USDT_Anteprima.Location = new System.Drawing.Point(52, 37);
+            this.lbl_USDT_Anteprima.Location = new System.Drawing.Point(61, 37);
             this.lbl_USDT_Anteprima.Name = "lbl_USDT_Anteprima";
             this.lbl_USDT_Anteprima.Size = new System.Drawing.Size(47, 20);
             this.lbl_USDT_Anteprima.TabIndex = 33;
@@ -516,7 +516,7 @@ namespace Client_V3.Forms
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
-            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.lbl_2000_Giorni);
             this.panel7.Controls.Add(this.Txt_Chia_Reward_2000);
             this.panel7.Controls.Add(this.label15);
             this.panel7.Location = new System.Drawing.Point(2, 74);
@@ -524,16 +524,16 @@ namespace Client_V3.Forms
             this.panel7.Size = new System.Drawing.Size(393, 26);
             this.panel7.TabIndex = 56;
             // 
-            // label14
+            // lbl_2000_Giorni
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(3, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 20);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Chia Reward 2000 days";
+            this.lbl_2000_Giorni.AutoSize = true;
+            this.lbl_2000_Giorni.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_2000_Giorni.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_2000_Giorni.Location = new System.Drawing.Point(3, 3);
+            this.lbl_2000_Giorni.Name = "lbl_2000_Giorni";
+            this.lbl_2000_Giorni.Size = new System.Drawing.Size(172, 20);
+            this.lbl_2000_Giorni.TabIndex = 38;
+            this.lbl_2000_Giorni.Text = "Chia Reward 2000 days";
             // 
             // Txt_Chia_Reward_2000
             // 
@@ -941,6 +941,30 @@ namespace Client_V3.Forms
             this.radioButton_C.Text = "0.0%";
             this.radioButton_C.UseVisualStyleBackColor = true;
             // 
+            // radioButton_D
+            // 
+            this.radioButton_D.AutoSize = true;
+            this.radioButton_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
+            this.radioButton_D.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.radioButton_D.Location = new System.Drawing.Point(156, 13);
+            this.radioButton_D.Name = "radioButton_D";
+            this.radioButton_D.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_D.TabIndex = 10;
+            this.radioButton_D.Text = "0.0%";
+            this.radioButton_D.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_E
+            // 
+            this.radioButton_E.AutoSize = true;
+            this.radioButton_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
+            this.radioButton_E.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.radioButton_E.Location = new System.Drawing.Point(209, 13);
+            this.radioButton_E.Name = "radioButton_E";
+            this.radioButton_E.Size = new System.Drawing.Size(48, 17);
+            this.radioButton_E.TabIndex = 53;
+            this.radioButton_E.Text = "0.0%";
+            this.radioButton_E.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel6);
@@ -966,7 +990,7 @@ namespace Client_V3.Forms
             this.panel6.Controls.Add(this.Txt_Giorni_Noleggio);
             this.panel6.Location = new System.Drawing.Point(2, 98);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(107, 22);
+            this.panel6.Size = new System.Drawing.Size(112, 22);
             this.panel6.TabIndex = 56;
             // 
             // Txt_Giorni_Noleggio
@@ -978,7 +1002,7 @@ namespace Client_V3.Forms
             this.Txt_Giorni_Noleggio.Location = new System.Drawing.Point(3, 2);
             this.Txt_Giorni_Noleggio.Name = "Txt_Giorni_Noleggio";
             this.Txt_Giorni_Noleggio.ReadOnly = true;
-            this.Txt_Giorni_Noleggio.Size = new System.Drawing.Size(96, 18);
+            this.Txt_Giorni_Noleggio.Size = new System.Drawing.Size(109, 18);
             this.Txt_Giorni_Noleggio.TabIndex = 35;
             this.Txt_Giorni_Noleggio.Text = "2000";
             this.Txt_Giorni_Noleggio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1004,30 +1028,6 @@ namespace Client_V3.Forms
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Simulazione Staking";
             this.groupBox5.Visible = false;
-            // 
-            // radioButton_D
-            // 
-            this.radioButton_D.AutoSize = true;
-            this.radioButton_D.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
-            this.radioButton_D.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.radioButton_D.Location = new System.Drawing.Point(156, 13);
-            this.radioButton_D.Name = "radioButton_D";
-            this.radioButton_D.Size = new System.Drawing.Size(48, 17);
-            this.radioButton_D.TabIndex = 10;
-            this.radioButton_D.Text = "0.0%";
-            this.radioButton_D.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_E
-            // 
-            this.radioButton_E.AutoSize = true;
-            this.radioButton_E.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
-            this.radioButton_E.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.radioButton_E.Location = new System.Drawing.Point(209, 13);
-            this.radioButton_E.Name = "radioButton_E";
-            this.radioButton_E.Size = new System.Drawing.Size(48, 17);
-            this.radioButton_E.TabIndex = 53;
-            this.radioButton_E.Text = "0.0%";
-            this.radioButton_E.UseVisualStyleBackColor = true;
             // 
             // Simulate
             // 
@@ -1137,7 +1137,7 @@ namespace Client_V3.Forms
         private TextBox Txt_Totale;
         private Label label17;
         private Panel panel7;
-        private Label label14;
+        private Label lbl_2000_Giorni;
         private TextBox Txt_Chia_Reward_2000;
         private Label label15;
         private Panel panel9;

@@ -17,20 +17,19 @@ namespace Client_V3
 
         internal class TestClient
         {
-            private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
-            //private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
+            //private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
-            private static bool _Ssl = false;
+            private static bool _Ssl = true;
             private static string _CertFile = "";
-            private static string _CertPass = "password";
+            private static string _CertPass = "Password1";
             private static bool _DebugMessages = true;
-            private static bool _AcceptInvalidCerts = true;
-            private static bool _MutualAuth = true;
+            private static bool _AcceptInvalidCerts = false;
+            private static bool _MutualAuth = false;
             private static WatsonTcpClient _Client = null;
             private static string _PresharedKey = null;
 
-            public static Task ComunicazioneServer()
-            {
+            public static Task ComunicazioneServer() {
                 return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
                 {
                     if (!_Client.Send(Encoding.UTF8.GetBytes(argomento_Invio))) Console.WriteLine("Failed");
@@ -61,8 +60,8 @@ namespace Client_V3
 
                         if (supplyCert)
                         {
-                            _CertFile = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\TestClient\test.pfx";
-                            _CertPass = "password";
+                            _CertFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\client.pfx";
+                            _CertPass = "Password1";
                         }
 
                         _AcceptInvalidCerts = true;
@@ -80,14 +79,12 @@ namespace Client_V3
                 {
                     if (_Client != null) _Client.Dispose();
                     if (!_Ssl) _Client = new WatsonTcpClient(_ServerIp, _ServerPort);
-                    
                     else
                     {
                         _Client = new WatsonTcpClient(_ServerIp, _ServerPort, _CertFile, _CertPass);
                         _Client.Settings.AcceptInvalidCertificates = _AcceptInvalidCerts;
                         _Client.Settings.MutuallyAuthenticate = _MutualAuth;
                     }
-                    client_Connesso = true;
                     _Client.Events.AuthenticationFailure += AuthenticationFailure;
                     _Client.Events.AuthenticationSucceeded += AuthenticationSucceeded;
                     _Client.Events.ServerConnected += ServerConnected;
@@ -109,6 +106,7 @@ namespace Client_V3
                     _Client.Keepalive.TcpKeepAliveRetryCount = 3;
 
                     _Client.Connect();
+                    client_Connesso = true;
                 });
             }
             private static void ExceptionEncountered(object sender, ExceptionEventArgs e)
@@ -209,6 +207,8 @@ namespace Client_V3
                         break;
 
                     default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;
+
+
                 }
 
                 var comando = msgArgs[0];
@@ -220,11 +220,11 @@ namespace Client_V3
 
                 switch (comando)
                 {
-                    case "plotSwap"     : Message_Recived_PlotSwap(msgArgs); break;      // Risposta prezzo per plot
+                    case "plotSwap": Message_Recived_PlotSwap(msgArgs); break;      // Risposta prezzo per plot
                     case "statusPayment": Message_Recived_StatusPayment(msgArgs); break; // Risposta timer payment usdt
                 }
-
             }
+
             private static void Message_Recived_PlotSwap(string[] msgArgs)
             {
                 argomento_Ricevuto = msgArgs[1];  //Assegnazione a variabile (Vecchio metodo comunicazione)

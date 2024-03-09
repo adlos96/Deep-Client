@@ -125,11 +125,13 @@ namespace Client_V3.Forms
                         Txt_Chia_Reward_1.Text = xch_Pay.ToString();
                         Txt_Chia_Reward_7.Text = (Convert.ToDouble(xch_Pay) * 7).ToString();
                         Txt_Chia_Reward_2000.Text = (Convert.ToDouble(xch_Pay) * Convert.ToDouble(giorni)).ToString();
+
                         Txt_Daily_Reward.Text = daily_Payment;
                         txt_Rendita.Text = rendita;
                         Txt_Deposito_Bonus.Text = credito;
                         Txt_Bonus.Text = bonus_Deposito;
                         Txt_Totale.Text = totale;
+                        lbl_2000_Giorni.Text = "Chia Reward " + giorni + " days";
                     }
                     x++;
                 }
