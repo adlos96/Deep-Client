@@ -18,7 +18,7 @@ namespace Client_V3
         internal class TestClient
         {
             //private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
-            private static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
+            public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = true;
             private static string _CertFile = "";

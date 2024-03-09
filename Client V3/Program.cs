@@ -14,6 +14,8 @@ namespace Client_V3
         [STAThread]
         static void Main()
         {
+            Certificati.Crea_Certificato();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());

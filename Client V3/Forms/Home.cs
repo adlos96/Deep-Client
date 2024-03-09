@@ -19,6 +19,12 @@ namespace Client.Forms
             await ClientsConnection.TestClient.Send_Server($"balance|protocol|{Variabili.wallet}");
             await Fee_Update();
 
+            if (ClientsConnection.TestClient._ServerIp != "127.1")
+            {
+                chart_Grafico_Home.Visible = false;
+                chart1.Visible = false;
+            }
+
             //Update withdrawal fee
             txt_Fee_A.Text = Variabili.fee_A;
             txt_Fee_B.Text = Variabili.fee_B;
