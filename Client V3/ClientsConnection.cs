@@ -17,7 +17,7 @@ namespace Client_V3
 
         internal class TestClient
         {
-            //private static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            //public static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
             public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = true;
@@ -29,13 +29,6 @@ namespace Client_V3
             private static WatsonTcpClient _Client = null;
             private static string _PresharedKey = null;
 
-            public static Task ComunicazioneServer() {
-                return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
-                {
-                    if (!_Client.Send(Encoding.UTF8.GetBytes(argomento_Invio))) Console.WriteLine("Failed");
-                    Thread.Sleep(1500);
-                });
-            }
             public static Task ClientSend(string argomento)
             {
                 return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.

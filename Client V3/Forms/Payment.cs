@@ -233,30 +233,24 @@ namespace Client.Forms
                 {
                     ClientsConnection.TestClient.InitializeClient(); //Connessione Client al server
                     Thread.Sleep(1250);
-                    ClientsConnection.TestClient.ComunicazioneServer(); //Invio dati al server
-                } else
-                    ClientsConnection.TestClient.ComunicazioneServer(); //Invio dati al server
+                }
                 Thread.Sleep(1250);
             });
         }
         private async void btn_Pay_Click(object sender, EventArgs e)
         {
-            bool avvenuto_Pagamento = false;
-            //Atttende l'avvenuto pagamento della somma in usdt per il noleggio del plot
-            //...
-            //...
-            avvenuto_Pagamento = true;
             Variabili.pagamento_Somma_USDT = txt_USDT_Anteprima.Text;
             Variabili.numero_Plot = txt_Plot_Anteprima.Text;
             Variabili.wallet_USDT = txt_Wallet_USDT_User.Text.ToLower();
             Variabili.chain = comboBox_Chain_Selection.Text;
 
-            if (avvenuto_Pagamento == true)
-            {
-                //Invia i dati dell'untente al server
-                ClientsConnection.argomento_Invio = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain;
-                await ClientsConnection.TestClient.ComunicazioneServer(); // Invia L'argomento al server
-            }
+
+            
+            //Invia i dati dell'untente al server
+            string argomento = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain;
+            await ClientsConnection.TestClient.ClientSend(argomento);
+
+
             Console.WriteLine(ClientsConnection.argomento_Ricevuto);
         }
 

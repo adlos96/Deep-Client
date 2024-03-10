@@ -472,10 +472,6 @@ namespace Client_V3
             if (System.IO.Directory.Exists(Variabili.test_Percorso_Transazioni) == false)
                 System.IO.Directory.CreateDirectory(Variabili.test_Percorso_Transazioni);
 
-            //Invio dati al server [richiesta_Sync_Transazioni|numero_Transazioni]
-            await ClientsConnection.TestClient.ComunicazioneServer(); //Invio dati al server
-            //Thread.Sleep(3000);
-
             //Ricevere la risposta
             string risposta = ClientsConnection.argomento_Ricevuto;
 
@@ -605,7 +601,7 @@ namespace Client_V3
             lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
         }
 
-        private void btn_Clear_Data_Post_Click(object sender, EventArgs e)
+        private async void btn_Clear_Data_Post_Click(object sender, EventArgs e)
         {
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
             int dato = 2;
@@ -613,7 +609,11 @@ namespace Client_V3
             {
                 System.IO.File.Delete($"{percorso_profili}Wallet\\{dato}.xml");
                 int dati = conta_numero__transazioni();
-                if (dati == 1) return;
+                if (dati == 1)
+                {
+                    await load_data();
+                    return;
+                }
                 while (System.IO.File.Exists($"{percorso_profili}Wallet\\{dato}.xml") == false)
                     dato++; //Se già esiste incrementa di 1 e riprova
             }

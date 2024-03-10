@@ -207,7 +207,7 @@ namespace Client.Forms
             this.groupBox_Payment_USDT.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox_Payment_USDT.Location = new System.Drawing.Point(9, 10);
             this.groupBox_Payment_USDT.Name = "groupBox_Payment_USDT";
-            this.groupBox_Payment_USDT.Size = new System.Drawing.Size(328, 164);
+            this.groupBox_Payment_USDT.Size = new System.Drawing.Size(321, 164);
             this.groupBox_Payment_USDT.TabIndex = 2;
             this.groupBox_Payment_USDT.TabStop = false;
             this.groupBox_Payment_USDT.Text = "Payment Request";
@@ -225,7 +225,7 @@ namespace Client.Forms
             // 
             this.panel_Logo_Wallet.BackgroundImage = global::Client_V3.Properties.Resources.Tether_ico_32;
             this.panel_Logo_Wallet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel_Logo_Wallet.Location = new System.Drawing.Point(244, 46);
+            this.panel_Logo_Wallet.Location = new System.Drawing.Point(274, 46);
             this.panel_Logo_Wallet.Name = "panel_Logo_Wallet";
             this.panel_Logo_Wallet.Size = new System.Drawing.Size(41, 35);
             this.panel_Logo_Wallet.TabIndex = 14;
@@ -294,7 +294,7 @@ namespace Client.Forms
             this.panel1.Controls.Add(this.txt_Address_Recive_USDT);
             this.panel1.Location = new System.Drawing.Point(10, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 33);
+            this.panel1.Size = new System.Drawing.Size(264, 33);
             this.panel1.TabIndex = 4;
             // 
             // label3
@@ -317,7 +317,7 @@ namespace Client.Forms
             this.txt_Address_Recive_USDT.Location = new System.Drawing.Point(59, 8);
             this.txt_Address_Recive_USDT.Name = "txt_Address_Recive_USDT";
             this.txt_Address_Recive_USDT.ReadOnly = true;
-            this.txt_Address_Recive_USDT.Size = new System.Drawing.Size(174, 18);
+            this.txt_Address_Recive_USDT.Size = new System.Drawing.Size(202, 18);
             this.txt_Address_Recive_USDT.TabIndex = 6;
             this.txt_Address_Recive_USDT.Text = "0x123123123";
             // 
@@ -666,7 +666,7 @@ namespace Client.Forms
             this.goupbox_Acquisto_Plot.ForeColor = System.Drawing.SystemColors.Control;
             this.goupbox_Acquisto_Plot.Location = new System.Drawing.Point(9, 182);
             this.goupbox_Acquisto_Plot.Name = "goupbox_Acquisto_Plot";
-            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(329, 187);
+            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(322, 187);
             this.goupbox_Acquisto_Plot.TabIndex = 3;
             this.goupbox_Acquisto_Plot.TabStop = false;
             this.goupbox_Acquisto_Plot.Text = "Acquisto Plot";
