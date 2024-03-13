@@ -12,10 +12,6 @@ namespace Client_V3
         public static Queue<string> queue_Payment_Command { get; } = new Queue<string>(); //Code
         public static Queue<string> queue_Simulate_Command { get; } = new Queue<string>();
 
-        public static string chia_prelevati = "0";
-        public static string status_Pagamento = "Stato pagamento: Nessuno";
-        public static string id_Client = "not connected";
-        public static string importo_USDT = "";
 
         // -------------------- Fee Xch -----------------------
         public static string fee_A = "Null";
@@ -34,8 +30,16 @@ namespace Client_V3
 
         // -------------------- xxx -----------------------
 
-        public static string xch_Prelevabili = "0.0000000000";
-        public static string xch_Pending     = "0.0000000000";
+        public static string xch_Prelevabili    = "0.0000000000";
+        public static string xch_Pending        = "0.0000000000";
+        public static string chia_prelevati     = "0";
+
+        public static string status_Pagamento   = "Stato pagamento: Nessuno";
+        public static string id_Client          = "not connected";
+        public static string importo_USDT       = "";
+        public static string referal_Code       = "not connected"; // codice referal dell'utente
+        public static string plot_Euro          = "0";
+
 
         // -------------------- Protocol Login -----------------------
         public static bool seed_Phrase = false; // Se la seed phrase inviata è corretta si potà resettare la password

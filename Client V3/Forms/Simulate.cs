@@ -34,7 +34,7 @@ namespace Client_V3.Forms
             if (radioButton_E.Checked == true) rendita_Giornaliera = 2.75;
 
             txt_Plot_Anteprima.Text = numero_Plot.ToString();
-            txt_EUR_Anteprima.Text = (numero_Plot * 1.05).ToString("0.00");
+            txt_EUR_Anteprima.Text = (numero_Plot * 0).ToString("0.00");
             txt_USDT_Anteprima.Text = "0";
 
             //Invio dati per simulazione
@@ -118,8 +118,10 @@ namespace Client_V3.Forms
                         string totale = args[8];
                         string giorni = args[9];
                         string plot_Price = args[10];
+                        Variabili.plot_Euro = args[11];
 
                         txt_USDT_Anteprima.Text = plot_Price;
+                        txt_EUR_Anteprima.Text = Variabili.plot_Euro;
                         Txt_Giorni_Noleggio.Text = giorni;
                         txt_Prezzo_Chia_Euro.Text = prezzo_Chia_Euro;
                         Txt_Chia_Reward_1.Text = xch_Pay.ToString();
@@ -138,7 +140,7 @@ namespace Client_V3.Forms
             }
             else
                 Console.WriteLine($"Codice saltato, Comandi attuali: [{Variabili.queue_Simulate_Command.Count}]");
-
+            
             Console.WriteLine("Fine loop");
         }
         public static Task Wait() {

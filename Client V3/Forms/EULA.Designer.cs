@@ -57,6 +57,11 @@ namespace Client_V3.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Deep_Client = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_Prelievo_Deposito = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -83,6 +88,11 @@ namespace Client_V3.Forms
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.lbl_Prelievo_Deposito);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.lbl_Deep_Client);
             this.groupBox4.Controls.Add(this.lbl_Link_DeepMiningProtocol);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label8);
@@ -97,8 +107,8 @@ namespace Client_V3.Forms
             // 
             this.lbl_Link_DeepMiningProtocol.AutoSize = true;
             this.lbl_Link_DeepMiningProtocol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Link_DeepMiningProtocol.ForeColor = System.Drawing.Color.Violet;
-            this.lbl_Link_DeepMiningProtocol.Location = new System.Drawing.Point(166, 52);
+            this.lbl_Link_DeepMiningProtocol.ForeColor = System.Drawing.Color.DarkViolet;
+            this.lbl_Link_DeepMiningProtocol.Location = new System.Drawing.Point(21, 78);
             this.lbl_Link_DeepMiningProtocol.Name = "lbl_Link_DeepMiningProtocol";
             this.lbl_Link_DeepMiningProtocol.Size = new System.Drawing.Size(85, 21);
             this.lbl_Link_DeepMiningProtocol.TabIndex = 12;
@@ -120,7 +130,7 @@ namespace Client_V3.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
             this.label8.Location = new System.Drawing.Point(21, 52);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 19);
@@ -352,6 +362,63 @@ namespace Client_V3.Forms
             this.label2.TabIndex = 8;
             this.label2.Text = "Rischi legati all\'utilizzo del software:";
             // 
+            // lbl_Deep_Client
+            // 
+            this.lbl_Deep_Client.AutoSize = true;
+            this.lbl_Deep_Client.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Deep_Client.ForeColor = System.Drawing.Color.Violet;
+            this.lbl_Deep_Client.Location = new System.Drawing.Point(21, 100);
+            this.lbl_Deep_Client.Name = "lbl_Deep_Client";
+            this.lbl_Deep_Client.Size = new System.Drawing.Size(85, 21);
+            this.lbl_Deep_Client.TabIndex = 14;
+            this.lbl_Deep_Client.Text = "Click here";
+            this.lbl_Deep_Client.Click += new System.EventHandler(this.lbl_Deep_Client_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(104, 80);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(143, 19);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Deep Mining Protocol";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(104, 103);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 19);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Deep Client";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.Location = new System.Drawing.Point(104, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 19);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Prelievo - Deposito";
+            // 
+            // lbl_Prelievo_Deposito
+            // 
+            this.lbl_Prelievo_Deposito.AutoSize = true;
+            this.lbl_Prelievo_Deposito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Prelievo_Deposito.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbl_Prelievo_Deposito.Location = new System.Drawing.Point(21, 122);
+            this.lbl_Prelievo_Deposito.Name = "lbl_Prelievo_Deposito";
+            this.lbl_Prelievo_Deposito.Size = new System.Drawing.Size(85, 21);
+            this.lbl_Prelievo_Deposito.TabIndex = 18;
+            this.lbl_Prelievo_Deposito.Text = "Click here";
+            this.lbl_Prelievo_Deposito.Click += new System.EventHandler(this.lbl_Prelievo_Deposito_Click);
+            // 
             // EULA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,5 +467,10 @@ namespace Client_V3.Forms
         private Label label6;
         private Label label5;
         private Label label1;
+        private Label lbl_Deep_Client;
+        private Label label18;
+        private Label lbl_Prelievo_Deposito;
+        private Label label17;
+        private Label label14;
     }
 }

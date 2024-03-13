@@ -27,5 +27,15 @@ namespace Client_V3.Forms
         {
 
         }
+
+        private void lbl_Prelievo_Deposito_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://adlos.notion.site/Creazione-Wallet-Metamask-8357406e7b6c45baa9a5f02f72f85e62");
+        }
+
+        private void lbl_Deep_Client_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://adlos.notion.site/Tutorial-Deep-Client-21e173c024a14024b887a931d65ca3a3");
+        }
     }
 }

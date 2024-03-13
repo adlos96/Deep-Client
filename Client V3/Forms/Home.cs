@@ -52,12 +52,11 @@ namespace Client.Forms
             string fee = "null";
             string xch = "null";
 
-            if (radioB_Fee_A.Checked == true) fee = txt_Fee_A.Text;
-            if (radioB_Fee_B.Checked == true) fee = txt_Fee_B.Text;
-            if (radioB_Fee_C.Checked == true) fee = txt_Fee_C.Text;
-            if (Convert.ToDouble(lbl_Withdrawable_Xch.Text) > 0) xch = lbl_Withdrawable_Xch.Text;
+            if (radioB_Fee_A.Checked == true) fee = Variabili.fee_A;
+            if (radioB_Fee_B.Checked == true) fee = Variabili.fee_B;
+            if (radioB_Fee_C.Checked == true) fee = Variabili.fee_C;
 
-            await ClientsConnection.TestClient.Send_Server($"withdrawal|{Variabili.wallet}|{xch}|{fee}");
+            await ClientsConnection.TestClient.Send_Server($"withdrawal|{Variabili.wallet}|{Variabili.xch_Prelevabili}|{fee}");
             Btn_Withdrawal.Enabled = false;
             await Sleep();
             Btn_Withdrawal.Enabled = true;

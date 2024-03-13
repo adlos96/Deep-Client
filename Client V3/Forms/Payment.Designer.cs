@@ -828,11 +828,11 @@ namespace Client.Forms
             this.lbl_ID.AutoSize = true;
             this.lbl_ID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ID.Location = new System.Drawing.Point(691, 4);
+            this.lbl_ID.Location = new System.Drawing.Point(732, 4);
             this.lbl_ID.Name = "lbl_ID";
-            this.lbl_ID.Size = new System.Drawing.Size(140, 20);
+            this.lbl_ID.Size = new System.Drawing.Size(68, 20);
             this.lbl_ID.TabIndex = 19;
-            this.lbl_ID.Text = "6EDjOrju xDH7eIGB";
+            this.lbl_ID.Text = "6EDjOrju";
             this.lbl_ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
