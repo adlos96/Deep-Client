@@ -96,7 +96,9 @@ namespace Client_V3
             Gbox_Reset_Password.Visible = false;  // <-- Seed Phrase
             txt_Password.Visible = false; // <-- password main
 
-            if (Client_V3.Properties.Settings.Default.Salvataggio == false)
+            var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
+
+            if (Client_V3.Properties.Settings.Default.Salvataggio == false || System.IO.Directory.Exists(percorso_profili) == false)
                 Menu_First_Register();
             else
             {
@@ -370,6 +372,10 @@ namespace Client_V3
             Btn_Swap.Enabled = false;
             Btn_Swap.Text = "First Register";
             Btn_Swap.BackColor = Color.FromArgb(110, 106, 106);
+
+            lbl_Avviso_Password.Visible = false;         // <-- txt password POST
+            txt_Password_Post.Visible = false;          // <-- lbl Password post
+            btn_Conferma_Password.Visible = false;      // <-- btn password post
         }
         static async Task<bool> Update_Data()
         {
