@@ -32,7 +32,8 @@ namespace Client_V3
 
         public static string xch_Prelevabili    = "0.0000000000";
         public static string xch_Pending        = "0.0000000000";
-        public static string chia_prelevati     = "0";
+        public static string chia_prelevati     = "0.0000000000";
+        public static string Credito_Rimasto    = "0.0000000000";
 
         public static string status_Pagamento   = "Stato pagamento: Nessuno";
         public static string id_Client          = "not connected";

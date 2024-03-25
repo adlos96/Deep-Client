@@ -22,7 +22,6 @@ namespace Client.Forms
             if (ClientsConnection.TestClient._ServerIp != "127.1")
             {
                 chart_Grafico_Home.Visible = false;
-                chart1.Visible = false;
             }
 
             //Update withdrawal fee
@@ -43,7 +42,8 @@ namespace Client.Forms
             txt_XUSDT_Balance.Text          = Variabili.XUSDT;
             lbl_Withdrawable_Xch.Text       = "Prelevabili: " + Variabili.xch_Prelevabili + " XCH";
             lbl_Pending_Xch.Text            = "Pending: " + Variabili.xch_Pending + " XCH";
-            lbl_Totale_Xch_Prelevati.Text   = "Prelevati: " + Variabili.chia_prelevati + " XCH";
+            txt_Totale_Xch_Prelevati.Text   = Variabili.chia_prelevati + " XCH";
+            txt_Credito_Rimasto.Text        = Variabili.Credito_Rimasto + " Euro";
         }
 
         private async void Btn_Withdrawal_Click(object sender, EventArgs e)

@@ -17,8 +17,8 @@ namespace Client_V3
 
         internal class TestClient
         {
-            //public static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
-            public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
+            public static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            //public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = true;
             private static string _CertFile = "";
@@ -175,6 +175,7 @@ namespace Client_V3
                         Variabili.xch_Prelevabili   = Convert.ToDouble(msgArgs[11]).ToString("0.0000000000");
                         Variabili.xch_Pending       = Convert.ToDouble(msgArgs[12]).ToString("0.0000000000");
                         Variabili.chia_prelevati    = msgArgs[13];
+                        Variabili.Credito_Rimasto   = msgArgs[14];
                         break;
                     case "timerUSDT":
                         Variabili.status_Pagamento = msgArgs[1];

@@ -32,15 +32,12 @@ namespace Client.Forms
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem2 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem3 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem4 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem5 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem6 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chart_Grafico_Home = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lbl_Totale_Xch_Prelevati = new System.Windows.Forms.Label();
+            this.lbl_Totale_Xch = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.radioB_Fee_C = new System.Windows.Forms.RadioButton();
             this.radioB_Fee_A = new System.Windows.Forms.RadioButton();
@@ -105,7 +102,13 @@ namespace Client.Forms
             this.lbl_Withdrawable_Xch = new System.Windows.Forms.Label();
             this.lbl_Pending_Xch = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.txt_Totale_Xch_Prelevati = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_Credito_Rimasto = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Grafico_Home)).BeginInit();
             this.panel12.SuspendLayout();
@@ -124,7 +127,6 @@ namespace Client.Forms
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -132,16 +134,15 @@ namespace Client.Forms
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Controls.Add(this.chart_Grafico_Home);
-            this.groupBox1.Controls.Add(this.lbl_Totale_Xch_Prelevati);
+            this.groupBox1.Controls.Add(this.lbl_Totale_Xch);
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(9, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(817, 453);
+            this.groupBox1.Size = new System.Drawing.Size(842, 453);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -162,13 +163,13 @@ namespace Client.Forms
             legend2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
             legend2.BackSecondaryColor = System.Drawing.Color.DarkOrange;
             legend2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            legendItem1.Name = "Chia";
-            legendItem1.ToolTip = "Ciao";
-            legendItem2.Name = "Atom";
-            legendItem3.Name = "Cro";
-            legend2.CustomItems.Add(legendItem1);
-            legend2.CustomItems.Add(legendItem2);
-            legend2.CustomItems.Add(legendItem3);
+            legendItem4.Name = "Chia";
+            legendItem4.ToolTip = "Ciao";
+            legendItem5.Name = "Atom";
+            legendItem6.Name = "Cro";
+            legend2.CustomItems.Add(legendItem4);
+            legend2.CustomItems.Add(legendItem5);
+            legend2.CustomItems.Add(legendItem6);
             legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legenda";
@@ -176,26 +177,30 @@ namespace Client.Forms
             this.chart_Grafico_Home.Legends.Add(legend2);
             this.chart_Grafico_Home.Location = new System.Drawing.Point(267, 16);
             this.chart_Grafico_Home.Name = "chart_Grafico_Home";
-            this.chart_Grafico_Home.Size = new System.Drawing.Size(544, 251);
+            this.chart_Grafico_Home.Size = new System.Drawing.Size(569, 251);
             this.chart_Grafico_Home.TabIndex = 61;
             this.chart_Grafico_Home.Text = "chart1";
             // 
-            // lbl_Totale_Xch_Prelevati
+            // lbl_Totale_Xch
             // 
-            this.lbl_Totale_Xch_Prelevati.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Totale_Xch_Prelevati.AutoSize = true;
-            this.lbl_Totale_Xch_Prelevati.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_Totale_Xch_Prelevati.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_Totale_Xch_Prelevati.Location = new System.Drawing.Point(273, 292);
-            this.lbl_Totale_Xch_Prelevati.Name = "lbl_Totale_Xch_Prelevati";
-            this.lbl_Totale_Xch_Prelevati.Size = new System.Drawing.Size(18, 20);
-            this.lbl_Totale_Xch_Prelevati.TabIndex = 60;
-            this.lbl_Totale_Xch_Prelevati.Text = "0";
-            this.lbl_Totale_Xch_Prelevati.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Totale_Xch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Totale_Xch.AutoSize = true;
+            this.lbl_Totale_Xch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_Totale_Xch.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_Totale_Xch.Location = new System.Drawing.Point(502, 270);
+            this.lbl_Totale_Xch.Name = "lbl_Totale_Xch";
+            this.lbl_Totale_Xch.Size = new System.Drawing.Size(18, 20);
+            this.lbl_Totale_Xch.TabIndex = 60;
+            this.lbl_Totale_Xch.Text = "0";
+            this.lbl_Totale_Xch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(59)))));
+            this.panel12.Controls.Add(this.label27);
+            this.panel12.Controls.Add(this.label5);
+            this.panel12.Controls.Add(this.txt_Credito_Rimasto);
+            this.panel12.Controls.Add(this.txt_Totale_Xch_Prelevati);
             this.panel12.Controls.Add(this.radioB_Fee_C);
             this.panel12.Controls.Add(this.radioB_Fee_A);
             this.panel12.Controls.Add(this.radioB_Fee_B);
@@ -204,9 +209,9 @@ namespace Client.Forms
             this.panel12.Controls.Add(this.panel21);
             this.panel12.Controls.Add(this.label43);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(267, 315);
+            this.panel12.Location = new System.Drawing.Point(267, 293);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(547, 107);
+            this.panel12.Size = new System.Drawing.Size(572, 129);
             this.panel12.TabIndex = 5;
             // 
             // radioB_Fee_C
@@ -216,7 +221,7 @@ namespace Client.Forms
             this.radioB_Fee_C.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioB_Fee_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.radioB_Fee_C.ForeColor = System.Drawing.Color.DarkViolet;
-            this.radioB_Fee_C.Location = new System.Drawing.Point(187, 76);
+            this.radioB_Fee_C.Location = new System.Drawing.Point(23, 103);
             this.radioB_Fee_C.Name = "radioB_Fee_C";
             this.radioB_Fee_C.Size = new System.Drawing.Size(14, 13);
             this.radioB_Fee_C.TabIndex = 57;
@@ -229,7 +234,7 @@ namespace Client.Forms
             this.radioB_Fee_A.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioB_Fee_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.radioB_Fee_A.ForeColor = System.Drawing.Color.DarkViolet;
-            this.radioB_Fee_A.Location = new System.Drawing.Point(82, 44);
+            this.radioB_Fee_A.Location = new System.Drawing.Point(23, 41);
             this.radioB_Fee_A.Name = "radioB_Fee_A";
             this.radioB_Fee_A.Size = new System.Drawing.Size(14, 13);
             this.radioB_Fee_A.TabIndex = 57;
@@ -242,7 +247,7 @@ namespace Client.Forms
             this.radioB_Fee_B.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.radioB_Fee_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.radioB_Fee_B.ForeColor = System.Drawing.Color.DarkViolet;
-            this.radioB_Fee_B.Location = new System.Drawing.Point(280, 44);
+            this.radioB_Fee_B.Location = new System.Drawing.Point(23, 72);
             this.radioB_Fee_B.Name = "radioB_Fee_B";
             this.radioB_Fee_B.Size = new System.Drawing.Size(14, 13);
             this.radioB_Fee_B.TabIndex = 57;
@@ -252,12 +257,13 @@ namespace Client.Forms
             // 
             this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.panel13.Controls.Add(this.label4);
             this.panel13.Controls.Add(this.label25);
             this.panel13.Controls.Add(this.txt_Fee_C);
             this.panel13.Controls.Add(this.label26);
-            this.panel13.Location = new System.Drawing.Point(203, 69);
+            this.panel13.Location = new System.Drawing.Point(39, 96);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(172, 26);
+            this.panel13.Size = new System.Drawing.Size(205, 26);
             this.panel13.TabIndex = 56;
             // 
             // label25
@@ -300,12 +306,13 @@ namespace Client.Forms
             // 
             this.panel15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.panel15.Controls.Add(this.label3);
             this.panel15.Controls.Add(this.label29);
             this.panel15.Controls.Add(this.txt_Fee_B);
             this.panel15.Controls.Add(this.label30);
-            this.panel15.Location = new System.Drawing.Point(296, 37);
+            this.panel15.Location = new System.Drawing.Point(39, 65);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(172, 26);
+            this.panel15.Size = new System.Drawing.Size(205, 26);
             this.panel15.TabIndex = 55;
             // 
             // label29
@@ -349,11 +356,12 @@ namespace Client.Forms
             this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel21.Controls.Add(this.label41);
+            this.panel21.Controls.Add(this.label1);
             this.panel21.Controls.Add(this.txt_Fee_A);
             this.panel21.Controls.Add(this.label42);
-            this.panel21.Location = new System.Drawing.Point(98, 37);
+            this.panel21.Location = new System.Drawing.Point(39, 34);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(172, 26);
+            this.panel21.Size = new System.Drawing.Size(205, 26);
             this.panel21.TabIndex = 52;
             // 
             // label41
@@ -398,7 +406,7 @@ namespace Client.Forms
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label43.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label43.Location = new System.Drawing.Point(182, 9);
+            this.label43.Location = new System.Drawing.Point(19, 8);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(174, 20);
             this.label43.TabIndex = 20;
@@ -939,7 +947,7 @@ namespace Client.Forms
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(3, 422);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(811, 28);
+            this.panel5.Size = new System.Drawing.Size(836, 28);
             this.panel5.TabIndex = 3;
             // 
             // Btn_Withdrawal
@@ -954,7 +962,7 @@ namespace Client.Forms
             this.Btn_Withdrawal.ForeColor = System.Drawing.Color.Green;
             this.Btn_Withdrawal.Location = new System.Drawing.Point(305, 0);
             this.Btn_Withdrawal.Name = "Btn_Withdrawal";
-            this.Btn_Withdrawal.Size = new System.Drawing.Size(227, 28);
+            this.Btn_Withdrawal.Size = new System.Drawing.Size(252, 28);
             this.Btn_Withdrawal.TabIndex = 20;
             this.Btn_Withdrawal.Text = "Withdraw";
             this.Btn_Withdrawal.UseVisualStyleBackColor = false;
@@ -979,7 +987,7 @@ namespace Client.Forms
             this.lbl_Pending_Xch.AutoSize = true;
             this.lbl_Pending_Xch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Pending_Xch.ForeColor = System.Drawing.Color.Coral;
-            this.lbl_Pending_Xch.Location = new System.Drawing.Point(538, 5);
+            this.lbl_Pending_Xch.Location = new System.Drawing.Point(563, 5);
             this.lbl_Pending_Xch.Name = "lbl_Pending_Xch";
             this.lbl_Pending_Xch.Size = new System.Drawing.Size(112, 20);
             this.lbl_Pending_Xch.TabIndex = 21;
@@ -992,35 +1000,108 @@ namespace Client.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(524, -24);
+            this.label2.Location = new System.Drawing.Point(537, -24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(328, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // chart1
+            // txt_Totale_Xch_Prelevati
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(387, 187);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(424, 237);
-            this.chart1.TabIndex = 62;
-            this.chart1.Text = "chart1";
+            this.txt_Totale_Xch_Prelevati.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Totale_Xch_Prelevati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Totale_Xch_Prelevati.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Totale_Xch_Prelevati.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.txt_Totale_Xch_Prelevati.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Totale_Xch_Prelevati.Location = new System.Drawing.Point(437, 18);
+            this.txt_Totale_Xch_Prelevati.Name = "txt_Totale_Xch_Prelevati";
+            this.txt_Totale_Xch_Prelevati.ReadOnly = true;
+            this.txt_Totale_Xch_Prelevati.Size = new System.Drawing.Size(132, 18);
+            this.txt_Totale_Xch_Prelevati.TabIndex = 62;
+            this.txt_Totale_Xch_Prelevati.Text = "0.00018";
+            this.txt_Totale_Xch_Prelevati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightSalmon;
+            this.label1.Location = new System.Drawing.Point(160, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 20);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Slow";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(163, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Med";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label4.Location = new System.Drawing.Point(164, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 20);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Fast";
+            // 
+            // txt_Credito_Rimasto
+            // 
+            this.txt_Credito_Rimasto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Credito_Rimasto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Credito_Rimasto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Credito_Rimasto.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.txt_Credito_Rimasto.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Credito_Rimasto.Location = new System.Drawing.Point(437, 45);
+            this.txt_Credito_Rimasto.Name = "txt_Credito_Rimasto";
+            this.txt_Credito_Rimasto.ReadOnly = true;
+            this.txt_Credito_Rimasto.Size = new System.Drawing.Size(132, 18);
+            this.txt_Credito_Rimasto.TabIndex = 63;
+            this.txt_Credito_Rimasto.Text = "0.00018";
+            this.txt_Credito_Rimasto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label5.Location = new System.Drawing.Point(312, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Totale Prelevati:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label27.Location = new System.Drawing.Point(312, 41);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(126, 20);
+            this.label27.TabIndex = 65;
+            this.label27.Text = "Credito Rimasto:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(838, 474);
+            this.ClientSize = new System.Drawing.Size(863, 474);
             this.Controls.Add(this.groupBox1);
             this.Name = "Home";
             this.Text = "Home";
@@ -1060,7 +1141,6 @@ namespace Client.Forms
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1132,8 +1212,14 @@ namespace Client.Forms
         private Label label28;
         private TextBox txt_axlUSDC_Balance;
         private Label label31;
-        private Label lbl_Totale_Xch_Prelevati;
+        private Label lbl_Totale_Xch;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Grafico_Home;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private TextBox txt_Totale_Xch_Prelevati;
+        private Label label1;
+        private Label label3;
+        private Label label4;
+        private Label label27;
+        private Label label5;
+        private TextBox txt_Credito_Rimasto;
     }
 }
