@@ -30,14 +30,13 @@ namespace Client.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem4 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem5 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
-            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem6 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem2 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem3 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chart_Grafico_Home = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lbl_Totale_Xch = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.radioB_Fee_C = new System.Windows.Forms.RadioButton();
             this.radioB_Fee_A = new System.Windows.Forms.RadioButton();
@@ -135,7 +134,6 @@ namespace Client.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.chart_Grafico_Home);
-            this.groupBox1.Controls.Add(this.lbl_Totale_Xch);
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.panel5);
@@ -154,45 +152,32 @@ namespace Client.Forms
             this.chart_Grafico_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             this.chart_Grafico_Home.BorderlineColor = System.Drawing.Color.Red;
             this.chart_Grafico_Home.BorderSkin.PageColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea2.BackSecondaryColor = System.Drawing.Color.DarkGreen;
-            chartArea2.Name = "ChartArea1";
-            this.chart_Grafico_Home.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            legend2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
-            legend2.BackSecondaryColor = System.Drawing.Color.DarkOrange;
-            legend2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            legendItem4.Name = "Chia";
-            legendItem4.ToolTip = "Ciao";
-            legendItem5.Name = "Atom";
-            legendItem6.Name = "Cro";
-            legend2.CustomItems.Add(legendItem4);
-            legend2.CustomItems.Add(legendItem5);
-            legend2.CustomItems.Add(legendItem6);
-            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legenda";
-            legend2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart_Grafico_Home.Legends.Add(legend2);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.DarkGreen;
+            chartArea1.Name = "ChartArea1";
+            this.chart_Grafico_Home.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            legend1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            legend1.BackSecondaryColor = System.Drawing.Color.DarkOrange;
+            legend1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            legendItem1.Name = "Chia";
+            legendItem1.ToolTip = "Ciao";
+            legendItem2.Name = "Atom";
+            legendItem3.Name = "Cro";
+            legend1.CustomItems.Add(legendItem1);
+            legend1.CustomItems.Add(legendItem2);
+            legend1.CustomItems.Add(legendItem3);
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legenda";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart_Grafico_Home.Legends.Add(legend1);
             this.chart_Grafico_Home.Location = new System.Drawing.Point(267, 16);
             this.chart_Grafico_Home.Name = "chart_Grafico_Home";
-            this.chart_Grafico_Home.Size = new System.Drawing.Size(569, 251);
+            this.chart_Grafico_Home.Size = new System.Drawing.Size(569, 271);
             this.chart_Grafico_Home.TabIndex = 61;
             this.chart_Grafico_Home.Text = "chart1";
-            // 
-            // lbl_Totale_Xch
-            // 
-            this.lbl_Totale_Xch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Totale_Xch.AutoSize = true;
-            this.lbl_Totale_Xch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_Totale_Xch.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_Totale_Xch.Location = new System.Drawing.Point(502, 270);
-            this.lbl_Totale_Xch.Name = "lbl_Totale_Xch";
-            this.lbl_Totale_Xch.Size = new System.Drawing.Size(18, 20);
-            this.lbl_Totale_Xch.TabIndex = 60;
-            this.lbl_Totale_Xch.Text = "0";
-            this.lbl_Totale_Xch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
@@ -1107,7 +1092,6 @@ namespace Client.Forms
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load_1);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Grafico_Home)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -1212,7 +1196,6 @@ namespace Client.Forms
         private Label label28;
         private TextBox txt_axlUSDC_Balance;
         private Label label31;
-        private Label lbl_Totale_Xch;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Grafico_Home;
         private TextBox txt_Totale_Xch_Prelevati;
         private Label label1;

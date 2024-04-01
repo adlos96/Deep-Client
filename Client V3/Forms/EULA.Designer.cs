@@ -35,6 +35,11 @@ namespace Client_V3.Forms
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lbl_Prelievo_Deposito = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbl_Deep_Client = new System.Windows.Forms.Label();
             this.lbl_Link_DeepMiningProtocol = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,11 +62,8 @@ namespace Client_V3.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_Deep_Client = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.lbl_Prelievo_Deposito = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -97,11 +99,68 @@ namespace Client_V3.Forms
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(358, 8);
+            this.groupBox4.Location = new System.Drawing.Point(495, 8);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(397, 422);
+            this.groupBox4.Size = new System.Drawing.Size(260, 422);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label18.Location = new System.Drawing.Point(104, 125);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(126, 19);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Prelievo - Deposito";
+            // 
+            // lbl_Prelievo_Deposito
+            // 
+            this.lbl_Prelievo_Deposito.AutoSize = true;
+            this.lbl_Prelievo_Deposito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Prelievo_Deposito.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lbl_Prelievo_Deposito.Location = new System.Drawing.Point(21, 122);
+            this.lbl_Prelievo_Deposito.Name = "lbl_Prelievo_Deposito";
+            this.lbl_Prelievo_Deposito.Size = new System.Drawing.Size(85, 21);
+            this.lbl_Prelievo_Deposito.TabIndex = 18;
+            this.lbl_Prelievo_Deposito.Text = "Click here";
+            this.lbl_Prelievo_Deposito.Click += new System.EventHandler(this.lbl_Prelievo_Deposito_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label17.Location = new System.Drawing.Point(104, 103);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 19);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Deep Client";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(104, 80);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(143, 19);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Deep Mining Protocol";
+            // 
+            // lbl_Deep_Client
+            // 
+            this.lbl_Deep_Client.AutoSize = true;
+            this.lbl_Deep_Client.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Deep_Client.ForeColor = System.Drawing.Color.Violet;
+            this.lbl_Deep_Client.Location = new System.Drawing.Point(21, 100);
+            this.lbl_Deep_Client.Name = "lbl_Deep_Client";
+            this.lbl_Deep_Client.Size = new System.Drawing.Size(85, 21);
+            this.lbl_Deep_Client.TabIndex = 14;
+            this.lbl_Deep_Client.Text = "Click here";
+            this.lbl_Deep_Client.Click += new System.EventHandler(this.lbl_Deep_Client_Click);
             // 
             // lbl_Link_DeepMiningProtocol
             // 
@@ -143,22 +202,22 @@ namespace Client_V3.Forms
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.lbl_Bonus_Invitato_Ref);
-            this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.lbl_Bonus_Invito_Ref);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lbl_Bonus_Deposito);
-            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(7, 225);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 205);
+            this.groupBox3.Size = new System.Drawing.Size(482, 205);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             // 
@@ -167,7 +226,7 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Invitato_Ref.AutoSize = true;
             this.lbl_Bonus_Invitato_Ref.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbl_Bonus_Invitato_Ref.ForeColor = System.Drawing.Color.White;
-            this.lbl_Bonus_Invitato_Ref.Location = new System.Drawing.Point(167, 87);
+            this.lbl_Bonus_Invitato_Ref.Location = new System.Drawing.Point(176, 87);
             this.lbl_Bonus_Invitato_Ref.Name = "lbl_Bonus_Invitato_Ref";
             this.lbl_Bonus_Invitato_Ref.Size = new System.Drawing.Size(66, 19);
             this.lbl_Bonus_Invitato_Ref.TabIndex = 18;
@@ -180,16 +239,16 @@ namespace Client_V3.Forms
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(26, 87);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(97, 19);
+            this.label25.Size = new System.Drawing.Size(107, 19);
             this.label25.TabIndex = 17;
-            this.label25.Text = "Bonus invitato";
+            this.label25.Text = "- Bonus invitato";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label26.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label26.Location = new System.Drawing.Point(119, 87);
+            this.label26.Location = new System.Drawing.Point(128, 87);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(53, 19);
             this.label26.TabIndex = 16;
@@ -200,7 +259,7 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Invito_Ref.AutoSize = true;
             this.lbl_Bonus_Invito_Ref.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbl_Bonus_Invito_Ref.ForeColor = System.Drawing.Color.White;
-            this.lbl_Bonus_Invito_Ref.Location = new System.Drawing.Point(155, 65);
+            this.lbl_Bonus_Invito_Ref.Location = new System.Drawing.Point(164, 65);
             this.lbl_Bonus_Invito_Ref.Name = "lbl_Bonus_Invito_Ref";
             this.lbl_Bonus_Invito_Ref.Size = new System.Drawing.Size(66, 19);
             this.lbl_Bonus_Invito_Ref.TabIndex = 15;
@@ -211,7 +270,7 @@ namespace Client_V3.Forms
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(230, 108);
+            this.label20.Location = new System.Drawing.Point(239, 108);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(99, 19);
             this.label20.TabIndex = 13;
@@ -222,7 +281,7 @@ namespace Client_V3.Forms
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label16.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label16.Location = new System.Drawing.Point(168, 108);
+            this.label16.Location = new System.Drawing.Point(177, 108);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 19);
             this.label16.TabIndex = 11;
@@ -235,9 +294,9 @@ namespace Client_V3.Forms
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(26, 65);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 19);
+            this.label15.Size = new System.Drawing.Size(95, 19);
             this.label15.TabIndex = 15;
-            this.label15.Text = "Bonus invito";
+            this.label15.Text = "- Bonus invito";
             // 
             // label13
             // 
@@ -246,16 +305,16 @@ namespace Client_V3.Forms
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(26, 108);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(147, 19);
+            this.label13.Size = new System.Drawing.Size(157, 19);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Rendimento annuo sul";
+            this.label13.Text = "- Rendimento annuo sul";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.label12.Location = new System.Drawing.Point(107, 65);
+            this.label12.Location = new System.Drawing.Point(116, 65);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 19);
             this.label12.TabIndex = 11;
@@ -266,7 +325,7 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Deposito.AutoSize = true;
             this.lbl_Bonus_Deposito.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbl_Bonus_Deposito.ForeColor = System.Drawing.Color.White;
-            this.lbl_Bonus_Deposito.Location = new System.Drawing.Point(152, 43);
+            this.lbl_Bonus_Deposito.Location = new System.Drawing.Point(160, 43);
             this.lbl_Bonus_Deposito.Name = "lbl_Bonus_Deposito";
             this.lbl_Bonus_Deposito.Size = new System.Drawing.Size(93, 19);
             this.lbl_Bonus_Deposito.TabIndex = 10;
@@ -279,16 +338,16 @@ namespace Client_V3.Forms
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(26, 43);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 19);
+            this.label7.Size = new System.Drawing.Size(78, 19);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Bonus sul";
+            this.label7.Text = "- Bonus sul";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Location = new System.Drawing.Point(90, 43);
+            this.label11.Location = new System.Drawing.Point(98, 43);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 19);
             this.label11.TabIndex = 11;
@@ -307,6 +366,8 @@ namespace Client_V3.Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label1);
@@ -314,7 +375,7 @@ namespace Client_V3.Forms
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(7, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 218);
+            this.groupBox2.Size = new System.Drawing.Size(482, 218);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -336,9 +397,9 @@ namespace Client_V3.Forms
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(13, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(289, 19);
+            this.label5.Size = new System.Drawing.Size(419, 19);
             this.label5.TabIndex = 15;
-            this.label5.Text = "- Attenzione, non è posssibile recurerare i dati";
+            this.label5.Text = "- Attenzione, non è posssibile richiedere il recupero dei dati smarriti";
             // 
             // label1
             // 
@@ -347,9 +408,9 @@ namespace Client_V3.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 19);
+            this.label1.Size = new System.Drawing.Size(421, 19);
             this.label1.TabIndex = 14;
-            this.label1.Text = "- Assicurati di inserire un indirizzo chia valido";
+            this.label1.Text = "- Assicurati di inserire un indirizzo chia valido, di cui si ha il controllo";
             // 
             // label2
             // 
@@ -362,62 +423,27 @@ namespace Client_V3.Forms
             this.label2.TabIndex = 8;
             this.label2.Text = "Rischi legati all\'utilizzo del software:";
             // 
-            // lbl_Deep_Client
+            // label9
             // 
-            this.lbl_Deep_Client.AutoSize = true;
-            this.lbl_Deep_Client.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Deep_Client.ForeColor = System.Drawing.Color.Violet;
-            this.lbl_Deep_Client.Location = new System.Drawing.Point(21, 100);
-            this.lbl_Deep_Client.Name = "lbl_Deep_Client";
-            this.lbl_Deep_Client.Size = new System.Drawing.Size(85, 21);
-            this.lbl_Deep_Client.TabIndex = 14;
-            this.lbl_Deep_Client.Text = "Click here";
-            this.lbl_Deep_Client.Click += new System.EventHandler(this.lbl_Deep_Client_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(13, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(272, 19);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "- Lo staff non chiederà mai i dati di accesso";
             // 
-            // label14
+            // label10
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(104, 80);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(143, 19);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Deep Mining Protocol";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label17.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label17.Location = new System.Drawing.Point(104, 103);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 19);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "Deep Client";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label18.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label18.Location = new System.Drawing.Point(104, 125);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 19);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Prelievo - Deposito";
-            // 
-            // lbl_Prelievo_Deposito
-            // 
-            this.lbl_Prelievo_Deposito.AutoSize = true;
-            this.lbl_Prelievo_Deposito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Prelievo_Deposito.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lbl_Prelievo_Deposito.Location = new System.Drawing.Point(21, 122);
-            this.lbl_Prelievo_Deposito.Name = "lbl_Prelievo_Deposito";
-            this.lbl_Prelievo_Deposito.Size = new System.Drawing.Size(85, 21);
-            this.lbl_Prelievo_Deposito.TabIndex = 18;
-            this.lbl_Prelievo_Deposito.Text = "Click here";
-            this.lbl_Prelievo_Deposito.Click += new System.EventHandler(this.lbl_Prelievo_Deposito_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 126);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(391, 19);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "- Non smarrire la Seed Phrase, essa non può essere recuperata";
             // 
             // EULA
             // 
@@ -472,5 +498,7 @@ namespace Client_V3.Forms
         private Label lbl_Prelievo_Deposito;
         private Label label17;
         private Label label14;
+        private Label label10;
+        private Label label9;
     }
 }

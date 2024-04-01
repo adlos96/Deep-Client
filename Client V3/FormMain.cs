@@ -27,8 +27,10 @@ namespace Client_V3
         private Panel leftBorderBtn;
         public static Form currentChildForm;
         static int contatore_Timer = 0;
+        static int contatore_Timer_Avvisi = 0;
         static bool loop = false;
         static bool add_Wallet = false;
+        static int errori = 0;
 
         public FormMain()
         {
@@ -93,8 +95,8 @@ namespace Client_V3
         {
             Variabili.Impostazioni();
             Btn_Sync.Enabled = false;
-            Gbox_Reset_Password.Visible = false;  // <-- Seed Phrase
-            txt_Password.Visible = false; // <-- password main
+            Gbox_Reset_Password.Visible = true;  // <-- Seed Phrase
+            txt_Password.Visible = true; // <-- password main
 
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
 
@@ -112,36 +114,63 @@ namespace Client_V3
 
                 lbl_PopUp_Main_Conferma.Visible = true;
                 lbl_PopUp_Main_XCH_Address.Visible = true;
-                lbl_Avviso_Password.Visible = false;         // <-- txt password POST
-                txt_Password_Post.Visible = false;          // <-- lbl Password post
-                btn_Conferma_Password.Visible = false;      // <-- btn password post
+                lbl_Avviso_Password.Visible = true;         // <-- txt password POST
+                txt_Password_Post.Visible = true;          // <-- lbl Password post
+                btn_Conferma_Password.Visible = true;      // <-- btn password post
             }
             await Update_Data(); //Aggiornamento dati
         }
         private async void btn_Conferma_Main_Click(object sender, EventArgs e)
         {
+            lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false; // Resetta la visibilità dell'errore...
+
             if (loop == true)
-            { contatore_Timer = 0; return; }
+            { contatore_Timer = 0;
+                Sleep_Timer_Seed_Phrase(4);
+                return; }
             if(!txt_User_Address.Text.Contains("xch"))
             {
                 lbl_Avviso_Main_Titolo.Text = "Per continuare:";
                 lbl_Avviso_Main.Text = "Il wallet Chia deve inziare con xch";
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
+                radioBtn_EULA_1.Checked = false;
+                radioBtn_EULA_2.Checked = false;
+                await Sleep_Timer_Wallet_Chia(3);
+                loop = false;
+                return;
             }
             if (txt_User_Address.Text == "Inserisci wallet XCH")
             {
                 lbl_Avviso_Main_Titolo.Text = "Per continuare:";
                 lbl_Avviso_Main.Text = "Inserisci un wallet valido";
+                radioBtn_EULA_1.Checked = false;
+                radioBtn_EULA_2.Checked = false;
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
+                await Sleep_Timer_Wallet_Chia(3);
+                loop = false;
+                return;
             }
-            if (txt_User_Address.Text.Count() != 62)
+            if (txt_User_Address.Text.Length == 0)
             {
                 lbl_Avviso_Main_Titolo.Text = "Per continuare:";
-                lbl_Avviso_Main.Text = "Il wallet Chia deve avere 62 caratteri";
+                lbl_Avviso_Main.Text = "Inserisci un wallet valido";
+                radioBtn_EULA_1.Checked = false;
+                radioBtn_EULA_2.Checked = false;
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
+                await Sleep_Timer_Wallet_Chia(3);
+                loop = false;
+                return;
             }
+            //if (txt_User_Address.Text.Count() != 62)
+            //{
+            //    lbl_Avviso_Main_Titolo.Text = "Per continuare:";
+            //    lbl_Avviso_Main.Text = "Il wallet Chia deve avere 62 caratteri";
+            //    lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
+            //    await Sleep_Timer_Color1(3);
+            //    return;
+            //}
 
-            if (radioBtn_EULA_1.Checked == true && radioBtn_EULA_2.Checked == true && txt_User_Address.Text.Length > 0 && txt_User_Address.Text != "Address") {
+            if (radioBtn_EULA_1.Checked == true && radioBtn_EULA_2.Checked == true) {
                 if (txt_Password.Text == "Inserisci Password (Opzionale)")
                 {
                     lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false;
@@ -168,7 +197,7 @@ namespace Client_V3
                     lbl_Avviso_Password.Text = "Per avere pieno accesso al software, inserisci una password e salvati la Seed Phrase";
                     lbl_PopUp_Main_XCH_Address.Text = txt_User_Address.Text; //INDIRIZZO CHIA
                     lbl_PopUp_Main_Conferma.Visible = true;
-                    //lbl_Avviso_Password.Visible = false;        // <-- Insedrimento post password
+                    lbl_Avviso_Password.Visible = true;        // <-- Inserimento post password
                     lbl_PopUp_Main_XCH_Address.Visible = true;
                     Variabili.invito_Referal = txt_Referal_Code.Text;
                     Variabili.wallet = txt_User_Address.Text;
@@ -183,7 +212,60 @@ namespace Client_V3
                     Menu_Coming_Soon();
                 } else
                 {
-                    //Lock_Seed_Phrase();
+                    if (groupBox_Riscrivi_Seed.Visible == false)
+                    {
+                        loop = true;
+                        btn_Conferma_Main.Enabled = false;
+                        btn_Conferma_Main.Text = "ATTENDERE";
+                        await Sleep(2);
+                        btn_Conferma_Main.ForeColor = Color.Red;
+                        btn_Conferma_Main.Enabled = true;
+                        btn_Conferma_Main.ForeColor = Color.ForestGreen;
+                        btn_Conferma_Main.Text = "Attenzione!! Se mi clicchi, resetti il timer";
+                        await Sleep(5);
+                        btn_Conferma_Main.Text = "Pronto?";
+                        await Sleep(1);
+                        btn_Conferma_Main.Text = "Non sò se hai capito, ma devi segnarmi da qualche parte...?";
+                        await Sleep(3);
+                        await Sleep_Timer(3, "");
+
+                        txt_Avviso.Text = txt_Seed_Phrase.Text; // <<-- Seed Phrase
+                        lbl_Avviso.Visible = true;              // <<-- Seed Phrase - Scritta lbl
+                        txt_Avviso.Visible = true;              // <<-- Seed Phrase - Testo
+                        btn_Conferma_Password.Visible = true; // <-- Bottone conferma password POST
+
+                        btn_Conferma_Main.Text = "Inserisci Seed Phrase";
+                        Sleep_Timer_Seed_Phrase(4);
+                        await Sleep_Timer(20, "Assicurati di aver salvato la Seed Phrase");
+
+                        Gbox_Seed_Phrase.Visible = true;        // <<-- Seed Phrase - Box Reinserimento
+                        Gbox_Reset_Password_Post.Visible = true;
+                        txt_Password_Post.Visible = false;    // <-- Txt inserisci password POST
+                        groupBox_Riscrivi_Seed.Visible = true;
+                        Sleep_Timer_Seed_Phrase(4);
+                    }
+
+                    if (txt_Inserisci_Seed_Phrase_1.Text != txt_Inserisci_Seed_Phrase_2.Text && ( txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_1.Text || txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_2.Text))
+                    {
+                        lbl_Avviso_Main.Text = "Inserisci la seed Prase per continuare";
+                        lbl_Avviso_Main_Titolo.Visible = true;
+                        lbl_Avviso_Main.Visible = true;
+                        lbl_Avviso_Main_Titolo.Text = "Per continuare:";
+                        lbl_Avviso_Main.Text = "Riscrivi la Seed Phrase";
+                        lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
+
+                        if (errori >= 2)
+                            await Sleep_Timer_Color(3);
+                        errori++;
+                        loop = false;
+                        return;
+                    }
+                    else
+                    {
+                        btn_Conferma_Main.Text = "Conferma";
+                        groupBox_Riscrivi_Seed.Visible = true;
+                    }
+
 
                     lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false;
                     /*
@@ -228,18 +310,10 @@ namespace Client_V3
             else
             {
                 lbl_Avviso_Main_Titolo.Text = "Per continuare:";
-                lbl_Avviso_Main.Text = "Accetta EULA ed inserisci un'indirizzo CHIA";
+                lbl_Avviso_Main.Text = "Conferma presa visione EULA";
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
-
-                if (radioBtn_EULA_1.Checked == true && radioBtn_EULA_2.Checked == true)
-                {
-                    lbl_Avviso_Main_Titolo.Text = "Per continuare:";
-                    lbl_Avviso_Main.Text = "Inserisci un'indirizzo CHIA";
-                    lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
-                }
+                await Sleep_Timer_EULA(3);
             }
-            radioBtn_EULA_1.Checked = false;
-            radioBtn_EULA_2.Checked = false;
         }
         void Add_on_List() {
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
@@ -289,32 +363,6 @@ namespace Client_V3
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\Wallet\";
             string[] transazioni_trovate = System.IO.Directory.GetFiles(percorso_profili);
             return transazioni_trovate;
-        }
-
-        async void Lock_Seed_Phrase()
-        {
-            loop = true;
-            btn_Conferma_Main.Enabled = false;
-            txt_Avviso.Text = txt_Seed_Phrase.Text;
-            lbl_Avviso.Visible = true;
-            txt_Avviso.Visible = true;
-            btn_Conferma_Main.Text = "ATTENDERE";
-            Gbox_Seed_Phrase.Visible = true;
-            await Sleep(2);
-            btn_Conferma_Main.ForeColor = Color.Red;
-            btn_Conferma_Main.Enabled = true;
-            btn_Conferma_Main.ForeColor = Color.ForestGreen;
-            btn_Conferma_Main.Text = "Attenzione!! Se mi clicchi, resetti il timer";
-            await Sleep(5);
-            btn_Conferma_Main.Text = "Pronto?";
-            await Sleep(1);
-            btn_Conferma_Main.Text = "Non sò se hai capito, ma devi segnarmi da qualche parte...?";
-            await Sleep(3);
-            await Sleep_Timer(3, "");
-            btn_Conferma_Password.Visible = true; // <-- Bottone conferma password POST
-            await Sleep_Timer(20, "Assicurati di aver salvato il Seed Phrase");
-            Gbox_Reset_Password_Post.Visible = true;
-            txt_Password_Post.Visible = false;    // <-- Txt inserisci password POST
         }
         void Menu_Coming_Soon()
         {
@@ -514,11 +562,87 @@ namespace Client_V3
                 btn_Conferma_Main.Text = $"{testo} ({secondi - contatore_Timer}s)";
                 if (secondi == contatore_Timer)
                 {
+                    if (secondi - contatore_Timer == 0)
+                        btn_Conferma_Main.Text = $"{testo}";
                     contatore_Timer = 0;
                     return true;
                 }
                 contatore_Timer++;
                 await Task.Delay(1000);
+            }
+        }
+        public async Task<bool> Sleep_Timer_Color(int secondi){
+            while (true)
+            {
+                txt_Inserisci_Seed_Phrase_1.BackColor = Color.DarkRed; // Reinserimento Seed Phrase non corretto 1
+                txt_Inserisci_Seed_Phrase_2.BackColor = Color.DarkRed; // Reinserimento Seed Phrase non corretto 2
+                await Task.Delay(125);
+                if (secondi * 4 == contatore_Timer_Avvisi)
+                {
+                    contatore_Timer_Avvisi = 0;
+                    txt_Inserisci_Seed_Phrase_1.BackColor = Color.FromArgb(32, 36, 47);
+                    txt_Inserisci_Seed_Phrase_2.BackColor = Color.FromArgb(32, 36, 47);
+                    return true;
+                }
+                contatore_Timer_Avvisi++;
+                txt_Inserisci_Seed_Phrase_1.BackColor = Color.FromArgb(32, 36, 47);
+                txt_Inserisci_Seed_Phrase_2.BackColor = Color.FromArgb(32, 36, 47);
+                await Task.Delay(125);
+            }
+        }
+        public async Task<bool> Sleep_Timer_Wallet_Chia(int secondi) {
+            while (true)
+            {
+                txt_User_Address.BackColor = Color.DarkRed;
+                await Task.Delay(125);
+                if (secondi * 4 == contatore_Timer_Avvisi)
+                {
+                    contatore_Timer_Avvisi = 0;
+                    txt_User_Address.BackColor = Color.FromArgb(32, 36, 47);
+                    return true;
+                }
+                contatore_Timer_Avvisi++;
+                txt_User_Address.BackColor = Color.FromArgb(32, 36, 47);
+                await Task.Delay(125);
+            }
+        }
+        public async Task<bool> Sleep_Timer_EULA(int secondi) {
+            while (true)
+            {
+                radioBtn_EULA_1.BackColor = Color.DarkRed;
+                radioBtn_EULA_2.BackColor = Color.DarkRed;
+                await Task.Delay(125);
+                if (secondi * 4 == contatore_Timer_Avvisi)
+                {
+                    contatore_Timer_Avvisi = 0;
+                    radioBtn_EULA_1.BackColor = Color.FromArgb(32, 36, 47);
+                    radioBtn_EULA_2.BackColor = Color.FromArgb(32, 36, 47);
+                    return true;
+                }
+                contatore_Timer_Avvisi++;
+                radioBtn_EULA_1.BackColor = Color.FromArgb(32, 36, 47);
+                radioBtn_EULA_2.BackColor = Color.FromArgb(32, 36, 47);
+                await Task.Delay(125);
+            }
+        }
+        public async Task<bool> Sleep_Timer_Seed_Phrase(int secondi)
+        {
+            while (true)
+            {
+                txt_Avviso.BackColor = Color.DarkGreen;
+                txt_Seed_Phrase.BackColor = Color.DarkGreen;
+                await Task.Delay(125);
+                if (secondi * 4 == contatore_Timer_Avvisi)
+                {
+                    contatore_Timer_Avvisi = 0;
+                    txt_Avviso.BackColor = Color.FromArgb(32, 36, 47);
+                    txt_Seed_Phrase.BackColor = Color.FromArgb(32, 36, 47);
+                    return true;
+                }
+                contatore_Timer_Avvisi++;
+                txt_Avviso.BackColor = Color.FromArgb(32, 36, 47);
+                txt_Seed_Phrase.BackColor = Color.FromArgb(32, 36, 47);
+                await Task.Delay(125);
             }
         }
         private async void btn_Reset_Password_Click(object sender, EventArgs e)

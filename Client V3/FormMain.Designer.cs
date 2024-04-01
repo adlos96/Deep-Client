@@ -46,6 +46,11 @@ namespace Client_V3
             this.icon_Current_Selection = new FontAwesome.Sharp.IconPictureBox();
             this.panel_Desktop = new System.Windows.Forms.Panel();
             this.goupB_Main_Form = new System.Windows.Forms.GroupBox();
+            this.groupBox_Riscrivi_Seed = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_Inserisci_Seed_Phrase_1 = new System.Windows.Forms.TextBox();
+            this.txt_Inserisci_Seed_Phrase_2 = new System.Windows.Forms.TextBox();
             this.txt_Avviso = new System.Windows.Forms.TextBox();
             this.lbl_Avviso = new System.Windows.Forms.Label();
             this.Btn_Sync = new System.Windows.Forms.Button();
@@ -110,6 +115,7 @@ namespace Client_V3
             ((System.ComponentModel.ISupportInitialize)(this.icon_Current_Selection)).BeginInit();
             this.panel_Desktop.SuspendLayout();
             this.goupB_Main_Form.SuspendLayout();
+            this.groupBox_Riscrivi_Seed.SuspendLayout();
             this.Gbox_New_Password.SuspendLayout();
             this.Gbox_Reset_Password.SuspendLayout();
             this.Gbox_Seed_Phrase.SuspendLayout();
@@ -394,6 +400,7 @@ namespace Client_V3
             this.goupB_Main_Form.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.goupB_Main_Form.Controls.Add(this.groupBox_Riscrivi_Seed);
             this.goupB_Main_Form.Controls.Add(this.txt_Avviso);
             this.goupB_Main_Form.Controls.Add(this.lbl_Avviso);
             this.goupB_Main_Form.Controls.Add(this.Btn_Sync);
@@ -413,6 +420,73 @@ namespace Client_V3
             this.goupB_Main_Form.TabIndex = 22;
             this.goupB_Main_Form.TabStop = false;
             // 
+            // groupBox_Riscrivi_Seed
+            // 
+            this.groupBox_Riscrivi_Seed.Controls.Add(this.label16);
+            this.groupBox_Riscrivi_Seed.Controls.Add(this.label17);
+            this.groupBox_Riscrivi_Seed.Controls.Add(this.txt_Inserisci_Seed_Phrase_1);
+            this.groupBox_Riscrivi_Seed.Controls.Add(this.txt_Inserisci_Seed_Phrase_2);
+            this.groupBox_Riscrivi_Seed.Location = new System.Drawing.Point(636, 235);
+            this.groupBox_Riscrivi_Seed.Name = "groupBox_Riscrivi_Seed";
+            this.groupBox_Riscrivi_Seed.Size = new System.Drawing.Size(211, 118);
+            this.groupBox_Riscrivi_Seed.TabIndex = 33;
+            this.groupBox_Riscrivi_Seed.TabStop = false;
+            this.groupBox_Riscrivi_Seed.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.Green;
+            this.label16.Location = new System.Drawing.Point(11, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(147, 20);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Riscrivi Seed Phrase";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.Green;
+            this.label17.Location = new System.Drawing.Point(11, 63);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(192, 20);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Riscrivilo ancora una volta";
+            // 
+            // txt_Inserisci_Seed_Phrase_1
+            // 
+            this.txt_Inserisci_Seed_Phrase_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Inserisci_Seed_Phrase_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
+            this.txt_Inserisci_Seed_Phrase_1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Inserisci_Seed_Phrase_1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txt_Inserisci_Seed_Phrase_1.Location = new System.Drawing.Point(5, 33);
+            this.txt_Inserisci_Seed_Phrase_1.Name = "txt_Inserisci_Seed_Phrase_1";
+            this.txt_Inserisci_Seed_Phrase_1.Size = new System.Drawing.Size(203, 27);
+            this.txt_Inserisci_Seed_Phrase_1.TabIndex = 29;
+            this.txt_Inserisci_Seed_Phrase_1.Text = "SEED-xDIx-PROVA-xxxx";
+            this.txt_Inserisci_Seed_Phrase_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_Inserisci_Seed_Phrase_2
+            // 
+            this.txt_Inserisci_Seed_Phrase_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Inserisci_Seed_Phrase_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
+            this.txt_Inserisci_Seed_Phrase_2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Inserisci_Seed_Phrase_2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txt_Inserisci_Seed_Phrase_2.Location = new System.Drawing.Point(5, 87);
+            this.txt_Inserisci_Seed_Phrase_2.Name = "txt_Inserisci_Seed_Phrase_2";
+            this.txt_Inserisci_Seed_Phrase_2.Size = new System.Drawing.Size(203, 27);
+            this.txt_Inserisci_Seed_Phrase_2.TabIndex = 30;
+            this.txt_Inserisci_Seed_Phrase_2.Text = "SEED-xDIx-PROVA-x12x";
+            this.txt_Inserisci_Seed_Phrase_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txt_Avviso
             // 
             this.txt_Avviso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -421,10 +495,10 @@ namespace Client_V3
             this.txt_Avviso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Avviso.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.txt_Avviso.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Avviso.Location = new System.Drawing.Point(216, 274);
+            this.txt_Avviso.Location = new System.Drawing.Point(206, 270);
             this.txt_Avviso.Name = "txt_Avviso";
             this.txt_Avviso.ReadOnly = true;
-            this.txt_Avviso.Size = new System.Drawing.Size(424, 32);
+            this.txt_Avviso.Size = new System.Drawing.Size(363, 32);
             this.txt_Avviso.TabIndex = 27;
             this.txt_Avviso.Text = "AAAA-BBBB-CCCC-DDDD";
             this.txt_Avviso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -436,7 +510,7 @@ namespace Client_V3
             this.lbl_Avviso.AutoSize = true;
             this.lbl_Avviso.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.lbl_Avviso.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Avviso.Location = new System.Drawing.Point(197, 230);
+            this.lbl_Avviso.Location = new System.Drawing.Point(143, 230);
             this.lbl_Avviso.Name = "lbl_Avviso";
             this.lbl_Avviso.Size = new System.Drawing.Size(478, 32);
             this.lbl_Avviso.TabIndex = 28;
@@ -454,7 +528,7 @@ namespace Client_V3
             this.Btn_Sync.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Sync.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Sync.ForeColor = System.Drawing.Color.Yellow;
-            this.Btn_Sync.Location = new System.Drawing.Point(636, 313);
+            this.Btn_Sync.Location = new System.Drawing.Point(6, 403);
             this.Btn_Sync.Name = "Btn_Sync";
             this.Btn_Sync.Size = new System.Drawing.Size(128, 30);
             this.Btn_Sync.TabIndex = 23;
@@ -541,12 +615,11 @@ namespace Client_V3
             this.txt_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Password.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Password.Location = new System.Drawing.Point(5, 73);
+            this.txt_Password.Location = new System.Drawing.Point(5, 67);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(848, 20);
+            this.txt_Password.Size = new System.Drawing.Size(848, 27);
             this.txt_Password.TabIndex = 25;
             this.txt_Password.Text = "Inserisci Password (Opzionale)";
             this.txt_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -671,7 +744,6 @@ namespace Client_V3
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Conferma_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             this.btn_Conferma_Main.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btn_Conferma_Main.FlatAppearance.BorderSize = 0;
             this.btn_Conferma_Main.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.btn_Conferma_Main.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Conferma_Main.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -888,12 +960,11 @@ namespace Client_V3
             this.txt_User_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_User_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.txt_User_Address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_User_Address.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_User_Address.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_User_Address.Location = new System.Drawing.Point(5, 47);
+            this.txt_User_Address.Location = new System.Drawing.Point(5, 42);
             this.txt_User_Address.Name = "txt_User_Address";
-            this.txt_User_Address.Size = new System.Drawing.Size(848, 20);
+            this.txt_User_Address.Size = new System.Drawing.Size(848, 27);
             this.txt_User_Address.TabIndex = 18;
             this.txt_User_Address.Text = "Inserisci wallet XCH";
             this.txt_User_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1250,6 +1321,8 @@ namespace Client_V3
             this.panel_Desktop.PerformLayout();
             this.goupB_Main_Form.ResumeLayout(false);
             this.goupB_Main_Form.PerformLayout();
+            this.groupBox_Riscrivi_Seed.ResumeLayout(false);
+            this.groupBox_Riscrivi_Seed.PerformLayout();
             this.Gbox_New_Password.ResumeLayout(false);
             this.Gbox_New_Password.PerformLayout();
             this.Gbox_Reset_Password.ResumeLayout(false);
@@ -1356,5 +1429,10 @@ namespace Client_V3
         private ComboBox comboBox_Load_Wallet;
         private Button btn_Add_Wallet;
         private Button btn_Clear_Data_Post;
+        private Label label16;
+        private TextBox txt_Inserisci_Seed_Phrase_2;
+        private TextBox txt_Inserisci_Seed_Phrase_1;
+        private Label label17;
+        private GroupBox groupBox_Riscrivi_Seed;
     }
 }

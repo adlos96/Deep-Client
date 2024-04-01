@@ -41,8 +41,8 @@ namespace Client.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Disconnetti = new System.Windows.Forms.Button();
+            this.btn_Connetti = new System.Windows.Forms.Button();
             this.groupBox_Payment_USDT = new System.Windows.Forms.GroupBox();
             this.panel_Logo_Chain = new System.Windows.Forms.Panel();
             this.panel_Logo_Wallet = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@ namespace Client.Forms
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Wallet_USDT_User = new System.Windows.Forms.TextBox();
-            this.btn_Sqlite = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.lbl_Avviso_Campi_Incompleti = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel_Anteprima = new System.Windows.Forms.Panel();
@@ -120,13 +120,13 @@ namespace Client.Forms
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_Disconnetti);
+            this.groupBox1.Controls.Add(this.btn_Connetti);
             this.groupBox1.Controls.Add(this.groupBox_Payment_USDT);
             this.groupBox1.Controls.Add(this.pnl_Subtitle);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.btn_Sqlite);
+            this.groupBox1.Controls.Add(this.btn_Refresh);
             this.groupBox1.Controls.Add(this.lbl_Avviso_Campi_Incompleti);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.goupbox_Acquisto_Plot);
@@ -160,39 +160,39 @@ namespace Client.Forms
             this.label13.TabIndex = 21;
             this.label13.Text = "Da quale indirizzo vuoi inviare";
             // 
-            // button2
+            // btn_Disconnetti
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button2.Location = new System.Drawing.Point(741, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 30);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Disconnetti";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Disconnetti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Disconnetti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Disconnetti.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Disconnetti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Disconnetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Disconnetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Disconnetti.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Disconnetti.Location = new System.Drawing.Point(741, 83);
+            this.btn_Disconnetti.Name = "btn_Disconnetti";
+            this.btn_Disconnetti.Size = new System.Drawing.Size(92, 30);
+            this.btn_Disconnetti.TabIndex = 20;
+            this.btn_Disconnetti.Text = "Disconnetti";
+            this.btn_Disconnetti.UseVisualStyleBackColor = false;
+            this.btn_Disconnetti.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_Connetti
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button1.Location = new System.Drawing.Point(741, 49);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Connetti";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Connetti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Connetti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Connetti.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Connetti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Connetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Connetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Connetti.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Connetti.Location = new System.Drawing.Point(741, 49);
+            this.btn_Connetti.Name = "btn_Connetti";
+            this.btn_Connetti.Size = new System.Drawing.Size(92, 30);
+            this.btn_Connetti.TabIndex = 19;
+            this.btn_Connetti.Text = "Connetti";
+            this.btn_Connetti.UseVisualStyleBackColor = false;
+            this.btn_Connetti.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox_Payment_USDT
             // 
@@ -437,22 +437,22 @@ namespace Client.Forms
             this.txt_Wallet_USDT_User.TabIndex = 6;
             this.txt_Wallet_USDT_User.Text = "0x123123123";
             // 
-            // btn_Sqlite
+            // btn_Refresh
             // 
-            this.btn_Sqlite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sqlite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Sqlite.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btn_Sqlite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Sqlite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sqlite.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Sqlite.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Sqlite.Location = new System.Drawing.Point(741, 118);
-            this.btn_Sqlite.Name = "btn_Sqlite";
-            this.btn_Sqlite.Size = new System.Drawing.Size(92, 30);
-            this.btn_Sqlite.TabIndex = 14;
-            this.btn_Sqlite.Text = "Refresh";
-            this.btn_Sqlite.UseVisualStyleBackColor = false;
-            this.btn_Sqlite.Click += new System.EventHandler(this.btn_Sqlite_Click);
+            this.btn_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Refresh.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btn_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Refresh.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Refresh.Location = new System.Drawing.Point(741, 118);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(92, 30);
+            this.btn_Refresh.TabIndex = 14;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Sqlite_Click);
             // 
             // lbl_Avviso_Campi_Incompleti
             // 
@@ -934,7 +934,7 @@ namespace Client.Forms
         private Label lbl_Testo_Manulale;
         private Label lbl_Anteprima_Manuale;
         private TextBox txt_Plot_Manuali;
-        private Button btn_Sqlite;
+        private Button btn_Refresh;
         private Panel panel3;
         private Panel panel4;
         private Label label8;
@@ -944,8 +944,8 @@ namespace Client.Forms
         private Label label16;
         private Label lbl_Connessione_Server;
         private Label lbl_ID;
-        private Button button2;
-        private Button button1;
+        private Button btn_Disconnetti;
+        private Button btn_Connetti;
         private Label label18;
         private Label label13;
     }

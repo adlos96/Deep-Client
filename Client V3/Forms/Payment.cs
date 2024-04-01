@@ -24,6 +24,17 @@ namespace Client.Forms
 
         private void Payment_Load(object sender, EventArgs e)
         {
+            if (ClientsConnection.TestClient._ServerIp != "127.1")
+            {
+                btn_Connetti.Visible = false;
+                btn_Disconnetti.Visible = false;
+                btn_Refresh.Visible = false;
+
+                btn_Connetti.Enabled = false;
+                btn_Disconnetti.Enabled = false;
+                btn_Refresh.Enabled = false;
+            }
+
             panel_Logo_Chain.Visible = false;
             panel_Plot_Manuali.Visible = false;
             pnl_Subtitle.Visible = false;
@@ -139,7 +150,7 @@ namespace Client.Forms
             }
             if (comboBox_Chain_Selection.Text == address_USDT_ERC20) // Tether
             {
-                txt_Address_Recive_USDT.Text = "0xcf10caa8e699b8089e408a6980d47672ffa99b3b";
+                txt_Address_Recive_USDT.Text = "Not Supported";
                 panel_Logo_Chain.BackgroundImage = Client_V3.Properties.Resources.ethereum_ERC_ico32;
                 panel_Logo_Chain.Visible = true;
                 panel_Logo_Chain.BackgroundImageLayout = ImageLayout.Center;
@@ -162,15 +173,12 @@ namespace Client.Forms
             }
             if (comboBox_Chain_Selection.Text == address_USDT_Cronos) //Tron
             {
-                txt_Address_Recive_USDT.Text = "0xcf10caa8e699b8089e408a6980d47672ffa99b3b";
+                txt_Address_Recive_USDT.Text = "Not Supported";
                 panel_Logo_Chain.BackgroundImage = Client_V3.Properties.Resources.cronos_cro_logo;
                 panel_Logo_Chain.Visible = true;
                 panel_Logo_Chain.BackgroundImageLayout = ImageLayout.Stretch; // --> Cronos e chia
                 lbl_Anteprima_Rete.Text = "Active";
             }
-
-            Console.WriteLine("Contatore1: " + contatore);
-            Console.WriteLine("Controlli : " + controlli);
 
             if (contatore == controlli)
             {
@@ -186,7 +194,7 @@ namespace Client.Forms
                 
                 if (comboBox_Chain_Selection.Text != "TRC-20")
                 {
-                    btn_Pay.Enabled = true;
+                    btn_Pay.Enabled = true; // <<--- Impostare su true!!!!!!
                     pnl_Subtitle.Visible = true;
                 }
 
