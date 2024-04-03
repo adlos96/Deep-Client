@@ -182,9 +182,6 @@ namespace Client_V3
                     case "ID":
                         Variabili.id_Client = msgArgs[1];
                         break;
-                    case "validate": // Imposta true o false a seconda di se corrisponde o meno
-                        Variabili.seed_Phrase = Convert.ToBoolean(msgArgs[1]);
-                        break;
                     case "rendita": // Imposta true o false a seconda di se corrisponde o meno
                         Variabili.Rendita_Base_A = Convert.ToDouble(msgArgs[1]);
                         Variabili.Rendita_Base_B = Convert.ToDouble(msgArgs[2]);
@@ -196,6 +193,9 @@ namespace Client_V3
                         Variabili.bonus_Deposito = Convert.ToDouble(msgArgs[1]);
                         Variabili.bonus_Innvito_Ref = Convert.ToDouble(msgArgs[2]);
                         Variabili.bonus_Invitato_Ref  = Convert.ToDouble(msgArgs[3]);
+                        break;
+                    case "validate": // Imposta true o false a seconda di se corrisponde o meno
+                        Variabili.seed_Phrase = Convert.ToBoolean(msgArgs[1]);
                         break;
 
                     default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;

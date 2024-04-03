@@ -32,6 +32,7 @@ namespace Client_V3
         private void InitializeComponent()
         {
             this.panel_Menu_Laterale = new System.Windows.Forms.Panel();
+            this.btn_Wallet = new FontAwesome.Sharp.IconButton();
             this.btn_Simulate = new FontAwesome.Sharp.IconButton();
             this.btn_Staking = new FontAwesome.Sharp.IconButton();
             this.btn_Dashboard = new FontAwesome.Sharp.IconButton();
@@ -42,10 +43,10 @@ namespace Client_V3
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_Logo = new System.Windows.Forms.Label();
             this.panel_Superiore = new System.Windows.Forms.Panel();
-            this.label_Form_Selected = new System.Windows.Forms.Label();
-            this.icon_Current_Selection = new FontAwesome.Sharp.IconPictureBox();
-            this.panel_Desktop = new System.Windows.Forms.Panel();
-            this.goupB_Main_Form = new System.Windows.Forms.GroupBox();
+            label_Form_Selected = new System.Windows.Forms.Label();
+            icon_Current_Selection = new FontAwesome.Sharp.IconPictureBox();
+            panel_Desktop = new System.Windows.Forms.Panel();
+            goupB_Main_Form = new System.Windows.Forms.GroupBox();
             this.groupBox_Riscrivi_Seed = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -86,35 +87,12 @@ namespace Client_V3
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_User_Address = new System.Windows.Forms.TextBox();
-            this.btn_Conferma_Password = new System.Windows.Forms.Button();
-            this.txt_Password_Post = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.lbl_Avviso_Password = new System.Windows.Forms.Label();
-            this.Gbox_New_Password_Request_Post = new System.Windows.Forms.GroupBox();
-            this.Btn_Update_Password_Post = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Gbox_Reset_Password_Post = new System.Windows.Forms.GroupBox();
-            this.btn_Reset_Password_Post = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_PopUp_Main_Conferma = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lbl_PopUp_Main_XCH_Address = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Clear_Data_Post = new System.Windows.Forms.Button();
-            this.btn_Add_Wallet = new System.Windows.Forms.Button();
-            this.comboBox_Load_Wallet = new System.Windows.Forms.ComboBox();
-            this.btn_Load_Wallet = new System.Windows.Forms.Button();
             this.panel_Menu_Laterale.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_Superiore.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icon_Current_Selection)).BeginInit();
-            this.panel_Desktop.SuspendLayout();
-            this.goupB_Main_Form.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(icon_Current_Selection)).BeginInit();
+            panel_Desktop.SuspendLayout();
+            goupB_Main_Form.SuspendLayout();
             this.groupBox_Riscrivi_Seed.SuspendLayout();
             this.Gbox_New_Password.SuspendLayout();
             this.Gbox_Reset_Password.SuspendLayout();
@@ -124,17 +102,12 @@ namespace Client_V3
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.Gbox_New_Password_Request_Post.SuspendLayout();
-            this.Gbox_Reset_Password_Post.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Menu_Laterale
             // 
             this.panel_Menu_Laterale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.panel_Menu_Laterale.Controls.Add(this.btn_Wallet);
             this.panel_Menu_Laterale.Controls.Add(this.btn_Simulate);
             this.panel_Menu_Laterale.Controls.Add(this.btn_Staking);
             this.panel_Menu_Laterale.Controls.Add(this.btn_Dashboard);
@@ -148,6 +121,29 @@ namespace Client_V3
             this.panel_Menu_Laterale.Name = "panel_Menu_Laterale";
             this.panel_Menu_Laterale.Size = new System.Drawing.Size(189, 521);
             this.panel_Menu_Laterale.TabIndex = 0;
+            // 
+            // btn_Wallet
+            // 
+            this.btn_Wallet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Wallet.FlatAppearance.BorderSize = 0;
+            this.btn_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Wallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn_Wallet.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btn_Wallet.IconChar = FontAwesome.Sharp.IconChar.Hotjar;
+            this.btn_Wallet.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_Wallet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Wallet.IconSize = 32;
+            this.btn_Wallet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Wallet.Location = new System.Drawing.Point(0, 332);
+            this.btn_Wallet.Name = "btn_Wallet";
+            this.btn_Wallet.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_Wallet.Size = new System.Drawing.Size(189, 43);
+            this.btn_Wallet.TabIndex = 9;
+            this.btn_Wallet.Text = "Wallet";
+            this.btn_Wallet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Wallet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Wallet.UseVisualStyleBackColor = true;
+            this.btn_Wallet.Click += new System.EventHandler(this.btn_Wallet_Click);
             // 
             // btn_Simulate
             // 
@@ -333,13 +329,13 @@ namespace Client_V3
             this.label_Logo.Size = new System.Drawing.Size(111, 21);
             this.label_Logo.TabIndex = 1;
             this.label_Logo.Text = "Login Protocol";
-            this.label_Logo.Click += new System.EventHandler(this.label_Logo_Click);
+            this.label_Logo.Click += new System.EventHandler(label_Logo_Click);
             // 
             // panel_Superiore
             // 
             this.panel_Superiore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.panel_Superiore.Controls.Add(this.label_Form_Selected);
-            this.panel_Superiore.Controls.Add(this.icon_Current_Selection);
+            this.panel_Superiore.Controls.Add(label_Form_Selected);
+            this.panel_Superiore.Controls.Add(icon_Current_Selection);
             this.panel_Superiore.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Superiore.Location = new System.Drawing.Point(189, 0);
             this.panel_Superiore.Name = "panel_Superiore";
@@ -348,77 +344,69 @@ namespace Client_V3
             // 
             // label_Form_Selected
             // 
-            this.label_Form_Selected.AutoSize = true;
-            this.label_Form_Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.label_Form_Selected.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label_Form_Selected.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_Form_Selected.Location = new System.Drawing.Point(51, 21);
-            this.label_Form_Selected.Name = "label_Form_Selected";
-            this.label_Form_Selected.Size = new System.Drawing.Size(106, 25);
-            this.label_Form_Selected.TabIndex = 2;
-            this.label_Form_Selected.Text = "Login Menu";
+            label_Form_Selected.AutoSize = true;
+            label_Form_Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            label_Form_Selected.Font = new System.Drawing.Font("Segoe UI", 13F);
+            label_Form_Selected.ForeColor = System.Drawing.Color.DarkOrange;
+            label_Form_Selected.Location = new System.Drawing.Point(51, 21);
+            label_Form_Selected.Name = "label_Form_Selected";
+            label_Form_Selected.Size = new System.Drawing.Size(106, 25);
+            label_Form_Selected.TabIndex = 2;
+            label_Form_Selected.Text = "Login Menu";
             // 
             // icon_Current_Selection
             // 
-            this.icon_Current_Selection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.icon_Current_Selection.ErrorImage = null;
-            this.icon_Current_Selection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.icon_Current_Selection.IconChar = FontAwesome.Sharp.IconChar.A;
-            this.icon_Current_Selection.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
-            this.icon_Current_Selection.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icon_Current_Selection.IconSize = 28;
-            this.icon_Current_Selection.InitialImage = null;
-            this.icon_Current_Selection.Location = new System.Drawing.Point(17, 21);
-            this.icon_Current_Selection.Name = "icon_Current_Selection";
-            this.icon_Current_Selection.Size = new System.Drawing.Size(31, 28);
-            this.icon_Current_Selection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.icon_Current_Selection.TabIndex = 2;
-            this.icon_Current_Selection.TabStop = false;
+            icon_Current_Selection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            icon_Current_Selection.ErrorImage = null;
+            icon_Current_Selection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            icon_Current_Selection.IconChar = FontAwesome.Sharp.IconChar.A;
+            icon_Current_Selection.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            icon_Current_Selection.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            icon_Current_Selection.IconSize = 28;
+            icon_Current_Selection.InitialImage = null;
+            icon_Current_Selection.Location = new System.Drawing.Point(17, 21);
+            icon_Current_Selection.Name = "icon_Current_Selection";
+            icon_Current_Selection.Size = new System.Drawing.Size(31, 28);
+            icon_Current_Selection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            icon_Current_Selection.TabIndex = 2;
+            icon_Current_Selection.TabStop = false;
             // 
             // panel_Desktop
             // 
-            this.panel_Desktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            panel_Desktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.panel_Desktop.Controls.Add(this.goupB_Main_Form);
-            this.panel_Desktop.Controls.Add(this.btn_Conferma_Password);
-            this.panel_Desktop.Controls.Add(this.txt_Password_Post);
-            this.panel_Desktop.Controls.Add(this.panel8);
-            this.panel_Desktop.Controls.Add(this.Gbox_New_Password_Request_Post);
-            this.panel_Desktop.Controls.Add(this.Gbox_Reset_Password_Post);
-            this.panel_Desktop.Controls.Add(this.panel6);
-            this.panel_Desktop.Controls.Add(this.panel7);
-            this.panel_Desktop.Controls.Add(this.groupBox1);
-            this.panel_Desktop.Location = new System.Drawing.Point(189, 74);
-            this.panel_Desktop.Name = "panel_Desktop";
-            this.panel_Desktop.Size = new System.Drawing.Size(864, 447);
-            this.panel_Desktop.TabIndex = 3;
+            panel_Desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            panel_Desktop.Controls.Add(goupB_Main_Form);
+            panel_Desktop.Location = new System.Drawing.Point(189, 74);
+            panel_Desktop.Name = "panel_Desktop";
+            panel_Desktop.Size = new System.Drawing.Size(864, 447);
+            panel_Desktop.TabIndex = 3;
             // 
             // goupB_Main_Form
             // 
-            this.goupB_Main_Form.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            goupB_Main_Form.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.goupB_Main_Form.Controls.Add(this.groupBox_Riscrivi_Seed);
-            this.goupB_Main_Form.Controls.Add(this.txt_Avviso);
-            this.goupB_Main_Form.Controls.Add(this.lbl_Avviso);
-            this.goupB_Main_Form.Controls.Add(this.Btn_Sync);
-            this.goupB_Main_Form.Controls.Add(this.Gbox_New_Password);
-            this.goupB_Main_Form.Controls.Add(this.txt_Password);
-            this.goupB_Main_Form.Controls.Add(this.Gbox_Reset_Password);
-            this.goupB_Main_Form.Controls.Add(this.Gbox_Seed_Phrase);
-            this.goupB_Main_Form.Controls.Add(this.btn_Conferma_Main);
-            this.goupB_Main_Form.Controls.Add(this.panel3);
-            this.goupB_Main_Form.Controls.Add(this.groupBox2);
-            this.goupB_Main_Form.Controls.Add(this.panel2);
-            this.goupB_Main_Form.Controls.Add(this.txt_User_Address);
-            this.goupB_Main_Form.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.goupB_Main_Form.Location = new System.Drawing.Point(3, 3);
-            this.goupB_Main_Form.Name = "goupB_Main_Form";
-            this.goupB_Main_Form.Size = new System.Drawing.Size(858, 443);
-            this.goupB_Main_Form.TabIndex = 22;
-            this.goupB_Main_Form.TabStop = false;
+            goupB_Main_Form.Controls.Add(this.groupBox_Riscrivi_Seed);
+            goupB_Main_Form.Controls.Add(this.txt_Avviso);
+            goupB_Main_Form.Controls.Add(this.lbl_Avviso);
+            goupB_Main_Form.Controls.Add(this.Btn_Sync);
+            goupB_Main_Form.Controls.Add(this.Gbox_New_Password);
+            goupB_Main_Form.Controls.Add(this.txt_Password);
+            goupB_Main_Form.Controls.Add(this.Gbox_Reset_Password);
+            goupB_Main_Form.Controls.Add(this.Gbox_Seed_Phrase);
+            goupB_Main_Form.Controls.Add(this.btn_Conferma_Main);
+            goupB_Main_Form.Controls.Add(this.panel3);
+            goupB_Main_Form.Controls.Add(this.groupBox2);
+            goupB_Main_Form.Controls.Add(this.panel2);
+            goupB_Main_Form.Controls.Add(this.txt_User_Address);
+            goupB_Main_Form.ForeColor = System.Drawing.Color.CornflowerBlue;
+            goupB_Main_Form.Location = new System.Drawing.Point(3, -1);
+            goupB_Main_Form.Name = "goupB_Main_Form";
+            goupB_Main_Form.Size = new System.Drawing.Size(858, 446);
+            goupB_Main_Form.TabIndex = 22;
+            goupB_Main_Form.TabStop = false;
             // 
             // groupBox_Riscrivi_Seed
             // 
@@ -842,7 +830,7 @@ namespace Client_V3
             this.lbl_Avviso_Main_Titolo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_Avviso_Main_Titolo.AutoSize = true;
             this.lbl_Avviso_Main_Titolo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_Avviso_Main_Titolo.ForeColor = System.Drawing.Color.Tomato;
+            this.lbl_Avviso_Main_Titolo.ForeColor = System.Drawing.Color.Red;
             this.lbl_Avviso_Main_Titolo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_Avviso_Main_Titolo.Location = new System.Drawing.Point(439, 13);
             this.lbl_Avviso_Main_Titolo.Name = "lbl_Avviso_Main_Titolo";
@@ -856,7 +844,7 @@ namespace Client_V3
             this.lbl_Avviso_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_Avviso_Main.AutoSize = true;
             this.lbl_Avviso_Main.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_Avviso_Main.ForeColor = System.Drawing.Color.Tomato;
+            this.lbl_Avviso_Main.ForeColor = System.Drawing.Color.Red;
             this.lbl_Avviso_Main.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_Avviso_Main.Location = new System.Drawing.Point(439, 34);
             this.lbl_Avviso_Main.Name = "lbl_Avviso_Main";
@@ -969,341 +957,12 @@ namespace Client_V3
             this.txt_User_Address.Text = "Inserisci wallet XCH";
             this.txt_User_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btn_Conferma_Password
-            // 
-            this.btn_Conferma_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Conferma_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Conferma_Password.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
-            this.btn_Conferma_Password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Conferma_Password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Conferma_Password.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Conferma_Password.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Conferma_Password.Location = new System.Drawing.Point(502, 48);
-            this.btn_Conferma_Password.Name = "btn_Conferma_Password";
-            this.btn_Conferma_Password.Size = new System.Drawing.Size(346, 30);
-            this.btn_Conferma_Password.TabIndex = 30;
-            this.btn_Conferma_Password.Text = "Conferma";
-            this.btn_Conferma_Password.UseVisualStyleBackColor = false;
-            this.btn_Conferma_Password.Visible = false;
-            this.btn_Conferma_Password.Click += new System.EventHandler(this.btn_Conferma_Password_Click);
-            // 
-            // txt_Password_Post
-            // 
-            this.txt_Password_Post.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Password_Post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.txt_Password_Post.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Password_Post.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_Password_Post.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Password_Post.Location = new System.Drawing.Point(9, 19);
-            this.txt_Password_Post.Name = "txt_Password_Post";
-            this.txt_Password_Post.Size = new System.Drawing.Size(839, 20);
-            this.txt_Password_Post.TabIndex = 29;
-            this.txt_Password_Post.Text = "Inserisci Password (Opzionale)";
-            this.txt_Password_Post.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel8.Controls.Add(this.lbl_Avviso_Password);
-            this.panel8.Location = new System.Drawing.Point(6, 285);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(668, 23);
-            this.panel8.TabIndex = 29;
-            // 
-            // lbl_Avviso_Password
-            // 
-            this.lbl_Avviso_Password.AutoSize = true;
-            this.lbl_Avviso_Password.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_Avviso_Password.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_Avviso_Password.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_Avviso_Password.Location = new System.Drawing.Point(3, 3);
-            this.lbl_Avviso_Password.Name = "lbl_Avviso_Password";
-            this.lbl_Avviso_Password.Size = new System.Drawing.Size(293, 20);
-            this.lbl_Avviso_Password.TabIndex = 24;
-            this.lbl_Avviso_Password.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
-            this.lbl_Avviso_Password.Visible = false;
-            // 
-            // Gbox_New_Password_Request_Post
-            // 
-            this.Gbox_New_Password_Request_Post.Controls.Add(this.Btn_Update_Password_Post);
-            this.Gbox_New_Password_Request_Post.Controls.Add(this.label12);
-            this.Gbox_New_Password_Request_Post.Controls.Add(this.textBox2);
-            this.Gbox_New_Password_Request_Post.Controls.Add(this.label13);
-            this.Gbox_New_Password_Request_Post.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbox_New_Password_Request_Post.Location = new System.Drawing.Point(246, 43);
-            this.Gbox_New_Password_Request_Post.Name = "Gbox_New_Password_Request_Post";
-            this.Gbox_New_Password_Request_Post.Size = new System.Drawing.Size(250, 121);
-            this.Gbox_New_Password_Request_Post.TabIndex = 28;
-            this.Gbox_New_Password_Request_Post.TabStop = false;
-            this.Gbox_New_Password_Request_Post.Text = "New Password Request";
-            this.Gbox_New_Password_Request_Post.Visible = false;
-            // 
-            // Btn_Update_Password_Post
-            // 
-            this.Btn_Update_Password_Post.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Update_Password_Post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.Btn_Update_Password_Post.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.Btn_Update_Password_Post.FlatAppearance.BorderSize = 0;
-            this.Btn_Update_Password_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.Btn_Update_Password_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Update_Password_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Update_Password_Post.ForeColor = System.Drawing.Color.ForestGreen;
-            this.Btn_Update_Password_Post.Location = new System.Drawing.Point(10, 84);
-            this.Btn_Update_Password_Post.Name = "Btn_Update_Password_Post";
-            this.Btn_Update_Password_Post.Size = new System.Drawing.Size(229, 30);
-            this.Btn_Update_Password_Post.TabIndex = 26;
-            this.Btn_Update_Password_Post.Text = "Update Password";
-            this.Btn_Update_Password_Post.UseVisualStyleBackColor = false;
-            this.Btn_Update_Password_Post.Click += new System.EventHandler(this.Btn_Update_Password_Post_Click);
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label12.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label12.Location = new System.Drawing.Point(19, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(212, 20);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Insert your new password here:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.textBox2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.textBox2.Location = new System.Drawing.Point(6, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = "AAAA-BBBB-CCCC-DDDD";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(24, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(209, 20);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "New Password: If not, ingore it";
-            // 
-            // Gbox_Reset_Password_Post
-            // 
-            this.Gbox_Reset_Password_Post.Controls.Add(this.btn_Reset_Password_Post);
-            this.Gbox_Reset_Password_Post.Controls.Add(this.label14);
-            this.Gbox_Reset_Password_Post.Controls.Add(this.textBox3);
-            this.Gbox_Reset_Password_Post.Controls.Add(this.label15);
-            this.Gbox_Reset_Password_Post.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbox_Reset_Password_Post.Location = new System.Drawing.Point(6, 43);
-            this.Gbox_Reset_Password_Post.Name = "Gbox_Reset_Password_Post";
-            this.Gbox_Reset_Password_Post.Size = new System.Drawing.Size(241, 121);
-            this.Gbox_Reset_Password_Post.TabIndex = 27;
-            this.Gbox_Reset_Password_Post.TabStop = false;
-            this.Gbox_Reset_Password_Post.Text = "Reset Password";
-            this.Gbox_Reset_Password_Post.Visible = false;
-            // 
-            // btn_Reset_Password_Post
-            // 
-            this.btn_Reset_Password_Post.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Reset_Password_Post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Reset_Password_Post.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btn_Reset_Password_Post.FlatAppearance.BorderSize = 0;
-            this.btn_Reset_Password_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Reset_Password_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reset_Password_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Reset_Password_Post.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Reset_Password_Post.Location = new System.Drawing.Point(6, 85);
-            this.btn_Reset_Password_Post.Name = "btn_Reset_Password_Post";
-            this.btn_Reset_Password_Post.Size = new System.Drawing.Size(229, 30);
-            this.btn_Reset_Password_Post.TabIndex = 25;
-            this.btn_Reset_Password_Post.Text = "Reset Password";
-            this.btn_Reset_Password_Post.UseVisualStyleBackColor = false;
-            this.btn_Reset_Password_Post.Click += new System.EventHandler(this.btn_Reset_Password_Post_Click);
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label14.Location = new System.Drawing.Point(24, 37);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(197, 20);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Insert your seed phrase here:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.textBox3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.textBox3.Location = new System.Drawing.Point(6, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 20);
-            this.textBox3.TabIndex = 24;
-            this.textBox3.Text = "AAAA-BBBB-CCCC-DDDD";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(16, 17);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(206, 20);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Lost password? Need reset it?";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel6.Controls.Add(this.lbl_PopUp_Main_Conferma);
-            this.panel6.Location = new System.Drawing.Point(6, 241);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(668, 23);
-            this.panel6.TabIndex = 25;
-            // 
-            // lbl_PopUp_Main_Conferma
-            // 
-            this.lbl_PopUp_Main_Conferma.AutoSize = true;
-            this.lbl_PopUp_Main_Conferma.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_PopUp_Main_Conferma.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_PopUp_Main_Conferma.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_PopUp_Main_Conferma.Location = new System.Drawing.Point(3, 3);
-            this.lbl_PopUp_Main_Conferma.Name = "lbl_PopUp_Main_Conferma";
-            this.lbl_PopUp_Main_Conferma.Size = new System.Drawing.Size(293, 20);
-            this.lbl_PopUp_Main_Conferma.TabIndex = 24;
-            this.lbl_PopUp_Main_Conferma.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
-            this.lbl_PopUp_Main_Conferma.Visible = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel7.Controls.Add(this.lbl_PopUp_Main_XCH_Address);
-            this.panel7.Location = new System.Drawing.Point(6, 263);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(668, 23);
-            this.panel7.TabIndex = 26;
-            // 
-            // lbl_PopUp_Main_XCH_Address
-            // 
-            this.lbl_PopUp_Main_XCH_Address.AutoSize = true;
-            this.lbl_PopUp_Main_XCH_Address.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_PopUp_Main_XCH_Address.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lbl_PopUp_Main_XCH_Address.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_PopUp_Main_XCH_Address.Location = new System.Drawing.Point(3, 3);
-            this.lbl_PopUp_Main_XCH_Address.Name = "lbl_PopUp_Main_XCH_Address";
-            this.lbl_PopUp_Main_XCH_Address.Size = new System.Drawing.Size(293, 20);
-            this.lbl_PopUp_Main_XCH_Address.TabIndex = 24;
-            this.lbl_PopUp_Main_XCH_Address.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
-            this.lbl_PopUp_Main_XCH_Address.Visible = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btn_Clear_Data_Post);
-            this.groupBox1.Controls.Add(this.btn_Add_Wallet);
-            this.groupBox1.Controls.Add(this.comboBox_Load_Wallet);
-            this.groupBox1.Controls.Add(this.btn_Load_Wallet);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(3, 331);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(671, 116);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Load Wallet";
-            // 
-            // btn_Clear_Data_Post
-            // 
-            this.btn_Clear_Data_Post.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Clear_Data_Post.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Clear_Data_Post.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btn_Clear_Data_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Clear_Data_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Clear_Data_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Clear_Data_Post.ForeColor = System.Drawing.Color.Red;
-            this.btn_Clear_Data_Post.Location = new System.Drawing.Point(357, 75);
-            this.btn_Clear_Data_Post.Name = "btn_Clear_Data_Post";
-            this.btn_Clear_Data_Post.Size = new System.Drawing.Size(308, 30);
-            this.btn_Clear_Data_Post.TabIndex = 28;
-            this.btn_Clear_Data_Post.Text = "Clear Data";
-            this.btn_Clear_Data_Post.UseVisualStyleBackColor = false;
-            this.btn_Clear_Data_Post.Click += new System.EventHandler(this.btn_Clear_Data_Post_Click);
-            // 
-            // btn_Add_Wallet
-            // 
-            this.btn_Add_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Add_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Add_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
-            this.btn_Add_Wallet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Add_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Add_Wallet.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Add_Wallet.Location = new System.Drawing.Point(6, 74);
-            this.btn_Add_Wallet.Name = "btn_Add_Wallet";
-            this.btn_Add_Wallet.Size = new System.Drawing.Size(345, 30);
-            this.btn_Add_Wallet.TabIndex = 27;
-            this.btn_Add_Wallet.Text = "Add Wallet";
-            this.btn_Add_Wallet.UseVisualStyleBackColor = false;
-            this.btn_Add_Wallet.Click += new System.EventHandler(this.btn_Add_Wallet_Click);
-            // 
-            // comboBox_Load_Wallet
-            // 
-            this.comboBox_Load_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_Load_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.comboBox_Load_Wallet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Load_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_Load_Wallet.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBox_Load_Wallet.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox_Load_Wallet.FormattingEnabled = true;
-            this.comboBox_Load_Wallet.Location = new System.Drawing.Point(6, 46);
-            this.comboBox_Load_Wallet.Name = "comboBox_Load_Wallet";
-            this.comboBox_Load_Wallet.Size = new System.Drawing.Size(659, 23);
-            this.comboBox_Load_Wallet.TabIndex = 26;
-            // 
-            // btn_Load_Wallet
-            // 
-            this.btn_Load_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Load_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Load_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
-            this.btn_Load_Wallet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.btn_Load_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Load_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Load_Wallet.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Load_Wallet.Location = new System.Drawing.Point(6, 14);
-            this.btn_Load_Wallet.Name = "btn_Load_Wallet";
-            this.btn_Load_Wallet.Size = new System.Drawing.Size(659, 30);
-            this.btn_Load_Wallet.TabIndex = 25;
-            this.btn_Load_Wallet.Text = "Load Wallet";
-            this.btn_Load_Wallet.UseVisualStyleBackColor = false;
-            this.btn_Load_Wallet.Click += new System.EventHandler(this.btn_Load_Wallet_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 521);
-            this.Controls.Add(this.panel_Desktop);
+            this.Controls.Add(panel_Desktop);
             this.Controls.Add(this.panel_Superiore);
             this.Controls.Add(this.panel_Menu_Laterale);
             this.MinimumSize = new System.Drawing.Size(900, 425);
@@ -1316,11 +975,10 @@ namespace Client_V3
             this.panel1.PerformLayout();
             this.panel_Superiore.ResumeLayout(false);
             this.panel_Superiore.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icon_Current_Selection)).EndInit();
-            this.panel_Desktop.ResumeLayout(false);
-            this.panel_Desktop.PerformLayout();
-            this.goupB_Main_Form.ResumeLayout(false);
-            this.goupB_Main_Form.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(icon_Current_Selection)).EndInit();
+            panel_Desktop.ResumeLayout(false);
+            goupB_Main_Form.ResumeLayout(false);
+            goupB_Main_Form.PerformLayout();
             this.groupBox_Riscrivi_Seed.ResumeLayout(false);
             this.groupBox_Riscrivi_Seed.PerformLayout();
             this.Gbox_New_Password.ResumeLayout(false);
@@ -1339,17 +997,6 @@ namespace Client_V3
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.Gbox_New_Password_Request_Post.ResumeLayout(false);
-            this.Gbox_New_Password_Request_Post.PerformLayout();
-            this.Gbox_Reset_Password_Post.ResumeLayout(false);
-            this.Gbox_Reset_Password_Post.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1358,17 +1005,12 @@ namespace Client_V3
 
         private Panel panel_Menu_Laterale;
         private Panel panel1;
-        private Label label_Logo;
         private FontAwesome.Sharp.IconButton btn_Simulate;
         private FontAwesome.Sharp.IconButton btn_Dashboard;
         private FontAwesome.Sharp.IconButton btn_Payment;
         private FontAwesome.Sharp.IconButton btn_Home;
         private FontAwesome.Sharp.IconButton btn_EULA;
         private Panel panel_Superiore;
-        private FontAwesome.Sharp.IconPictureBox icon_Current_Selection;
-        private Label label_Form_Selected;
-        private Panel panel_Desktop;
-        private GroupBox goupB_Main_Form;
         private GroupBox groupBox2;
         private RadioButton radioBtn_EULA_1;
         private Panel panel2;
@@ -1387,10 +1029,6 @@ namespace Client_V3
         private RadioButton radioBtn_EULA_2;
         private Label lbl_Avviso_Main;
         private Label lbl_Avviso_Main_Titolo;
-        private Label lbl_PopUp_Main_Conferma;
-        private Panel panel6;
-        private Panel panel7;
-        private Label lbl_PopUp_Main_XCH_Address;
         private Button Btn_Sync;
         private FontAwesome.Sharp.IconButton btn_Staking;
         private FontAwesome.Sharp.IconButton Btn_Swap;
@@ -1410,29 +1048,16 @@ namespace Client_V3
         private TextBox txt_Avviso;
         private Label lbl_Avviso;
         private Button btn_New_Password_Request;
-        private GroupBox Gbox_New_Password_Request_Post;
-        private Button Btn_Update_Password_Post;
-        private Label label12;
-        private TextBox textBox2;
-        private Label label13;
-        private GroupBox Gbox_Reset_Password_Post;
-        private Button btn_Reset_Password_Post;
-        private Label label14;
-        private TextBox textBox3;
-        private Label label15;
-        private Panel panel8;
-        private Label lbl_Avviso_Password;
-        private TextBox txt_Password_Post;
-        private Button btn_Conferma_Password;
-        private GroupBox groupBox1;
-        private Button btn_Load_Wallet;
-        private ComboBox comboBox_Load_Wallet;
-        private Button btn_Add_Wallet;
-        private Button btn_Clear_Data_Post;
         private Label label16;
         private TextBox txt_Inserisci_Seed_Phrase_2;
         private TextBox txt_Inserisci_Seed_Phrase_1;
         private Label label17;
         private GroupBox groupBox_Riscrivi_Seed;
+        private FontAwesome.Sharp.IconButton btn_Wallet;
+        public Label label_Logo;
+        private static FontAwesome.Sharp.IconPictureBox icon_Current_Selection;
+        private static Label label_Form_Selected;
+        private static Panel panel_Desktop;
+        public static GroupBox goupB_Main_Form;
     }
 }
