@@ -215,7 +215,7 @@ namespace Client_V3
                     groupBox_Riscrivi_Seed.Visible = true;
                     Sleep_Timer_Seed_Phrase(4);
                 }
-                if (txt_Inserisci_Seed_Phrase_1.Text != txt_Inserisci_Seed_Phrase_2.Text && ( txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_1.Text || txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_2.Text))
+                if (txt_Inserisci_Seed_Phrase_1.Text != txt_Inserisci_Seed_Phrase_2.Text || ( txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_1.Text && txt_Seed_Phrase.Text != txt_Inserisci_Seed_Phrase_2.Text))
                 {
                     lbl_Avviso_Main.Text = "Inserisci la seed Prase per continuare";
                     lbl_Avviso_Main_Titolo.Visible = true;
@@ -269,7 +269,26 @@ namespace Client_V3
 
                 Menu_Coming_Soon();
                 Wallet();
+
                 loop = false;
+                //Resettiamo i campi per i nuovi dati
+                lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false; // Resetta la visibilità dell'errore...
+                Gbox_Seed_Phrase.Visible = false;
+                txt_User_Address.Text = "Inserisci wallet XCH";
+                txt_Password.Text = "Inserisci Password";
+                txt_Referal_Code.Text = "Ref_Code";
+
+                Gbox_Seed_Phrase.Visible = false;
+                txt_Inserisci_Seed_Phrase_1.Text = "SEED-xDIx-PROVA-xxxx";
+                txt_Inserisci_Seed_Phrase_2.Text = "SEED-xDIx-PROVA-x12x";
+                Gbox_Seed_Phrase.Visible = false;
+                Gbox_Seed_Phrase.Text = "SEED-xDIx-PROVA-xxxx";
+                txt_Avviso.Text = "AAAA-BBBB-CCCC-DDDD";
+                groupBox_Riscrivi_Seed.Visible = false;
+                radioBtn_EULA_1.Checked = false;
+                radioBtn_EULA_2.Checked = false;
+                loop = false;
+                errori = 0;
             }
             else
             {
@@ -292,7 +311,7 @@ namespace Client_V3
             string wallet       = txt_User_Address.Text;
             string referal      = txt_Referal_Code.Text;
             string seed         = txt_Seed_Phrase.Text;
-            if (wallet == "Inserisci Password (Opzionale)") wallet = "Null";
+            if (password == "Inserisci Password") password = "Null";
 
             XDocument Salvataggio_Xml = new XDocument(new XElement("Wallet_Data",
                 new XElement("Wallet", wallet),

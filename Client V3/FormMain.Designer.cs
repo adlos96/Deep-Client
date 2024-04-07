@@ -629,7 +629,7 @@ namespace Client_V3
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(848, 27);
             this.txt_Password.TabIndex = 25;
-            this.txt_Password.Text = "Inserisci Password (Opzionale)";
+            this.txt_Password.Text = "Inserisci Password";
             this.txt_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Gbox_Reset_Password
