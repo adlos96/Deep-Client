@@ -43,7 +43,9 @@ namespace Client_V3
 
 
         // -------------------- Protocol Login -----------------------
-        public static bool seed_Phrase = false; // Se la seed phrase inviata è corretta si potà resettare la password
+        public static bool login_Stato          = false; // Se il pulsante login è stato premuto
+        public static bool login_Approved       = false; // Se l'autenticazione dei dati è avvenuta ed è stata confermata
+        public static bool seedPhrase_Approved  = false; // Se il seedPhrase corrisponde abilita il reset della password
 
         // -------------------- Protocol Balance -----------------------
 

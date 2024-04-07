@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Client.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -28,8 +30,8 @@ namespace Client_V3.Forms
             lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
             lbl_PopUp_Main_XCH_Address.Visible = true;
         }
-        private async void btn_Load_Wallet_Click(object sender, EventArgs e)
-        {
+        private async void btn_Load_Wallet_Click(object sender, EventArgs e) {
+
             lbl_Erroe.Visible = false;
             string wallet = comboBox_Load_Wallet.Text;
             var data = await load_data();
@@ -43,21 +45,21 @@ namespace Client_V3.Forms
                 }
             }
             lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
+            Variabili.login_Approved = false;
+            Variabili.login_Stato = false;
         }
-        private async void btn_Add_Wallet_Click(object sender, EventArgs e)
-        {
+        private async void btn_Add_Wallet_Click(object sender, EventArgs e) {
+
             lbl_Erroe.Visible = false;
             int a = conta_numero__transazioni();
             if (a >= 10) return;
-            FormMain.add_Wallet = true;
-            FormMain.goupB_Main_Form.Visible = true;
             await load_data();
             FormMain.label_Logo_Click(sender, e);
-            Variabili.seed_Phrase = false;
+            Variabili.login_Approved = false;
         }
 
-        private async void btn_Clear_Data_Post_Click(object sender, EventArgs e)
-        {
+        private async void btn_Clear_Data_Post_Click(object sender, EventArgs e) {
+
             lbl_Erroe.Visible = false;
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
             int dato = 2;
@@ -75,8 +77,26 @@ namespace Client_V3.Forms
             }
         }
 
-        private async void Btn_Update_Password_Post_Click(object sender, EventArgs e)
-        {
+        private async void btn_Reset_Password_Post_Click(object sender, EventArgs e) {
+            if (txt_Reset_SeedPhrase.Text == "AAAA-BBBB-CCCC-DDDD" || txt_Reset_SeedPhrase.Text.Length != 19)
+            {
+                lbl_Erroe.Text = "Inserisci una SeedPhrase valida, con 19 caratteri";
+                lbl_Erroe.Visible = true;
+                await Sleep_Timer_Update_Seed(3);
+            }
+            else
+            {
+                lbl_Erroe.Visible = false;
+                btn_Reset_Password_Post.Enabled = false;
+                await ClientsConnection.TestClient.Send_Server($"updatePassword|{txt_Reset_SeedPhrase.Text}|{Variabili.wallet}");
+                await Sleep(10);
+                await Conferma_btn();
+                if (Variabili.seedPhrase_Approved == true)
+                    Gbox_New_Password_Request.Visible = true;
+                btn_Reset_Password_Post.Enabled = true;
+            }
+        }
+        private async void Btn_Update_Password_Post_Click(object sender, EventArgs e) {
             if (txt_Update_Password.Text == "New Password? Change me" || txt_Update_Password.Text.Length <= 6)
             {
                 lbl_Erroe.Text = "Inserisci una Password di almeno 7 caratteri";
@@ -93,24 +113,6 @@ namespace Client_V3.Forms
             }
         }
 
-        private async void btn_Reset_Password_Post_Click(object sender, EventArgs e)
-        {
-            if (txt_Reset_SeedPhrase.Text == "AAAA-BBBB-CCCC-DDDD" || txt_Reset_SeedPhrase.Text.Length != 19)
-            {
-                lbl_Erroe.Text = "Inserisci una SeedPhrase valida, con 19 caratteri";
-                lbl_Erroe.Visible = true;
-                await Sleep_Timer_Update_Seed(3);
-            }
-            else
-            {
-                lbl_Erroe.Visible = false;
-                btn_Reset_Password_Post.Enabled = false;
-                Gbox_New_Password_Request.Visible = true;
-                await ClientsConnection.TestClient.Send_Server($"updatePassword|{txt_Reset_SeedPhrase.Text}|{Variabili.wallet}");
-                await Sleep(10);
-                btn_Reset_Password_Post.Enabled = true;
-            }
-        }
         public static int conta_numero__transazioni()
         {
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\Wallet";
@@ -128,18 +130,13 @@ namespace Client_V3.Forms
                 DocumentoXml.Load(elementi_passati[x]);
                 XmlNode nodeWallet = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Wallet");
                 XmlNode nodePassword = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Password");
-                XmlNode nodeSeed = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Seed");
-                XmlNode nodeReferal = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Referal");
                 comboBox_Load_Wallet.Items.Add(nodeWallet.InnerText);
-                var txn_Data = new string[] { nodeWallet.InnerText, nodePassword.InnerText, nodeReferal.InnerText, nodeSeed.InnerText };
+                var txn_Data = new string[] { nodeWallet.InnerText, nodePassword.InnerText };
                 stato_Transazione.Add(txn_Data);
                 if (x == 0)
                 {
                     Variabili.wallet = nodeWallet.InnerText;
                     Variabili.password = nodePassword.InnerText;
-                    Variabili.seed = nodeSeed.InnerText;
-                    Variabili.invito_Referal = nodeReferal.InnerText;
-                    Variabili.seed_Phrase = true;
                 }
             }
             comboBox_Load_Wallet.Text = comboBox_Load_Wallet.Items[0].ToString();
@@ -213,6 +210,18 @@ namespace Client_V3.Forms
                 txt_Update_Password.BackColor = Color.FromArgb(32, 36, 47);
                 await Task.Delay(125);
             }
+        }
+        public static Task Conferma_btn()
+        {
+            return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
+            {
+                if (ClientsConnection.client_Connesso == false)
+                {
+                    ClientsConnection.TestClient.InitializeClient(); //Connessione Client al server
+                    Thread.Sleep(1250);
+                }
+                Thread.Sleep(1250);
+            });
         }
     }
 }

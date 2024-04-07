@@ -105,7 +105,7 @@
             this.Btn_Update_Password_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.Btn_Update_Password_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Update_Password_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Btn_Update_Password_Post.ForeColor = System.Drawing.Color.ForestGreen;
+            this.Btn_Update_Password_Post.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.Btn_Update_Password_Post.Location = new System.Drawing.Point(10, 84);
             this.Btn_Update_Password_Post.Name = "Btn_Update_Password_Post";
             this.Btn_Update_Password_Post.Size = new System.Drawing.Size(229, 30);
@@ -178,7 +178,7 @@
             this.btn_Reset_Password_Post.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.btn_Reset_Password_Post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reset_Password_Post.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Reset_Password_Post.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Reset_Password_Post.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_Reset_Password_Post.Location = new System.Drawing.Point(6, 85);
             this.btn_Reset_Password_Post.Name = "btn_Reset_Password_Post";
             this.btn_Reset_Password_Post.Size = new System.Drawing.Size(229, 30);
@@ -341,11 +341,11 @@
             this.btn_Load_Wallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Load_Wallet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Load_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btn_Load_Wallet.FlatAppearance.BorderColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_Load_Wallet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.btn_Load_Wallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Load_Wallet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Load_Wallet.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_Load_Wallet.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_Load_Wallet.Location = new System.Drawing.Point(6, 14);
             this.btn_Load_Wallet.Name = "btn_Load_Wallet";
             this.btn_Load_Wallet.Size = new System.Drawing.Size(659, 30);

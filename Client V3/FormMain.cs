@@ -96,7 +96,8 @@ namespace Client_V3
         {
             Variabili.Impostazioni();
             Btn_Sync.Enabled = false;
-            Gbox_Reset_Password.Visible = true;  // <-- Seed Phrase
+            if (Variabili.login_Stato == true || Variabili.seedPhrase_Approved == true)
+                Gbox_Reset_Password.Visible = true;  // <-- Seed Phrase
             txt_Password.Visible = true; // <-- password main -->
             Variabili.seed = SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
 
@@ -173,6 +174,11 @@ namespace Client_V3
             //    loop = false;
             //    return;
             //}
+            if (Variabili.login_Stato == true)
+            {
+                await Login(); // Se premuto il pulsante Login in precedenza
+                return;
+            }
             if (errori == 0)
             {
                 Variabili.seed = SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
@@ -264,7 +270,6 @@ namespace Client_V3
                 Menu_Coming_Soon();
                 Wallet();
                 loop = false;
-                
             }
             else
             {
@@ -383,7 +388,7 @@ namespace Client_V3
         static async Task<bool> Update_Data()
         {
             await ClientsConnection.TestClient.Connessione();
-            await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione walle/Client
+            await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione wallet/Client
             await ClientsConnection.TestClient.Send_Server($"home|fee_Update|{Variabili.wallet}"); //aggiorniamo dati form Home - Fee & Withdrawal
             await ClientsConnection.TestClient.Send_Server($"balance|protocol|{Variabili.wallet}"); //Aggiorniamo dati form Home - Balance protocol
             await ClientsConnection.TestClient.Send_Server($"rendita|protocol|{Variabili.wallet}"); //Aggiorniamo dati form Home - Balance protocol
@@ -396,26 +401,31 @@ namespace Client_V3
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Home());
+            btn_Login.Visible = false;
         }
         private void btn_Payment_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new Payment());
+            btn_Login.Visible = false;
         }
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new Dashboard());
+            btn_Login.Visible = false;
         }
         private void btn_Simulate_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new Simulate());
+            btn_Login.Visible = false;
         }
         private void btn_Staking_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Staking());
+            btn_Login.Visible = false;
         }
         private void btn_EULA_Click(object sender, EventArgs e)
         {
@@ -426,19 +436,21 @@ namespace Client_V3
         {
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(new Swap());
+            btn_Login.Visible = false;
         }
         private void btn_Wallet_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(new SeedPhrase());
+            btn_Login.Visible = true;
         }
 
         private void Wallet()
         {
             OpenChildForm(new SeedPhrase());
+            btn_Login.Visible = true;
         }
         #endregion
-
         public static void label_Logo_Click(object sender, EventArgs e)
         {
             if (currentChildForm != null)
@@ -448,6 +460,8 @@ namespace Client_V3
             }
             else
             Reset();
+            add_Wallet = true;
+            goupB_Main_Form.Visible = true;
         }
         public static void Reset()
         {
@@ -621,6 +635,49 @@ namespace Client_V3
             btn_New_Password_Request.Enabled = false;
             await ClientsConnection.TestClient.Send_Server($"updatePassword|{txt_Reset_Seed_Phrase.Text}|{Variabili.wallet}");
             await Sleep(10);
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Variabili.login_Stato = true;
+            label_Logo_Click(sender, e);
+
+        }
+        async Task Login()
+        {
+            btn_Conferma_Main.Text = "Login";
+            btn_Conferma_Main.ForeColor = Color.MediumSeaGreen;
+            btn_Conferma_Main.FlatAppearance.BorderColor = Color.MediumSeaGreen;
+            panel_Referal.Visible = false;
+            GroupBox_Eula.Visible = false;
+
+            await ClientsConnection.TestClient.Send_Server($"login|{txt_User_Address.Text}|{txt_Password.Text}");
+
+            /*
+               btn_Home.Enabled = true;
+               btn_Home.Text = "Home";
+               btn_Home.BackColor = Color.FromArgb(39, 45, 59);
+            */
+
+            btn_Dashboard.Enabled = true;
+            btn_Dashboard.Text = "Dashboard";
+            btn_Dashboard.BackColor = Color.FromArgb(39, 45, 59);
+
+            btn_Simulate.Enabled = true;
+            btn_Simulate.Text = "Simulate";
+            btn_Simulate.BackColor = Color.FromArgb(39, 45, 59);
+
+            btn_Payment.Enabled = true;
+            btn_Payment.Text = "Payment";
+            btn_Payment.BackColor = Color.FromArgb(39, 45, 59);
+            goupB_Main_Form.Visible = false;
+
+            Variabili.invito_Referal = txt_Referal_Code.Text;
+            Variabili.wallet = txt_User_Address.Text;
+
+            Add_on_List();
+            Menu_Coming_Soon();
+            Wallet();
         }
     }
 }

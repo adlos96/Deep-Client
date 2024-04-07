@@ -195,12 +195,10 @@ namespace Client_V3
                         Variabili.bonus_Invitato_Ref  = Convert.ToDouble(msgArgs[3]);
                         break;
                     case "validate": // Imposta true o false a seconda di se corrisponde o meno
-                        Variabili.seed_Phrase = Convert.ToBoolean(msgArgs[1]);
+                        Variabili.seedPhrase_Approved = Convert.ToBoolean(msgArgs[1]);
                         break;
 
                     default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;
-
-
                 }
 
                 var comando = msgArgs[0];

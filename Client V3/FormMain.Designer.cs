@@ -43,6 +43,7 @@ namespace Client_V3
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_Logo = new System.Windows.Forms.Label();
             this.panel_Superiore = new System.Windows.Forms.Panel();
+            btn_Login = new System.Windows.Forms.Button();
             label_Form_Selected = new System.Windows.Forms.Label();
             icon_Current_Selection = new FontAwesome.Sharp.IconPictureBox();
             panel_Desktop = new System.Windows.Forms.Panel();
@@ -70,12 +71,12 @@ namespace Client_V3
             this.txt_Seed_Phrase = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Conferma_Main = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_Referal = new System.Windows.Forms.Panel();
             this.txt_Referal_Code = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GroupBox_Eula = new System.Windows.Forms.GroupBox();
             this.lbl_Avviso_Main_Titolo = new System.Windows.Forms.Label();
             this.lbl_Avviso_Main = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -97,8 +98,8 @@ namespace Client_V3
             this.Gbox_New_Password.SuspendLayout();
             this.Gbox_Reset_Password.SuspendLayout();
             this.Gbox_Seed_Phrase.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel_Referal.SuspendLayout();
+            this.GroupBox_Eula.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -334,6 +335,7 @@ namespace Client_V3
             // panel_Superiore
             // 
             this.panel_Superiore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.panel_Superiore.Controls.Add(btn_Login);
             this.panel_Superiore.Controls.Add(label_Form_Selected);
             this.panel_Superiore.Controls.Add(icon_Current_Selection);
             this.panel_Superiore.Dock = System.Windows.Forms.DockStyle.Top;
@@ -341,6 +343,24 @@ namespace Client_V3
             this.panel_Superiore.Name = "panel_Superiore";
             this.panel_Superiore.Size = new System.Drawing.Size(864, 74);
             this.panel_Superiore.TabIndex = 1;
+            // 
+            // btn_Login
+            // 
+            btn_Login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
+            btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btn_Login.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            btn_Login.ForeColor = System.Drawing.Color.Aqua;
+            btn_Login.Location = new System.Drawing.Point(693, 25);
+            btn_Login.Name = "btn_Login";
+            btn_Login.Size = new System.Drawing.Size(149, 30);
+            btn_Login.TabIndex = 34;
+            btn_Login.Text = "Login";
+            btn_Login.UseVisualStyleBackColor = false;
+            btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label_Form_Selected
             // 
@@ -397,8 +417,8 @@ namespace Client_V3
             goupB_Main_Form.Controls.Add(this.Gbox_Reset_Password);
             goupB_Main_Form.Controls.Add(this.Gbox_Seed_Phrase);
             goupB_Main_Form.Controls.Add(this.btn_Conferma_Main);
-            goupB_Main_Form.Controls.Add(this.panel3);
-            goupB_Main_Form.Controls.Add(this.groupBox2);
+            goupB_Main_Form.Controls.Add(this.panel_Referal);
+            goupB_Main_Form.Controls.Add(this.GroupBox_Eula);
             goupB_Main_Form.Controls.Add(this.panel2);
             goupB_Main_Form.Controls.Add(this.txt_User_Address);
             goupB_Main_Form.ForeColor = System.Drawing.Color.CornflowerBlue;
@@ -744,18 +764,18 @@ namespace Client_V3
             this.btn_Conferma_Main.UseVisualStyleBackColor = false;
             this.btn_Conferma_Main.Click += new System.EventHandler(this.btn_Conferma_Main_Click);
             // 
-            // panel3
+            // panel_Referal
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel_Referal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.txt_Referal_Code);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(5, 163);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(848, 27);
-            this.panel3.TabIndex = 22;
+            this.panel_Referal.Controls.Add(this.txt_Referal_Code);
+            this.panel_Referal.Controls.Add(this.label3);
+            this.panel_Referal.Controls.Add(this.label4);
+            this.panel_Referal.Controls.Add(this.label5);
+            this.panel_Referal.Location = new System.Drawing.Point(5, 163);
+            this.panel_Referal.Name = "panel_Referal";
+            this.panel_Referal.Size = new System.Drawing.Size(848, 27);
+            this.panel_Referal.TabIndex = 22;
             // 
             // txt_Referal_Code
             // 
@@ -808,22 +828,22 @@ namespace Client_V3
             this.label5.TabIndex = 8;
             this.label5.Text = "(Opzionale)";
             // 
-            // groupBox2
+            // GroupBox_Eula
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.GroupBox_Eula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.groupBox2.Controls.Add(this.lbl_Avviso_Main_Titolo);
-            this.groupBox2.Controls.Add(this.lbl_Avviso_Main);
-            this.groupBox2.Controls.Add(this.panel5);
-            this.groupBox2.Controls.Add(this.panel4);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(5, 94);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(848, 61);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "EULA";
+            this.GroupBox_Eula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.GroupBox_Eula.Controls.Add(this.lbl_Avviso_Main_Titolo);
+            this.GroupBox_Eula.Controls.Add(this.lbl_Avviso_Main);
+            this.GroupBox_Eula.Controls.Add(this.panel5);
+            this.GroupBox_Eula.Controls.Add(this.panel4);
+            this.GroupBox_Eula.ForeColor = System.Drawing.SystemColors.Control;
+            this.GroupBox_Eula.Location = new System.Drawing.Point(5, 94);
+            this.GroupBox_Eula.Name = "GroupBox_Eula";
+            this.GroupBox_Eula.Size = new System.Drawing.Size(848, 61);
+            this.GroupBox_Eula.TabIndex = 21;
+            this.GroupBox_Eula.TabStop = false;
+            this.GroupBox_Eula.Text = "EULA";
             // 
             // lbl_Avviso_Main_Titolo
             // 
@@ -987,10 +1007,10 @@ namespace Client_V3
             this.Gbox_Reset_Password.PerformLayout();
             this.Gbox_Seed_Phrase.ResumeLayout(false);
             this.Gbox_Seed_Phrase.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel_Referal.ResumeLayout(false);
+            this.panel_Referal.PerformLayout();
+            this.GroupBox_Eula.ResumeLayout(false);
+            this.GroupBox_Eula.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1011,7 +1031,7 @@ namespace Client_V3
         private FontAwesome.Sharp.IconButton btn_Home;
         private FontAwesome.Sharp.IconButton btn_EULA;
         private Panel panel_Superiore;
-        private GroupBox groupBox2;
+        private GroupBox GroupBox_Eula;
         private RadioButton radioBtn_EULA_1;
         private Panel panel2;
         private Label label7;
@@ -1019,7 +1039,7 @@ namespace Client_V3
         private Label label2;
         private Button btn_Conferma_Main;
         private TextBox txt_User_Address;
-        private Panel panel3;
+        private Panel panel_Referal;
         private TextBox txt_Referal_Code;
         private Label label3;
         private Label label4;
@@ -1059,5 +1079,6 @@ namespace Client_V3
         private static Label label_Form_Selected;
         private static Panel panel_Desktop;
         public static GroupBox goupB_Main_Form;
+        public static Button btn_Login;
     }
 }
