@@ -97,6 +97,8 @@ namespace Client.Forms
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_Plot_Disponibili = new System.Windows.Forms.TextBox();
+            this.txt_Plot_Noleggiati = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox_Payment_USDT.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,6 +120,8 @@ namespace Client.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.groupBox1.Controls.Add(this.txt_Plot_Noleggiati);
+            this.groupBox1.Controls.Add(this.txt_Plot_Disponibili);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.btn_Disconnetti);
@@ -461,7 +465,7 @@ namespace Client.Forms
             this.lbl_Avviso_Campi_Incompleti.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_Avviso_Campi_Incompleti.ForeColor = System.Drawing.Color.Tomato;
             this.lbl_Avviso_Campi_Incompleti.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_Avviso_Campi_Incompleti.Location = new System.Drawing.Point(456, 57);
+            this.lbl_Avviso_Campi_Incompleti.Location = new System.Drawing.Point(456, 93);
             this.lbl_Avviso_Campi_Incompleti.Name = "lbl_Avviso_Campi_Incompleti";
             this.lbl_Avviso_Campi_Incompleti.Size = new System.Drawing.Size(232, 20);
             this.lbl_Avviso_Campi_Incompleti.TabIndex = 13;
@@ -848,6 +852,34 @@ namespace Client.Forms
             this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txt_Plot_Disponibili
+            // 
+            this.txt_Plot_Disponibili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txt_Plot_Disponibili.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Plot_Disponibili.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Plot_Disponibili.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Plot_Disponibili.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.txt_Plot_Disponibili.Location = new System.Drawing.Point(334, 51);
+            this.txt_Plot_Disponibili.Name = "txt_Plot_Disponibili";
+            this.txt_Plot_Disponibili.Size = new System.Drawing.Size(173, 20);
+            this.txt_Plot_Disponibili.TabIndex = 24;
+            this.txt_Plot_Disponibili.Text = "Plot Disponibili: 1000000";
+            this.txt_Plot_Disponibili.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_Plot_Noleggiati
+            // 
+            this.txt_Plot_Noleggiati.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txt_Plot_Noleggiati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Plot_Noleggiati.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Plot_Noleggiati.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Plot_Noleggiati.ForeColor = System.Drawing.Color.Gold;
+            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(565, 49);
+            this.txt_Plot_Noleggiati.Name = "txt_Plot_Noleggiati";
+            this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(166, 20);
+            this.txt_Plot_Noleggiati.TabIndex = 25;
+            this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 100000";
+            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -948,5 +980,7 @@ namespace Client.Forms
         private Button btn_Connetti;
         private Label label18;
         private Label label13;
+        private TextBox txt_Plot_Noleggiati;
+        private TextBox txt_Plot_Disponibili;
     }
 }

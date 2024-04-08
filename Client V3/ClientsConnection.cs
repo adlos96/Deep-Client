@@ -153,7 +153,11 @@ namespace Client_V3
                 switch (msgArgs[0])
                 {
                     case "simulazione": Variabili.queue_Simulate_Command.Enqueue(messaggio_Ricevuto); break;
-                    case "plotSwap": Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto); break;
+                    case "plotSwap": 
+                        Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto);
+                        Variabili.plot_Disponibile = msgArgs[2];
+                        Variabili.plot_Noleggiati = msgArgs[3];
+                        break;
                     case "home_fee":
                         Variabili.fee_A = msgArgs[1];
                         Variabili.fee_B = msgArgs[2];

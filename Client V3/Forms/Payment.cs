@@ -187,9 +187,11 @@ namespace Client.Forms
                 lbl_Referal_Code_Anteprima.Text = Variabili.invito_Referal;
 
                 await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione
-                await ClientsConnection.TestClient.Send_Server("plotPrice" + "|" + numero_Plot.ToString());
+                await ClientsConnection.TestClient.Send_Server("plotPrice" + "|" + numero_Plot.ToString() +"|" + Variabili.wallet);
                 await Conferma_btn(); //Connessione al server
 
+                txt_Plot_Disponibili.Text = "Plot Noleggiati: " + Variabili.plot_Disponibile;
+                txt_Plot_Noleggiati.Text = "Plot Disponibili: " + Variabili.plot_Noleggiati;
                 txt_USDT_Anteprima.Text = ClientsConnection.argomento_Ricevuto;
                 
                 if (comboBox_Chain_Selection.Text != "TRC-20")
@@ -197,7 +199,6 @@ namespace Client.Forms
                     btn_Pay.Enabled = true; // <<--- Impostare su true!!!!!!
                     pnl_Subtitle.Visible = true;
                 }
-
                 Console.WriteLine("[] Messaggio Ricevuto: " + ClientsConnection.argomento_Ricevuto);
 
                 if (ClientsConnection.client_Connesso == true)
@@ -219,7 +220,6 @@ namespace Client.Forms
                     lbl_Avviso_Campi_Incompleti.Text = "RETE NON SUPPORTATA";
                     lbl_Avviso_Campi_Incompleti.Visible = true;
                     btn_Pay.Enabled = false;
-
                 }
 
                 if (ClientsConnection.argomento_Ricevuto != "")
@@ -227,13 +227,8 @@ namespace Client.Forms
                         panel_Anteprima.Visible = true;
                     else MessageBox.Show("Qualcosa è andato storto!...");
                 else Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
-                /*
-                if (ClientsConnection.client_Connesso == true)
-                    ClientsConnection.TestClient.Disconnetti();
-                */
             }
         }
-
         public static Task Conferma_btn()
         {
             return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
