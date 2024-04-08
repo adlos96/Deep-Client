@@ -173,7 +173,7 @@ namespace Client.Forms
             this.btn_Disconnetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Disconnetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Disconnetti.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Disconnetti.Location = new System.Drawing.Point(741, 83);
+            this.btn_Disconnetti.Location = new System.Drawing.Point(741, 112);
             this.btn_Disconnetti.Name = "btn_Disconnetti";
             this.btn_Disconnetti.Size = new System.Drawing.Size(92, 30);
             this.btn_Disconnetti.TabIndex = 20;
@@ -190,7 +190,7 @@ namespace Client.Forms
             this.btn_Connetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Connetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Connetti.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Connetti.Location = new System.Drawing.Point(741, 49);
+            this.btn_Connetti.Location = new System.Drawing.Point(741, 78);
             this.btn_Connetti.Name = "btn_Connetti";
             this.btn_Connetti.Size = new System.Drawing.Size(92, 30);
             this.btn_Connetti.TabIndex = 19;
@@ -450,7 +450,7 @@ namespace Client.Forms
             this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Refresh.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Refresh.Location = new System.Drawing.Point(741, 118);
+            this.btn_Refresh.Location = new System.Drawing.Point(741, 147);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(92, 30);
             this.btn_Refresh.TabIndex = 14;
@@ -863,8 +863,8 @@ namespace Client.Forms
             this.txt_Plot_Disponibili.Name = "txt_Plot_Disponibili";
             this.txt_Plot_Disponibili.Size = new System.Drawing.Size(173, 20);
             this.txt_Plot_Disponibili.TabIndex = 24;
-            this.txt_Plot_Disponibili.Text = "Plot Disponibili: 1000000";
-            this.txt_Plot_Disponibili.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Plot_Disponibili.Text = "Plot Disponibili: 0";
+            this.txt_Plot_Disponibili.Visible = false;
             // 
             // txt_Plot_Noleggiati
             // 
@@ -873,12 +873,13 @@ namespace Client.Forms
             this.txt_Plot_Noleggiati.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Plot_Noleggiati.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Plot_Noleggiati.ForeColor = System.Drawing.Color.Gold;
-            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(565, 49);
+            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(666, 49);
             this.txt_Plot_Noleggiati.Name = "txt_Plot_Noleggiati";
             this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(166, 20);
             this.txt_Plot_Noleggiati.TabIndex = 25;
-            this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 100000";
-            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 0";
+            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Plot_Noleggiati.Visible = false;
             // 
             // Payment
             // 

@@ -110,9 +110,10 @@ namespace Client.Forms
             lbl_Stato_Rete_Anteprima.Text = "Active";
             lbl_Stato_Rete_Anteprima.ForeColor = System.Drawing.Color.SeaGreen;
             btn_Conferma_Plot.Enabled = false;
-
             panel_Anteprima.Visible = false; // Disabilita anteprima
             pnl_Subtitle.Visible = false; // Disabilita pannello superiore
+            txt_Plot_Noleggiati.Visible = false;
+            txt_Plot_Disponibili.Visible = false;
 
             lbl_Anteprima_Manuale.Text = numero_Plot.ToString();
 
@@ -190,8 +191,8 @@ namespace Client.Forms
                 await ClientsConnection.TestClient.Send_Server("plotPrice" + "|" + numero_Plot.ToString() +"|" + Variabili.wallet);
                 await Conferma_btn(); //Connessione al server
 
-                txt_Plot_Disponibili.Text = "Plot Noleggiati: " + Variabili.plot_Disponibile;
-                txt_Plot_Noleggiati.Text = "Plot Disponibili: " + Variabili.plot_Noleggiati;
+                txt_Plot_Disponibili.Text = "Plot Noleggiati: " + Variabili.plot_Noleggiati;
+                txt_Plot_Noleggiati.Text = "Plot Disponibili: " + Variabili.plot_Disponibile;
                 txt_USDT_Anteprima.Text = ClientsConnection.argomento_Ricevuto;
                 
                 if (comboBox_Chain_Selection.Text != "TRC-20")
@@ -224,7 +225,11 @@ namespace Client.Forms
 
                 if (ClientsConnection.argomento_Ricevuto != "")
                     if (Convert.ToDouble(ClientsConnection.argomento_Ricevuto) > 1) //Controllo che il prezzo sia superiore ad 1$
+                    {
                         panel_Anteprima.Visible = true;
+                        txt_Plot_Noleggiati.Visible = true;
+                        txt_Plot_Disponibili.Visible = true;
+                    }
                     else MessageBox.Show("Qualcosa è andato storto!...");
                 else Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
             }

@@ -154,9 +154,12 @@ namespace Client_V3
                 {
                     case "simulazione": Variabili.queue_Simulate_Command.Enqueue(messaggio_Ricevuto); break;
                     case "plotSwap": 
-                        Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto);
                         Variabili.plot_Disponibile = msgArgs[2];
-                        Variabili.plot_Noleggiati = msgArgs[3];
+                        if (msgArgs[3] == "")
+                            Variabili.plot_Noleggiati = "0";
+                        else
+                            Variabili.plot_Noleggiati = msgArgs[3];
+                        Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto);
                         break;
                     case "home_fee":
                         Variabili.fee_A = msgArgs[1];
