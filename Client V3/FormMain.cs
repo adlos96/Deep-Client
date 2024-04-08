@@ -116,6 +116,13 @@ namespace Client_V3
         private async void btn_Conferma_Main_Click(object sender, EventArgs e)
         {
             lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false; // Resetta la visibilità dell'errore...
+            btn_Login.Enabled = false;
+
+            if (Variabili.login_Stato == true)
+            {
+                Gbox_Reset_Password.Visible = true;  // <-- Seed Phrase
+                groupBox_Riscrivi_Seed.Visible = true;
+            }
 
             if (loop == true)
             { contatore_Timer = 0;
@@ -130,6 +137,7 @@ namespace Client_V3
                 radioBtn_EULA_2.Checked = false;
                 await Sleep_Timer_Wallet_Chia(3);
                 loop = false;
+                btn_Login.Enabled = true;
                 return;
             }
             if (txt_User_Address.Text == "Inserisci wallet XCH")
@@ -141,6 +149,7 @@ namespace Client_V3
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
                 await Sleep_Timer_Wallet_Chia(3);
                 loop = false;
+                btn_Login.Enabled = true;
                 return;
             }
             if (txt_User_Address.Text.Length == 0)
@@ -152,6 +161,7 @@ namespace Client_V3
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
                 await Sleep_Timer_Wallet_Chia(3);
                 loop = false;
+                btn_Login.Enabled = true;
                 return;
             }
             if (txt_Password.Text.Length > 30)
@@ -163,6 +173,7 @@ namespace Client_V3
                 lbl_Avviso_Main.Visible = true; lbl_Avviso_Main_Titolo.Visible = true;
                 await Sleep_Timer_Wallet_Chia(3);
                 loop = false;
+                btn_Login.Enabled = true;
                 return;
             }
             //if (txt_User_Address.Text.Count() != 62)
@@ -175,10 +186,13 @@ namespace Client_V3
             //    return;
             //}
             if (Variabili.login_Stato == true)
-            {
-                await Login(); // Se premuto il pulsante Login in precedenza
-                return;
-            }
+                if (txt_Inserisci_Seed_Phrase_1.Text == txt_Inserisci_Seed_Phrase_2.Text)
+                {
+                    await Login(); // Se premuto il pulsante Login in precedenza
+                    btn_Login.Enabled = true;
+                    return;
+                } else await Sleep_Timer_Color(3);
+    
             if (errori == 0)
             {
                 Variabili.seed = SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
@@ -307,11 +321,12 @@ namespace Client_V3
                 System.IO.Directory.CreateDirectory(percorso_profili + @"Wallet\");
 
             int id = 1;
-            string password     = txt_Password.Text;
-            string wallet       = txt_User_Address.Text;
-            string referal      = txt_Referal_Code.Text;
-            string seed         = txt_Seed_Phrase.Text;
+            string password     = Variabili.password;
+            string wallet       = Variabili.wallet;
+            string referal      = Variabili.referal_Code;
+            string seed         = Variabili.seed;
             if (password == "Inserisci Password") password = "Null";
+            if (seed == "SEED-xDIx-PROVA-xxxx") seed = "Null";
 
             XDocument Salvataggio_Xml = new XDocument(new XElement("Wallet_Data",
                 new XElement("Wallet", wallet),
@@ -421,30 +436,35 @@ namespace Client_V3
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Home());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_Payment_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new Payment());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new Dashboard());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_Simulate_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new Simulate());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_Staking_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Staking());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_EULA_Click(object sender, EventArgs e)
         {
@@ -456,6 +476,7 @@ namespace Client_V3
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(new Swap());
             btn_Login.Visible = false;
+            Variabili.login_Stato = false;
         }
         private void btn_Wallet_Click(object sender, EventArgs e)
         {
@@ -468,6 +489,7 @@ namespace Client_V3
         {
             OpenChildForm(new SeedPhrase());
             btn_Login.Visible = true;
+            Variabili.login_Stato = false;
         }
         #endregion
         public static void label_Logo_Click(object sender, EventArgs e)
@@ -693,6 +715,8 @@ namespace Client_V3
 
             Variabili.invito_Referal = txt_Referal_Code.Text;
             Variabili.wallet = txt_User_Address.Text;
+            Variabili.seed = txt_Inserisci_Seed_Phrase_1.Text;
+            Variabili.referal_Code = txt_Inserisci_Seed_Phrase_1.Text;
 
             Add_on_List();
             Menu_Coming_Soon();

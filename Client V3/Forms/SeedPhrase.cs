@@ -130,13 +130,17 @@ namespace Client_V3.Forms
                 DocumentoXml.Load(elementi_passati[x]);
                 XmlNode nodeWallet = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Wallet");
                 XmlNode nodePassword = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Password");
+                XmlNode nodeSeed = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Seed");
+                XmlNode nodeReferal = DocumentoXml.DocumentElement.SelectSingleNode("/Wallet_Data/Referal");
                 comboBox_Load_Wallet.Items.Add(nodeWallet.InnerText);
-                var txn_Data = new string[] { nodeWallet.InnerText, nodePassword.InnerText };
+                var txn_Data = new string[] { nodeWallet.InnerText, nodePassword.InnerText, nodeSeed.InnerText, nodeReferal.InnerText };
                 stato_Transazione.Add(txn_Data);
                 if (x == 0)
                 {
                     Variabili.wallet = nodeWallet.InnerText;
                     Variabili.password = nodePassword.InnerText;
+                    Variabili.seed = nodeSeed.InnerText;
+                    Variabili.referal_Code = nodeReferal.InnerText;
                 }
             }
             comboBox_Load_Wallet.Text = comboBox_Load_Wallet.Items[0].ToString();
