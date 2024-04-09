@@ -381,7 +381,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.groupBox1);
             this.Name = "SeedPhrase";
-            this.Text = "SeedPhrase";
+            this.Text = "Wallet";
             this.Load += new System.EventHandler(this.SeedPhrase_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();

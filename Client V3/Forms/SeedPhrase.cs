@@ -140,7 +140,7 @@ namespace Client_V3.Forms
                     Variabili.wallet = nodeWallet.InnerText;
                     Variabili.password = nodePassword.InnerText;
                     Variabili.seed = nodeSeed.InnerText;
-                    Variabili.referal_Code = nodeReferal.InnerText;
+                    Variabili.invito_Referal = nodeReferal.InnerText;
                 }
             }
             comboBox_Load_Wallet.Text = comboBox_Load_Wallet.Items[0].ToString();

@@ -121,7 +121,7 @@ namespace Client_V3.Forms
                         Variabili.plot_Euro = args[11];
 
                         txt_USDT_Anteprima.Text = plot_Price;
-                        txt_EUR_Anteprima.Text = Variabili.plot_Euro;
+                        txt_EUR_Anteprima.Text = (Convert.ToDouble(Variabili.plot_Euro) * Convert.ToDouble(txt_Plot_Anteprima.Text)).ToString();
                         Txt_Giorni_Noleggio.Text = giorni;
                         txt_Prezzo_Chia_Euro.Text = prezzo_Chia_Euro;
                         Txt_Chia_Reward_1.Text = xch_Pay.ToString();

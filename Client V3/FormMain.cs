@@ -99,7 +99,7 @@ namespace Client_V3
             if (Variabili.login_Stato == true || Variabili.seedPhrase_Approved == true)
                 Gbox_Reset_Password.Visible = true;  // <-- Seed Phrase
             txt_Password.Visible = true; // <-- password main -->
-            Variabili.seed = SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
+            Variabili.seed = Forms.SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
 
             var percorso_profili = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\AppData\Local\Deep_Client_\";
 
@@ -112,6 +112,7 @@ namespace Client_V3
                 Wallet();
             }
             await Update_Data(); //Aggiornamento dati
+            if (Variabili.login_Stato == false) label_Form_Selected.Text = "Login Menu";
         }
         private async void btn_Conferma_Main_Click(object sender, EventArgs e)
         {
@@ -195,7 +196,7 @@ namespace Client_V3
     
             if (errori == 0)
             {
-                Variabili.seed = SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
+                Variabili.seed = Forms.SeedPhrase.Generate_Random_Transaction_Memo(4, 4, '-');
                 txt_Seed_Phrase.Text = Variabili.seed;
 
             }
@@ -284,8 +285,8 @@ namespace Client_V3
                 Menu_Coming_Soon();
                 Wallet();
 
-                loop = false;
                 //Resettiamo i campi per i nuovi dati
+                loop = false;
                 lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false; // Resetta la visibilità dell'errore...
                 Gbox_Seed_Phrase.Visible = false;
                 txt_User_Address.Text = "Inserisci wallet XCH";
@@ -296,7 +297,6 @@ namespace Client_V3
                 txt_Inserisci_Seed_Phrase_1.Text = "SEED-xDIx-PROVA-xxxx";
                 txt_Inserisci_Seed_Phrase_2.Text = "SEED-xDIx-PROVA-x12x";
                 Gbox_Seed_Phrase.Visible = false;
-                Gbox_Seed_Phrase.Text = "SEED-xDIx-PROVA-xxxx";
                 txt_Avviso.Text = "AAAA-BBBB-CCCC-DDDD";
                 groupBox_Riscrivi_Seed.Visible = false;
                 radioBtn_EULA_1.Checked = false;
@@ -323,7 +323,7 @@ namespace Client_V3
             int id = 1;
             string password     = Variabili.password;
             string wallet       = Variabili.wallet;
-            string referal      = Variabili.referal_Code;
+            string referal      = Variabili.invito_Referal;
             string seed         = Variabili.seed;
             if (password == "Inserisci Password") password = "Null";
             if (seed == "SEED-xDIx-PROVA-xxxx") seed = "Null";
@@ -483,6 +483,7 @@ namespace Client_V3
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(new SeedPhrase());
             btn_Login.Visible = true;
+            btn_Login.Enabled = true;
         }
 
         private void Wallet()
@@ -499,8 +500,8 @@ namespace Client_V3
                 currentChildForm.Close();
                 Reset();
             }
-            else
-            Reset();
+            else Reset();
+
             add_Wallet = true;
             goupB_Main_Form.Visible = true;
         }
@@ -682,7 +683,7 @@ namespace Client_V3
         {
             Variabili.login_Stato = true;
             label_Logo_Click(sender, e);
-
+            if (Variabili.login_Stato == true) label_Form_Selected.Text = "Login";
         }
         async Task Login()
         {
@@ -713,10 +714,10 @@ namespace Client_V3
             btn_Payment.BackColor = Color.FromArgb(39, 45, 59);
             goupB_Main_Form.Visible = false;
 
-            Variabili.invito_Referal = txt_Referal_Code.Text;
             Variabili.wallet = txt_User_Address.Text;
-            Variabili.seed = txt_Inserisci_Seed_Phrase_1.Text;
-            Variabili.referal_Code = txt_Inserisci_Seed_Phrase_1.Text;
+            Variabili.password = txt_Password.Text;
+            Variabili.seed = txt_Avviso.Text;
+            Variabili.invito_Referal = txt_Referal_Code.Text;
 
             Add_on_List();
             Menu_Coming_Soon();

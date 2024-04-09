@@ -38,7 +38,6 @@ namespace Client_V3
         public static string status_Pagamento   = "Stato pagamento: Nessuno";
         public static string id_Client          = "not connected";
         public static string importo_USDT       = "";
-        public static string referal_Code       = "not connected"; // codice referal dell'utente
         public static string plot_Euro          = "0";
 
 
