@@ -722,6 +722,25 @@ namespace Client_V3
             Add_on_List();
             Menu_Coming_Soon();
             Wallet();
+
+            //Resettiamo i campi per i nuovi dati
+            loop = false;
+            lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false; // Resetta la visibilità dell'errore...
+            Gbox_Seed_Phrase.Visible = false;
+            txt_User_Address.Text = "Inserisci wallet XCH";
+            txt_Password.Text = "Inserisci Password";
+            txt_Referal_Code.Text = "Ref_Code";
+
+            Gbox_Seed_Phrase.Visible = false;
+            txt_Inserisci_Seed_Phrase_1.Text = "SEED-xDIx-PROVA-xxxx";
+            txt_Inserisci_Seed_Phrase_2.Text = "SEED-xDIx-PROVA-x12x";
+            Gbox_Seed_Phrase.Visible = false;
+            txt_Avviso.Text = "AAAA-BBBB-CCCC-DDDD";
+            groupBox_Riscrivi_Seed.Visible = false;
+            radioBtn_EULA_1.Checked = false;
+            radioBtn_EULA_2.Checked = false;
+            loop = false;
+            errori = 0;
         }
     }
 }
