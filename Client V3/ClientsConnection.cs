@@ -53,7 +53,7 @@ namespace Client_V3
 
                         if (supplyCert)
                         {
-                            _CertFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\client.pfx";
+                            _CertFile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + $@"/Documents/Client.pfx";
                             _CertPass = "Password1";
                         }
 
