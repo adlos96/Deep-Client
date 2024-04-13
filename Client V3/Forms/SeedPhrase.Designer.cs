@@ -60,7 +60,7 @@
             // 
             // panel8
             // 
-            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel8.Controls.Add(this.lbl_Avviso_Password);
             this.panel8.Location = new System.Drawing.Point(13, 273);
             this.panel8.Name = "panel8";
@@ -81,7 +81,7 @@
             // 
             // Gbox_New_Password_Request
             // 
-            this.Gbox_New_Password_Request.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Gbox_New_Password_Request.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Gbox_New_Password_Request.Controls.Add(this.Btn_Update_Password_Post);
             this.Gbox_New_Password_Request.Controls.Add(this.label12);
             this.Gbox_New_Password_Request.Controls.Add(this.txt_Update_Password);
@@ -155,7 +155,7 @@
             // 
             // Gbox_Reset_Password_Post
             // 
-            this.Gbox_Reset_Password_Post.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Gbox_Reset_Password_Post.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Gbox_Reset_Password_Post.Controls.Add(this.btn_Reset_Password_Post);
             this.Gbox_Reset_Password_Post.Controls.Add(this.label14);
             this.Gbox_Reset_Password_Post.Controls.Add(this.txt_Reset_SeedPhrase);
@@ -228,7 +228,7 @@
             // 
             // panel6
             // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel6.Controls.Add(this.lbl_PopUp_Main_Conferma);
             this.panel6.Location = new System.Drawing.Point(13, 229);
             this.panel6.Name = "panel6";
@@ -250,7 +250,7 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel7.Controls.Add(this.lbl_PopUp_Main_XCH_Address);
             this.panel7.Location = new System.Drawing.Point(13, 251);
             this.panel7.Name = "panel7";
@@ -272,7 +272,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.groupBox1.Controls.Add(this.btn_Clear_Data_Post);
             this.groupBox1.Controls.Add(this.btn_Add_Wallet);
             this.groupBox1.Controls.Add(this.comboBox_Load_Wallet);
@@ -356,6 +356,7 @@
             // 
             // lbl_Erroe
             // 
+            this.lbl_Erroe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Erroe.AutoSize = true;
             this.lbl_Erroe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_Erroe.ForeColor = System.Drawing.Color.Red;

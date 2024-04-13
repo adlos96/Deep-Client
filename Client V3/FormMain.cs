@@ -252,24 +252,6 @@ namespace Client_V3
                 }
 
                 lbl_Avviso_Main.Visible = false; lbl_Avviso_Main_Titolo.Visible = false;
-                /*
-                btn_Home.Enabled = true;
-                btn_Home.Text = "Home";
-                btn_Home.BackColor = Color.FromArgb(39, 45, 59);
-                */
-
-                btn_Dashboard.Enabled = true;
-                btn_Dashboard.Text = "Dashboard";
-                btn_Dashboard.BackColor = Color.FromArgb(39, 45, 59);
-
-                btn_Simulate.Enabled = true;
-                btn_Simulate.Text = "Simulate";
-                btn_Simulate.BackColor = Color.FromArgb(39, 45, 59);
-
-                btn_Payment.Enabled = true;
-                btn_Payment.Text = "Payment";
-                btn_Payment.BackColor = Color.FromArgb(39, 45, 59);
-                goupB_Main_Form.Visible = false;
 
                 Variabili.invito_Referal = txt_Referal_Code.Text;
                 Variabili.wallet = txt_User_Address.Text;
@@ -391,6 +373,10 @@ namespace Client_V3
             Btn_Swap.Text = "Coming Soon"; //Swap
             Btn_Swap.BackColor = Color.FromArgb(110, 106, 106);
 
+            btn_Wallet.Enabled = true;
+            btn_Wallet.Text = "Wallet";
+            btn_Wallet.BackColor = Color.FromArgb(39, 45, 59);
+
             goupB_Main_Form.Visible = false;
         }
         void Menu_First_Register()
@@ -418,6 +404,10 @@ namespace Client_V3
             Btn_Swap.Enabled = false;
             Btn_Swap.Text = "First Register";
             Btn_Swap.BackColor = Color.FromArgb(110, 106, 106);
+
+            btn_Wallet.Enabled = false;
+            btn_Wallet.Text = "First Register";
+            btn_Wallet.BackColor = Color.FromArgb(110, 106, 106);
         }
         static async Task<bool> Update_Data()
         {

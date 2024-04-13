@@ -346,8 +346,7 @@ namespace Client_V3
             // 
             // btn_Login
             // 
-            btn_Login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            btn_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
             btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));

@@ -39,6 +39,8 @@ namespace Client.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_Plot_Noleggiati = new System.Windows.Forms.TextBox();
+            this.txt_Plot_Disponibili = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_Disconnetti = new System.Windows.Forms.Button();
@@ -97,8 +99,6 @@ namespace Client.Forms
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Plot_Disponibili = new System.Windows.Forms.TextBox();
-            this.txt_Plot_Noleggiati = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox_Payment_USDT.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -139,6 +139,37 @@ namespace Client.Forms
             this.groupBox1.Size = new System.Drawing.Size(839, 378);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txt_Plot_Noleggiati
+            // 
+            this.txt_Plot_Noleggiati.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Plot_Noleggiati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Plot_Noleggiati.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Plot_Noleggiati.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Plot_Noleggiati.ForeColor = System.Drawing.Color.Gold;
+            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(666, 49);
+            this.txt_Plot_Noleggiati.Name = "txt_Plot_Noleggiati";
+            this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(166, 20);
+            this.txt_Plot_Noleggiati.TabIndex = 25;
+            this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 0";
+            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Plot_Noleggiati.Visible = false;
+            // 
+            // txt_Plot_Disponibili
+            // 
+            this.txt_Plot_Disponibili.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_Plot_Disponibili.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Plot_Disponibili.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Plot_Disponibili.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Plot_Disponibili.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.txt_Plot_Disponibili.Location = new System.Drawing.Point(334, 51);
+            this.txt_Plot_Disponibili.Name = "txt_Plot_Disponibili";
+            this.txt_Plot_Disponibili.Size = new System.Drawing.Size(173, 20);
+            this.txt_Plot_Disponibili.TabIndex = 24;
+            this.txt_Plot_Disponibili.Text = "Plot Disponibili: 0";
+            this.txt_Plot_Disponibili.Visible = false;
             // 
             // label18
             // 
@@ -851,35 +882,6 @@ namespace Client.Forms
             this.label2.TabIndex = 16;
             this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_Plot_Disponibili
-            // 
-            this.txt_Plot_Disponibili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txt_Plot_Disponibili.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.txt_Plot_Disponibili.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Plot_Disponibili.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_Plot_Disponibili.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.txt_Plot_Disponibili.Location = new System.Drawing.Point(334, 51);
-            this.txt_Plot_Disponibili.Name = "txt_Plot_Disponibili";
-            this.txt_Plot_Disponibili.Size = new System.Drawing.Size(173, 20);
-            this.txt_Plot_Disponibili.TabIndex = 24;
-            this.txt_Plot_Disponibili.Text = "Plot Disponibili: 0";
-            this.txt_Plot_Disponibili.Visible = false;
-            // 
-            // txt_Plot_Noleggiati
-            // 
-            this.txt_Plot_Noleggiati.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txt_Plot_Noleggiati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.txt_Plot_Noleggiati.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Plot_Noleggiati.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_Plot_Noleggiati.ForeColor = System.Drawing.Color.Gold;
-            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(666, 49);
-            this.txt_Plot_Noleggiati.Name = "txt_Plot_Noleggiati";
-            this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(166, 20);
-            this.txt_Plot_Noleggiati.TabIndex = 25;
-            this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 0";
-            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_Plot_Noleggiati.Visible = false;
             // 
             // Payment
             // 
