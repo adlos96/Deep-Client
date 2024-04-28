@@ -233,6 +233,12 @@ namespace Client.Forms
                     else MessageBox.Show("Qualcosa è andato storto!...");
                 else Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
             }
+
+            if (Variabili.status_Pagamento == "Stato pagamento: Nessuno")
+                lbl_Stato_Pagamento_Timer.Text = Variabili.status_Pagamento;
+            else
+                lbl_Stato_Pagamento_Timer.Text = "Richiesta presente: " + Variabili.status_Pagamento + " Minuti " + Variabili.importo_USDT + "USDT";
+            lbl_ID.Text = "ID: " + Variabili.id_Client;
         }
         public static Task Conferma_btn()
         {
@@ -252,8 +258,6 @@ namespace Client.Forms
             Variabili.wallet_USDT = txt_Wallet_USDT_User.Text.ToLower();
             Variabili.chain = comboBox_Chain_Selection.Text;
 
-
-            
             //Invia i dati dell'untente al server
             string argomento = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain + "|" + Variabili.password + "|" + Variabili.seed;
             await ClientsConnection.TestClient.ClientSend(argomento);

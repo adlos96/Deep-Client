@@ -184,7 +184,7 @@ namespace Client_V3
                         break;
                     case "timerUSDT":
                         Variabili.status_Pagamento = msgArgs[1];
-                        Variabili.importo_USDT = (msgArgs[1]).ToString();
+                        Variabili.importo_USDT = msgArgs[2].ToString();
                         break;
                     case "ID":
                         Variabili.id_Client = msgArgs[1];

@@ -100,6 +100,7 @@ namespace Client_V3
         public static string chain                  = "Null";
         public static string plot_Noleggiati        = "Plot Noleggiati: 0";
         public static string plot_Disponibile       = "Plot Disponibili: 0";
+        public static string info                   = "Totale Deposito: 0 Euro Numero Utenti: 0";
 
         // -------------------- User Data Client -----------------------
         public static double eur_usd = 0;

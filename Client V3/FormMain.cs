@@ -191,6 +191,8 @@ namespace Client_V3
                 {
                     await Login(); // Se premuto il pulsante Login in precedenza
                     btn_Login.Enabled = true;
+                    Client_V3.Properties.Settings.Default.Salvataggio = true;
+                    Properties.Settings.Default.Save();
                     return;
                 } else await Sleep_Timer_Color(3);
     
@@ -225,7 +227,8 @@ namespace Client_V3
                     btn_Conferma_Main.Text = "Inserisci Seed Phrase";
                     Sleep_Timer_Seed_Phrase(4);
                     await Sleep_Timer(20, "Assicurati di aver salvato la Seed Phrase");
-                
+                    await Sleep_Timer(1, "Conferma");
+
                     Gbox_Seed_Phrase.Visible = true;        // <<-- Seed Phrase - Box Reinserimento
                     groupBox_Riscrivi_Seed.Visible = true;
                     Sleep_Timer_Seed_Phrase(4);
@@ -255,6 +258,7 @@ namespace Client_V3
 
                 Variabili.invito_Referal = txt_Referal_Code.Text;
                 Variabili.wallet = txt_User_Address.Text;
+                Variabili.password = txt_Password.Text;
 
                 Add_on_List();
 

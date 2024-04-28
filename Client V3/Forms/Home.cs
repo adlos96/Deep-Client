@@ -17,11 +17,13 @@ namespace Client.Forms
         {
             await ClientsConnection.TestClient.Connessione();
             await ClientsConnection.TestClient.Send_Server($"balance|protocol|{Variabili.wallet}");
+            await ClientsConnection.TestClient.Send_Server($"data|{Variabili.wallet}");
             await Fee_Update();
 
             if (ClientsConnection.TestClient._ServerIp != "127.1")
             {
                 chart_Grafico_Home.Visible = false;
+                txt_Info.Visible = false; //Info deposito totale e numero utenti .... true
             }
 
             //Update withdrawal fee
@@ -44,6 +46,7 @@ namespace Client.Forms
             lbl_Pending_Xch.Text            = "Pending: " + Variabili.xch_Pending + " XCH";
             txt_Totale_Xch_Prelevati.Text   = Variabili.chia_prelevati + " XCH";
             txt_Credito_Rimasto.Text        = Variabili.Credito_Rimasto + " Euro";
+            txt_Info.Text                   = Variabili.info;
         }
 
         private async void Btn_Withdrawal_Click(object sender, EventArgs e)
