@@ -322,7 +322,7 @@ namespace Client_V3
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = global::Client_V3.Properties.Resources.out_0;
+            this.panel3.BackgroundImage = global::Client_V3.Properties.Resources.out_01;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Location = new System.Drawing.Point(1, 0);
             this.panel3.Name = "panel3";

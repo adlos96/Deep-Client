@@ -127,9 +127,6 @@
   <data name="Chia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="out-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\out-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tether_ico_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tether_ico_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

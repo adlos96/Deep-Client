@@ -250,7 +250,6 @@
     <Content Include="Resources\Chia.png" />
     <None Include="Resources\cronos-cro-logo.png" />
     <Content Include="Resources\ethereum_ERC_ico32.png" />
-    <None Include="Resources\out-0.png" />
     <None Include="Resources\out-01.png" />
     <Content Include="Resources\Polygon_ico_32.png" />
     <Content Include="Resources\Tether_ico_32.png" />
