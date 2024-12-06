@@ -16,6 +16,7 @@ namespace Client_V3.Forms
             lbl_Bonus_Deposito.Text = Variabili.bonus_Deposito.ToString() + "% (Tantum)";
             lbl_Bonus_Invito_Ref.Text = Variabili.bonus_Innvito_Ref.ToString() + "% (ADS)";
             lbl_Bonus_Invitato_Ref.Text = Variabili.bonus_Invitato_Ref.ToString() + "% (ADS)";
+            lbl_Rendimento.Text = Variabili.Rendita_Base_B.ToString() + "% - " + Variabili.Rendita_Base_E.ToString() + "%";
         }
 
         private void lbl_Link_DeepMiningProtocol_Click(object sender, EventArgs e)

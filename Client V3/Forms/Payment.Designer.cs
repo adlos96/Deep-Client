@@ -38,7 +38,15 @@ namespace Client.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lbl_Connessione_Server = new System.Windows.Forms.Label();
             this.txt_Plot_Noleggiati = new System.Windows.Forms.TextBox();
             this.txt_Plot_Disponibili = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -59,8 +67,6 @@ namespace Client.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_Subtitle = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lbl_Connessione_Server = new System.Windows.Forms.Label();
             this.lbl_Stato_Pagamento_Timer = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -99,6 +105,15 @@ namespace Client.Forms
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.datagrid_Unstake = new System.Windows.Forms.DataGridView();
+            this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Value_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Coin_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Coin_Price_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Value_To = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Price_To = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox_Payment_USDT.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -112,6 +127,8 @@ namespace Client.Forms
             this.panel_Numero_Plot_TrackBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.panel5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Unstake)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -120,6 +137,9 @@ namespace Client.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.lbl_Connessione_Server);
             this.groupBox1.Controls.Add(this.txt_Plot_Noleggiati);
             this.groupBox1.Controls.Add(this.txt_Plot_Disponibili);
             this.groupBox1.Controls.Add(this.label18);
@@ -136,24 +156,49 @@ namespace Client.Forms
             this.groupBox1.Controls.Add(this.goupbox_Acquisto_Plot);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(839, 378);
+            this.groupBox1.Size = new System.Drawing.Size(1010, 471);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label16.Location = new System.Drawing.Point(813, 44);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(101, 20);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Connessione:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Connessione_Server
+            // 
+            this.lbl_Connessione_Server.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_Connessione_Server.AutoSize = true;
+            this.lbl_Connessione_Server.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_Connessione_Server.ForeColor = System.Drawing.Color.Tomato;
+            this.lbl_Connessione_Server.Location = new System.Drawing.Point(909, 44);
+            this.lbl_Connessione_Server.Name = "lbl_Connessione_Server";
+            this.lbl_Connessione_Server.Size = new System.Drawing.Size(96, 20);
+            this.lbl_Connessione_Server.TabIndex = 17;
+            this.lbl_Connessione_Server.Text = "Disconnesso";
+            this.lbl_Connessione_Server.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_Plot_Noleggiati
             // 
             this.txt_Plot_Noleggiati.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_Plot_Noleggiati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             this.txt_Plot_Noleggiati.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Plot_Noleggiati.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Plot_Noleggiati.ForeColor = System.Drawing.Color.Gold;
-            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(666, 49);
+            this.txt_Plot_Noleggiati.Location = new System.Drawing.Point(336, 56);
             this.txt_Plot_Noleggiati.Name = "txt_Plot_Noleggiati";
-            this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(166, 20);
+            this.txt_Plot_Noleggiati.Size = new System.Drawing.Size(171, 20);
             this.txt_Plot_Noleggiati.TabIndex = 25;
             this.txt_Plot_Noleggiati.Text = "Plot Noleggiati: 0";
-            this.txt_Plot_Noleggiati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_Plot_Noleggiati.Visible = false;
             // 
             // txt_Plot_Disponibili
@@ -164,7 +209,7 @@ namespace Client.Forms
             this.txt_Plot_Disponibili.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Plot_Disponibili.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Plot_Disponibili.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.txt_Plot_Disponibili.Location = new System.Drawing.Point(334, 51);
+            this.txt_Plot_Disponibili.Location = new System.Drawing.Point(336, 37);
             this.txt_Plot_Disponibili.Name = "txt_Plot_Disponibili";
             this.txt_Plot_Disponibili.Size = new System.Drawing.Size(173, 20);
             this.txt_Plot_Disponibili.TabIndex = 24;
@@ -177,7 +222,7 @@ namespace Client.Forms
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.Green;
-            this.label18.Location = new System.Drawing.Point(652, 312);
+            this.label18.Location = new System.Drawing.Point(685, 302);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(47, 20);
             this.label18.TabIndex = 22;
@@ -189,7 +234,7 @@ namespace Client.Forms
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(447, 311);
+            this.label13.Location = new System.Drawing.Point(480, 301);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(210, 20);
             this.label13.TabIndex = 21;
@@ -204,7 +249,7 @@ namespace Client.Forms
             this.btn_Disconnetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Disconnetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Disconnetti.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Disconnetti.Location = new System.Drawing.Point(741, 112);
+            this.btn_Disconnetti.Location = new System.Drawing.Point(912, 117);
             this.btn_Disconnetti.Name = "btn_Disconnetti";
             this.btn_Disconnetti.Size = new System.Drawing.Size(92, 30);
             this.btn_Disconnetti.TabIndex = 20;
@@ -221,7 +266,7 @@ namespace Client.Forms
             this.btn_Connetti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Connetti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Connetti.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Connetti.Location = new System.Drawing.Point(741, 78);
+            this.btn_Connetti.Location = new System.Drawing.Point(912, 83);
             this.btn_Connetti.Name = "btn_Connetti";
             this.btn_Connetti.Size = new System.Drawing.Size(92, 30);
             this.btn_Connetti.TabIndex = 19;
@@ -381,39 +426,11 @@ namespace Client.Forms
             this.pnl_Subtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Subtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
-            this.pnl_Subtitle.Controls.Add(this.label16);
-            this.pnl_Subtitle.Controls.Add(this.lbl_Connessione_Server);
             this.pnl_Subtitle.Controls.Add(this.lbl_Stato_Pagamento_Timer);
-            this.pnl_Subtitle.Location = new System.Drawing.Point(334, 17);
+            this.pnl_Subtitle.Location = new System.Drawing.Point(334, 8);
             this.pnl_Subtitle.Name = "pnl_Subtitle";
-            this.pnl_Subtitle.Size = new System.Drawing.Size(504, 28);
+            this.pnl_Subtitle.Size = new System.Drawing.Size(675, 28);
             this.pnl_Subtitle.TabIndex = 17;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label16.Location = new System.Drawing.Point(315, 4);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 20);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Connessione:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Connessione_Server
-            // 
-            this.lbl_Connessione_Server.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_Connessione_Server.AutoSize = true;
-            this.lbl_Connessione_Server.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_Connessione_Server.ForeColor = System.Drawing.Color.Tomato;
-            this.lbl_Connessione_Server.Location = new System.Drawing.Point(411, 4);
-            this.lbl_Connessione_Server.Name = "lbl_Connessione_Server";
-            this.lbl_Connessione_Server.Size = new System.Drawing.Size(96, 20);
-            this.lbl_Connessione_Server.TabIndex = 17;
-            this.lbl_Connessione_Server.Text = "Disconnesso";
-            this.lbl_Connessione_Server.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Stato_Pagamento_Timer
             // 
@@ -433,7 +450,7 @@ namespace Client.Forms
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackgroundImage = global::Client_V3.Properties.Resources.Tether_ico_32;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Location = new System.Drawing.Point(681, 333);
+            this.panel3.Location = new System.Drawing.Point(714, 323);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(41, 35);
             this.panel3.TabIndex = 16;
@@ -444,7 +461,7 @@ namespace Client.Forms
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.txt_Wallet_USDT_User);
-            this.panel4.Location = new System.Drawing.Point(447, 334);
+            this.panel4.Location = new System.Drawing.Point(480, 324);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 33);
             this.panel4.TabIndex = 15;
@@ -481,7 +498,7 @@ namespace Client.Forms
             this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Refresh.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Refresh.Location = new System.Drawing.Point(741, 147);
+            this.btn_Refresh.Location = new System.Drawing.Point(912, 152);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(92, 30);
             this.btn_Refresh.TabIndex = 14;
@@ -496,7 +513,7 @@ namespace Client.Forms
             this.lbl_Avviso_Campi_Incompleti.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_Avviso_Campi_Incompleti.ForeColor = System.Drawing.Color.Tomato;
             this.lbl_Avviso_Campi_Incompleti.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_Avviso_Campi_Incompleti.Location = new System.Drawing.Point(456, 93);
+            this.lbl_Avviso_Campi_Incompleti.Location = new System.Drawing.Point(489, 83);
             this.lbl_Avviso_Campi_Incompleti.Name = "lbl_Avviso_Campi_Incompleti";
             this.lbl_Avviso_Campi_Incompleti.Size = new System.Drawing.Size(232, 20);
             this.lbl_Avviso_Campi_Incompleti.TabIndex = 13;
@@ -508,7 +525,7 @@ namespace Client.Forms
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.panel_Anteprima);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(470, 122);
+            this.groupBox2.Location = new System.Drawing.Point(503, 112);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(207, 172);
             this.groupBox2.TabIndex = 12;
@@ -577,7 +594,7 @@ namespace Client.Forms
             this.txt_Plot_Anteprima.Location = new System.Drawing.Point(3, 25);
             this.txt_Plot_Anteprima.Name = "txt_Plot_Anteprima";
             this.txt_Plot_Anteprima.ReadOnly = true;
-            this.txt_Plot_Anteprima.Size = new System.Drawing.Size(44, 18);
+            this.txt_Plot_Anteprima.Size = new System.Drawing.Size(63, 18);
             this.txt_Plot_Anteprima.TabIndex = 9;
             this.txt_Plot_Anteprima.Text = "74";
             this.txt_Plot_Anteprima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -591,7 +608,7 @@ namespace Client.Forms
             this.txt_USDT_Anteprima.Location = new System.Drawing.Point(3, 46);
             this.txt_USDT_Anteprima.Name = "txt_USDT_Anteprima";
             this.txt_USDT_Anteprima.ReadOnly = true;
-            this.txt_USDT_Anteprima.Size = new System.Drawing.Size(44, 18);
+            this.txt_USDT_Anteprima.Size = new System.Drawing.Size(63, 18);
             this.txt_USDT_Anteprima.TabIndex = 14;
             this.txt_USDT_Anteprima.Text = "74";
             this.txt_USDT_Anteprima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -699,7 +716,7 @@ namespace Client.Forms
             this.goupbox_Acquisto_Plot.Controls.Add(this.panel_Numero_Plot_TrackBar);
             this.goupbox_Acquisto_Plot.Controls.Add(this.btn_Conferma_Plot);
             this.goupbox_Acquisto_Plot.ForeColor = System.Drawing.SystemColors.Control;
-            this.goupbox_Acquisto_Plot.Location = new System.Drawing.Point(9, 182);
+            this.goupbox_Acquisto_Plot.Location = new System.Drawing.Point(9, 173);
             this.goupbox_Acquisto_Plot.Name = "goupbox_Acquisto_Plot";
             this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(322, 187);
             this.goupbox_Acquisto_Plot.TabIndex = 3;
@@ -852,9 +869,9 @@ namespace Client.Forms
             this.panel5.Controls.Add(this.lbl_ID);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 393);
+            this.panel5.Location = new System.Drawing.Point(0, 486);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(860, 28);
+            this.panel5.Size = new System.Drawing.Size(1031, 28);
             this.panel5.TabIndex = 1;
             // 
             // lbl_ID
@@ -863,7 +880,7 @@ namespace Client.Forms
             this.lbl_ID.AutoSize = true;
             this.lbl_ID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ID.Location = new System.Drawing.Point(732, 4);
+            this.lbl_ID.Location = new System.Drawing.Point(903, 4);
             this.lbl_ID.Name = "lbl_ID";
             this.lbl_ID.Size = new System.Drawing.Size(68, 20);
             this.lbl_ID.TabIndex = 19;
@@ -876,19 +893,130 @@ namespace Client.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(229, 4);
+            this.label2.Location = new System.Drawing.Point(501, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 20);
+            this.label2.Size = new System.Drawing.Size(173, 20);
             this.label2.TabIndex = 16;
-            this.label2.Text = "I Pagamenti sono momentaneamente sospesi";
+            this.label2.Text = "Cloud Mining operativo";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.datagrid_Unstake);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Location = new System.Drawing.Point(3, 373);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1004, 95);
+            this.groupBox3.TabIndex = 69;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Swap Transaction";
+            // 
+            // datagrid_Unstake
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Control;
+            this.datagrid_Unstake.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.datagrid_Unstake.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.datagrid_Unstake.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datagrid_Unstake.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Unstake.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.datagrid_Unstake.ColumnHeadersHeight = 20;
+            this.datagrid_Unstake.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_ID,
+            this.Col_Value_From,
+            this.Col_Coin_From,
+            this.Col_Coin_Price_From,
+            this.Col_Value_To,
+            this.Col_Price_To,
+            this.Col_Data});
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_Unstake.DefaultCellStyle = dataGridViewCellStyle16;
+            this.datagrid_Unstake.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagrid_Unstake.EnableHeadersVisualStyles = false;
+            this.datagrid_Unstake.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.datagrid_Unstake.Location = new System.Drawing.Point(3, 16);
+            this.datagrid_Unstake.Name = "datagrid_Unstake";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Unstake.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.datagrid_Unstake.RowHeadersVisible = false;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.Control;
+            this.datagrid_Unstake.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.datagrid_Unstake.Size = new System.Drawing.Size(998, 76);
+            this.datagrid_Unstake.TabIndex = 0;
+            // 
+            // col_ID
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Control;
+            this.col_ID.DefaultCellStyle = dataGridViewCellStyle15;
+            this.col_ID.HeaderText = "ID";
+            this.col_ID.Name = "col_ID";
+            this.col_ID.Width = 40;
+            // 
+            // Col_Value_From
+            // 
+            this.Col_Value_From.HeaderText = "Importo";
+            this.Col_Value_From.Name = "Col_Value_From";
+            this.Col_Value_From.Width = 75;
+            // 
+            // Col_Coin_From
+            // 
+            this.Col_Coin_From.HeaderText = "Chain";
+            this.Col_Coin_From.Name = "Col_Coin_From";
+            this.Col_Coin_From.Width = 50;
+            // 
+            // Col_Coin_Price_From
+            // 
+            this.Col_Coin_Price_From.HeaderText = "Tempo";
+            this.Col_Coin_Price_From.Name = "Col_Coin_Price_From";
+            this.Col_Coin_Price_From.Width = 50;
+            // 
+            // Col_Value_To
+            // 
+            this.Col_Value_To.HeaderText = "From";
+            this.Col_Value_To.Name = "Col_Value_To";
+            this.Col_Value_To.Width = 75;
+            // 
+            // Col_Price_To
+            // 
+            this.Col_Price_To.HeaderText = "To";
+            this.Col_Price_To.Name = "Col_Price_To";
+            this.Col_Price_To.Width = 50;
+            // 
+            // Col_Data
+            // 
+            this.Col_Data.HeaderText = "Data";
+            this.Col_Data.Name = "Col_Data";
+            this.Col_Data.Width = 120;
             // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(860, 421);
+            this.ClientSize = new System.Drawing.Size(1031, 514);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox1);
             this.Name = "Payment";
@@ -918,6 +1046,8 @@ namespace Client.Forms
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Unstake)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -985,5 +1115,14 @@ namespace Client.Forms
         private Label label13;
         private TextBox txt_Plot_Noleggiati;
         private TextBox txt_Plot_Disponibili;
+        private GroupBox groupBox3;
+        private DataGridView datagrid_Unstake;
+        private DataGridViewTextBoxColumn col_ID;
+        private DataGridViewTextBoxColumn Col_Value_From;
+        private DataGridViewTextBoxColumn Col_Coin_From;
+        private DataGridViewTextBoxColumn Col_Coin_Price_From;
+        private DataGridViewTextBoxColumn Col_Value_To;
+        private DataGridViewTextBoxColumn Col_Price_To;
+        private DataGridViewTextBoxColumn Col_Data;
     }
 }

@@ -93,6 +93,26 @@ namespace Client_V3.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap out_0 {
+            get {
+                object obj = ResourceManager.GetObject("out-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap out_01 {
+            get {
+                object obj = ResourceManager.GetObject("out-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Polygon_ico_32 {
             get {
                 object obj = ResourceManager.GetObject("Polygon_ico_32", resourceCulture);

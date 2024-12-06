@@ -28,73 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Btn_Swap = new System.Windows.Forms.Button();
             this.lbl_Price_From = new System.Windows.Forms.Label();
             this.lbl_Price_To = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Panel_Credito_Utente = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_XUSDT_Balance = new System.Windows.Forms.TextBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_XDLS_Balance = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_USDC_Balance = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_USDT_Balance = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_axlUSDC_Balance = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_Cro_Balance = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_Luna_Balance = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_Atom_Balance = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_Tia_Balance = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.txt_Chia_Balance = new System.Windows.Forms.TextBox();
             this.checkB_Show_Client_Balance = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_Wallet_Deposit = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_Coin_Disponibili_From = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lbl_Importo_From = new System.Windows.Forms.Label();
             this.Chain_Selection_From = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.txt_Coin_Deposit = new System.Windows.Forms.TextBox();
+            this.txt_Coin_From_Importo = new System.Windows.Forms.TextBox();
             this.Coin_Selection_From = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtlbl_Slippage_Fee = new System.Windows.Forms.TextBox();
-            this.txtlbl_Protocol_Fee = new System.Windows.Forms.TextBox();
-            this.txtlbl_Bridge_Fee = new System.Windows.Forms.TextBox();
-            this.txtlbl_Transaction_Fee = new System.Windows.Forms.TextBox();
             this.txt_Bridge_Fee = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txt_Tansaction_Fee = new System.Windows.Forms.TextBox();
+            this.txt_Transaction_Fee = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txt_Protocol_Fee = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_Slippage = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txt_Wallet_Withdrawal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_Disponibile = new System.Windows.Forms.Label();
-            this.txt_Coin_Disponibili = new System.Windows.Forms.TextBox();
+            this.txt_Coin_Disponibili_To = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_Importo_To = new System.Windows.Forms.Label();
@@ -102,11 +111,24 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txt_Coin_Recived = new System.Windows.Forms.TextBox();
             this.Coin_Selection_To = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Btn_Swap_NOT_USE = new FontAwesome.Sharp.IconButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.datagrid_Unstake = new System.Windows.Forms.DataGridView();
+            this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Value_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Coin_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Coin_Price_From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Value_To = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Price_To = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Plot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colwallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col_Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Panel_Credito_Utente.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -121,6 +143,8 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Unstake)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -132,9 +156,9 @@
             this.panel5.Controls.Add(this.lbl_Price_To);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 402);
+            this.panel5.Location = new System.Drawing.Point(0, 590);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(830, 28);
+            this.panel5.Size = new System.Drawing.Size(842, 28);
             this.panel5.TabIndex = 4;
             // 
             // Btn_Swap
@@ -142,6 +166,7 @@
             this.Btn_Swap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Swap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.Btn_Swap.Enabled = false;
             this.Btn_Swap.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.Btn_Swap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
             this.Btn_Swap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -149,7 +174,7 @@
             this.Btn_Swap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.Btn_Swap.Location = new System.Drawing.Point(294, -1);
             this.Btn_Swap.Name = "Btn_Swap";
-            this.Btn_Swap.Size = new System.Drawing.Size(242, 28);
+            this.Btn_Swap.Size = new System.Drawing.Size(254, 28);
             this.Btn_Swap.TabIndex = 20;
             this.Btn_Swap.Text = "Swap";
             this.Btn_Swap.UseVisualStyleBackColor = false;
@@ -174,7 +199,7 @@
             this.lbl_Price_To.AutoSize = true;
             this.lbl_Price_To.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lbl_Price_To.ForeColor = System.Drawing.Color.Coral;
-            this.lbl_Price_To.Location = new System.Drawing.Point(584, 1);
+            this.lbl_Price_To.Location = new System.Drawing.Point(596, 1);
             this.lbl_Price_To.Name = "lbl_Price_To";
             this.lbl_Price_To.Size = new System.Drawing.Size(211, 20);
             this.lbl_Price_To.TabIndex = 21;
@@ -187,7 +212,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(532, -26);
+            this.label2.Location = new System.Drawing.Point(538, -26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(328, 20);
             this.label2.TabIndex = 16;
@@ -196,25 +221,55 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.Panel_Credito_Utente);
             this.panel1.Controls.Add(this.checkB_Show_Client_Balance);
-            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 402);
+            this.panel1.Size = new System.Drawing.Size(321, 414);
             this.panel1.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox3.Location = new System.Drawing.Point(30, 227);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(109, 18);
+            this.textBox3.TabIndex = 40;
+            this.textBox3.Text = "Mostra Bilancio";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox1.Location = new System.Drawing.Point(0, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(316, 20);
+            this.textBox1.TabIndex = 38;
+            this.textBox1.Text = "Coin From";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Panel_Credito_Utente
             // 
             this.Panel_Credito_Utente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_Credito_Utente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.Panel_Credito_Utente.Controls.Add(this.panel17);
+            this.Panel_Credito_Utente.Controls.Add(this.panel18);
             this.Panel_Credito_Utente.Controls.Add(this.panel13);
             this.Panel_Credito_Utente.Controls.Add(this.panel12);
             this.Panel_Credito_Utente.Controls.Add(this.panel14);
@@ -223,11 +278,87 @@
             this.Panel_Credito_Utente.Controls.Add(this.panel8);
             this.Panel_Credito_Utente.Controls.Add(this.panel16);
             this.Panel_Credito_Utente.Controls.Add(this.panel9);
-            this.Panel_Credito_Utente.Location = new System.Drawing.Point(7, 250);
+            this.Panel_Credito_Utente.Location = new System.Drawing.Point(-2, 250);
             this.Panel_Credito_Utente.Name = "Panel_Credito_Utente";
-            this.Panel_Credito_Utente.Size = new System.Drawing.Size(311, 106);
+            this.Panel_Credito_Utente.Size = new System.Drawing.Size(321, 138);
             this.Panel_Credito_Utente.TabIndex = 64;
             this.Panel_Credito_Utente.Visible = false;
+            // 
+            // panel17
+            // 
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.panel17.Controls.Add(this.label4);
+            this.panel17.Controls.Add(this.txt_XUSDT_Balance);
+            this.panel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.panel17.Location = new System.Drawing.Point(164, 104);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(154, 22);
+            this.panel17.TabIndex = 61;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Coral;
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 15);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "XUSDT";
+            // 
+            // txt_XUSDT_Balance
+            // 
+            this.txt_XUSDT_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_XUSDT_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_XUSDT_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_XUSDT_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_XUSDT_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_XUSDT_Balance.Name = "txt_XUSDT_Balance";
+            this.txt_XUSDT_Balance.ReadOnly = true;
+            this.txt_XUSDT_Balance.Size = new System.Drawing.Size(93, 16);
+            this.txt_XUSDT_Balance.TabIndex = 37;
+            this.txt_XUSDT_Balance.Text = "0";
+            this.txt_XUSDT_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel18
+            // 
+            this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.panel18.Controls.Add(this.label5);
+            this.panel18.Controls.Add(this.txt_XDLS_Balance);
+            this.panel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.panel18.Location = new System.Drawing.Point(164, 79);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(154, 22);
+            this.panel18.TabIndex = 60;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Coral;
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 15);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "XDLS";
+            // 
+            // txt_XDLS_Balance
+            // 
+            this.txt_XDLS_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_XDLS_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_XDLS_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_XDLS_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_XDLS_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_XDLS_Balance.Name = "txt_XDLS_Balance";
+            this.txt_XDLS_Balance.ReadOnly = true;
+            this.txt_XDLS_Balance.Size = new System.Drawing.Size(93, 16);
+            this.txt_XDLS_Balance.TabIndex = 37;
+            this.txt_XDLS_Balance.Text = "0";
+            this.txt_XDLS_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel13
             // 
@@ -235,11 +366,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel13.Controls.Add(this.label24);
-            this.panel13.Controls.Add(this.textBox8);
+            this.panel13.Controls.Add(this.txt_USDC_Balance);
             this.panel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panel13.Location = new System.Drawing.Point(179, 79);
+            this.panel13.Location = new System.Drawing.Point(164, 29);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(129, 22);
+            this.panel13.Size = new System.Drawing.Size(154, 22);
             this.panel13.TabIndex = 59;
             // 
             // label24
@@ -249,23 +380,23 @@
             this.label24.ForeColor = System.Drawing.Color.Coral;
             this.label24.Location = new System.Drawing.Point(3, 3);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(55, 15);
+            this.label24.Size = new System.Drawing.Size(39, 15);
             this.label24.TabIndex = 36;
-            this.label24.Text = "axlUSDT";
+            this.label24.Text = "USDC";
             // 
-            // textBox8
+            // txt_USDC_Balance
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox8.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox8.Location = new System.Drawing.Point(58, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(68, 16);
-            this.textBox8.TabIndex = 37;
-            this.textBox8.Text = "0";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_USDC_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_USDC_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_USDC_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_USDC_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_USDC_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_USDC_Balance.Name = "txt_USDC_Balance";
+            this.txt_USDC_Balance.ReadOnly = true;
+            this.txt_USDC_Balance.Size = new System.Drawing.Size(93, 16);
+            this.txt_USDC_Balance.TabIndex = 37;
+            this.txt_USDC_Balance.Text = "0";
+            this.txt_USDC_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel12
             // 
@@ -273,11 +404,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel12.Controls.Add(this.label29);
-            this.panel12.Controls.Add(this.textBox7);
+            this.panel12.Controls.Add(this.txt_USDT_Balance);
             this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panel12.Location = new System.Drawing.Point(2, 79);
+            this.panel12.Location = new System.Drawing.Point(164, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(129, 22);
+            this.panel12.Size = new System.Drawing.Size(154, 22);
             this.panel12.TabIndex = 55;
             // 
             // label29
@@ -287,23 +418,23 @@
             this.label29.ForeColor = System.Drawing.Color.Coral;
             this.label29.Location = new System.Drawing.Point(3, 3);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(47, 15);
+            this.label29.Size = new System.Drawing.Size(39, 15);
             this.label29.TabIndex = 36;
-            this.label29.Text = "XUSDT";
+            this.label29.Text = "USDT";
             // 
-            // textBox7
+            // txt_USDT_Balance
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox7.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox7.Location = new System.Drawing.Point(58, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(68, 16);
-            this.textBox7.TabIndex = 37;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_USDT_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_USDT_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_USDT_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_USDT_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_USDT_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_USDT_Balance.Name = "txt_USDT_Balance";
+            this.txt_USDT_Balance.ReadOnly = true;
+            this.txt_USDT_Balance.Size = new System.Drawing.Size(93, 16);
+            this.txt_USDT_Balance.TabIndex = 37;
+            this.txt_USDT_Balance.Text = "0";
+            this.txt_USDT_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel14
             // 
@@ -311,11 +442,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel14.Controls.Add(this.label26);
-            this.panel14.Controls.Add(this.textBox9);
+            this.panel14.Controls.Add(this.txt_axlUSDC_Balance);
             this.panel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panel14.Location = new System.Drawing.Point(179, 54);
+            this.panel14.Location = new System.Drawing.Point(164, 54);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(129, 22);
+            this.panel14.Size = new System.Drawing.Size(154, 22);
             this.panel14.TabIndex = 57;
             // 
             // label26
@@ -325,23 +456,23 @@
             this.label26.ForeColor = System.Drawing.Color.Coral;
             this.label26.Location = new System.Drawing.Point(3, 3);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(37, 15);
+            this.label26.Size = new System.Drawing.Size(55, 15);
             this.label26.TabIndex = 36;
-            this.label26.Text = "XDLS";
+            this.label26.Text = "axlUSDC";
             // 
-            // textBox9
+            // txt_axlUSDC_Balance
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox9.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox9.Location = new System.Drawing.Point(58, 3);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(68, 16);
-            this.textBox9.TabIndex = 37;
-            this.textBox9.Text = "0";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_axlUSDC_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_axlUSDC_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_axlUSDC_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_axlUSDC_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_axlUSDC_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_axlUSDC_Balance.Name = "txt_axlUSDC_Balance";
+            this.txt_axlUSDC_Balance.ReadOnly = true;
+            this.txt_axlUSDC_Balance.Size = new System.Drawing.Size(93, 16);
+            this.txt_axlUSDC_Balance.TabIndex = 37;
+            this.txt_axlUSDC_Balance.Text = "0";
+            this.txt_axlUSDC_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel11
             // 
@@ -349,11 +480,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel11.Controls.Add(this.label27);
-            this.panel11.Controls.Add(this.textBox6);
+            this.panel11.Controls.Add(this.txt_Cro_Balance);
             this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.panel11.Location = new System.Drawing.Point(2, 54);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(129, 22);
+            this.panel11.Size = new System.Drawing.Size(152, 22);
             this.panel11.TabIndex = 54;
             // 
             // label27
@@ -361,25 +492,25 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.Coral;
-            this.label27.Location = new System.Drawing.Point(3, 3);
+            this.label27.Location = new System.Drawing.Point(1, 4);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(31, 15);
             this.label27.TabIndex = 36;
             this.label27.Text = "CRO";
             // 
-            // textBox6
+            // txt_Cro_Balance
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox6.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox6.Location = new System.Drawing.Point(58, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(68, 16);
-            this.textBox6.TabIndex = 37;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Cro_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Cro_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Cro_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_Cro_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Cro_Balance.Location = new System.Drawing.Point(42, 3);
+            this.txt_Cro_Balance.Name = "txt_Cro_Balance";
+            this.txt_Cro_Balance.ReadOnly = true;
+            this.txt_Cro_Balance.Size = new System.Drawing.Size(107, 16);
+            this.txt_Cro_Balance.TabIndex = 37;
+            this.txt_Cro_Balance.Text = "0";
+            this.txt_Cro_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel15
             // 
@@ -387,11 +518,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel15.Controls.Add(this.label28);
-            this.panel15.Controls.Add(this.textBox10);
+            this.panel15.Controls.Add(this.txt_Luna_Balance);
             this.panel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panel15.Location = new System.Drawing.Point(179, 29);
+            this.panel15.Location = new System.Drawing.Point(0, 79);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(129, 22);
+            this.panel15.Size = new System.Drawing.Size(154, 22);
             this.panel15.TabIndex = 58;
             // 
             // label28
@@ -405,19 +536,19 @@
             this.label28.TabIndex = 36;
             this.label28.Text = "LUNA";
             // 
-            // textBox10
+            // txt_Luna_Balance
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox10.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox10.Location = new System.Drawing.Point(58, 3);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(68, 16);
-            this.textBox10.TabIndex = 37;
-            this.textBox10.Text = "0";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Luna_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Luna_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Luna_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_Luna_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Luna_Balance.Location = new System.Drawing.Point(44, 3);
+            this.txt_Luna_Balance.Name = "txt_Luna_Balance";
+            this.txt_Luna_Balance.ReadOnly = true;
+            this.txt_Luna_Balance.Size = new System.Drawing.Size(107, 16);
+            this.txt_Luna_Balance.TabIndex = 37;
+            this.txt_Luna_Balance.Text = "0";
+            this.txt_Luna_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel8
             // 
@@ -425,11 +556,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel8.Controls.Add(this.label25);
-            this.panel8.Controls.Add(this.textBox5);
+            this.panel8.Controls.Add(this.txt_Atom_Balance);
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.panel8.Location = new System.Drawing.Point(2, 29);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(129, 22);
+            this.panel8.Size = new System.Drawing.Size(152, 22);
             this.panel8.TabIndex = 54;
             // 
             // label25
@@ -437,25 +568,25 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.Coral;
-            this.label25.Location = new System.Drawing.Point(3, 3);
+            this.label25.Location = new System.Drawing.Point(1, 4);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(41, 15);
             this.label25.TabIndex = 36;
             this.label25.Text = "ATOM";
             // 
-            // textBox5
+            // txt_Atom_Balance
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox5.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox5.Location = new System.Drawing.Point(58, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(68, 16);
-            this.textBox5.TabIndex = 37;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Atom_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Atom_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Atom_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_Atom_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Atom_Balance.Location = new System.Drawing.Point(42, 3);
+            this.txt_Atom_Balance.Name = "txt_Atom_Balance";
+            this.txt_Atom_Balance.ReadOnly = true;
+            this.txt_Atom_Balance.Size = new System.Drawing.Size(107, 16);
+            this.txt_Atom_Balance.TabIndex = 37;
+            this.txt_Atom_Balance.Text = "0";
+            this.txt_Atom_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel16
             // 
@@ -463,11 +594,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel16.Controls.Add(this.label30);
-            this.panel16.Controls.Add(this.textBox11);
+            this.panel16.Controls.Add(this.txt_Tia_Balance);
             this.panel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.panel16.Location = new System.Drawing.Point(179, 4);
+            this.panel16.Location = new System.Drawing.Point(0, 104);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(129, 22);
+            this.panel16.Size = new System.Drawing.Size(154, 22);
             this.panel16.TabIndex = 56;
             // 
             // label30
@@ -481,19 +612,19 @@
             this.label30.TabIndex = 36;
             this.label30.Text = "TIA";
             // 
-            // textBox11
+            // txt_Tia_Balance
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.textBox11.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox11.Location = new System.Drawing.Point(58, 3);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(68, 16);
-            this.textBox11.TabIndex = 37;
-            this.textBox11.Text = "0";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Tia_Balance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Tia_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Tia_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txt_Tia_Balance.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Tia_Balance.Location = new System.Drawing.Point(44, 3);
+            this.txt_Tia_Balance.Name = "txt_Tia_Balance";
+            this.txt_Tia_Balance.ReadOnly = true;
+            this.txt_Tia_Balance.Size = new System.Drawing.Size(107, 16);
+            this.txt_Tia_Balance.TabIndex = 37;
+            this.txt_Tia_Balance.Text = "0";
+            this.txt_Tia_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel9
             // 
@@ -505,7 +636,7 @@
             this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.panel9.Location = new System.Drawing.Point(2, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(129, 22);
+            this.panel9.Size = new System.Drawing.Size(152, 22);
             this.panel9.TabIndex = 53;
             // 
             // label23
@@ -513,7 +644,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.Coral;
-            this.label23.Location = new System.Drawing.Point(3, 3);
+            this.label23.Location = new System.Drawing.Point(1, 3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(35, 15);
             this.label23.TabIndex = 36;
@@ -525,10 +656,10 @@
             this.txt_Chia_Balance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Chia_Balance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.txt_Chia_Balance.ForeColor = System.Drawing.Color.YellowGreen;
-            this.txt_Chia_Balance.Location = new System.Drawing.Point(58, 3);
+            this.txt_Chia_Balance.Location = new System.Drawing.Point(42, 3);
             this.txt_Chia_Balance.Name = "txt_Chia_Balance";
             this.txt_Chia_Balance.ReadOnly = true;
-            this.txt_Chia_Balance.Size = new System.Drawing.Size(68, 16);
+            this.txt_Chia_Balance.Size = new System.Drawing.Size(107, 16);
             this.txt_Chia_Balance.TabIndex = 37;
             this.txt_Chia_Balance.Text = "0";
             this.txt_Chia_Balance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -536,30 +667,14 @@
             // checkB_Show_Client_Balance
             // 
             this.checkB_Show_Client_Balance.AutoSize = true;
-            this.checkB_Show_Client_Balance.Enabled = false;
             this.checkB_Show_Client_Balance.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
             this.checkB_Show_Client_Balance.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.checkB_Show_Client_Balance.Location = new System.Drawing.Point(11, 227);
+            this.checkB_Show_Client_Balance.Location = new System.Drawing.Point(9, 230);
             this.checkB_Show_Client_Balance.Name = "checkB_Show_Client_Balance";
-            this.checkB_Show_Client_Balance.Size = new System.Drawing.Size(94, 17);
+            this.checkB_Show_Client_Balance.Size = new System.Drawing.Size(15, 14);
             this.checkB_Show_Client_Balance.TabIndex = 60;
-            this.checkB_Show_Client_Balance.Text = "Mostra Credito";
             this.checkB_Show_Client_Balance.UseVisualStyleBackColor = false;
             this.checkB_Show_Client_Balance.CheckedChanged += new System.EventHandler(this.checkB_Show_Client_Balance_CheckedChanged);
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(80, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 20);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "Select Deposit Address";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -568,9 +683,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel4.Controls.Add(this.txt_Wallet_Deposit);
             this.panel4.Controls.Add(this.label15);
-            this.panel4.Location = new System.Drawing.Point(7, 181);
+            this.panel4.Location = new System.Drawing.Point(-2, 181);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(311, 41);
+            this.panel4.Size = new System.Drawing.Size(321, 41);
             this.panel4.TabIndex = 58;
             // 
             // txt_Wallet_Deposit
@@ -583,9 +698,9 @@
             this.txt_Wallet_Deposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.txt_Wallet_Deposit.Location = new System.Drawing.Point(115, 11);
             this.txt_Wallet_Deposit.Name = "txt_Wallet_Deposit";
-            this.txt_Wallet_Deposit.Size = new System.Drawing.Size(193, 18);
+            this.txt_Wallet_Deposit.Size = new System.Drawing.Size(203, 18);
             this.txt_Wallet_Deposit.TabIndex = 38;
-            this.txt_Wallet_Deposit.Text = "Wallet Invio";
+            this.txt_Wallet_Deposit.Text = "Inserisci Wallet Invio";
             this.txt_Wallet_Deposit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
@@ -601,36 +716,38 @@
             this.label15.TabIndex = 36;
             this.label15.Text = "Wallet Invio: ";
             // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(131, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Coin From";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel10
             // 
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.panel10.Controls.Add(this.txt_Coin_Disponibili_From);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label8);
             this.panel10.Controls.Add(this.lbl_Importo_From);
             this.panel10.Controls.Add(this.Chain_Selection_From);
             this.panel10.Controls.Add(this.label21);
-            this.panel10.Controls.Add(this.txt_Coin_Deposit);
+            this.panel10.Controls.Add(this.txt_Coin_From_Importo);
             this.panel10.Controls.Add(this.Coin_Selection_From);
-            this.panel10.Location = new System.Drawing.Point(3, 29);
+            this.panel10.Location = new System.Drawing.Point(-2, 29);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(311, 119);
+            this.panel10.Size = new System.Drawing.Size(321, 119);
             this.panel10.TabIndex = 56;
+            // 
+            // txt_Coin_Disponibili_From
+            // 
+            this.txt_Coin_Disponibili_From.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Coin_Disponibili_From.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Coin_Disponibili_From.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Coin_Disponibili_From.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_Coin_Disponibili_From.ForeColor = System.Drawing.Color.ForestGreen;
+            this.txt_Coin_Disponibili_From.Location = new System.Drawing.Point(132, 33);
+            this.txt_Coin_Disponibili_From.Name = "txt_Coin_Disponibili_From";
+            this.txt_Coin_Disponibili_From.ReadOnly = true;
+            this.txt_Coin_Disponibili_From.Size = new System.Drawing.Size(186, 15);
+            this.txt_Coin_Disponibili_From.TabIndex = 65;
+            this.txt_Coin_Disponibili_From.Text = "Disponibile: 0";
             // 
             // label9
             // 
@@ -652,11 +769,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Coral;
-            this.label8.Location = new System.Drawing.Point(0, 51);
+            this.label8.Location = new System.Drawing.Point(0, 48);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 20);
+            this.label8.Size = new System.Drawing.Size(56, 20);
             this.label8.TabIndex = 47;
-            this.label8.Text = "Seleziona Chain: ";
+            this.label8.Text = "Chain: ";
             // 
             // lbl_Importo_From
             // 
@@ -667,9 +784,9 @@
             this.lbl_Importo_From.ForeColor = System.Drawing.Color.Coral;
             this.lbl_Importo_From.Location = new System.Drawing.Point(239, 79);
             this.lbl_Importo_From.Name = "lbl_Importo_From";
-            this.lbl_Importo_From.Size = new System.Drawing.Size(67, 20);
+            this.lbl_Importo_From.Size = new System.Drawing.Size(68, 20);
             this.lbl_Importo_From.TabIndex = 46;
-            this.lbl_Importo_From.Text = "axlUSDT";
+            this.lbl_Importo_From.Text = "axlUSDC";
             // 
             // Chain_Selection_From
             // 
@@ -677,13 +794,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chain_Selection_From.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.Chain_Selection_From.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Chain_Selection_From.Enabled = false;
             this.Chain_Selection_From.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Chain_Selection_From.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chain_Selection_From.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.Chain_Selection_From.FormattingEnabled = true;
             this.Chain_Selection_From.Location = new System.Drawing.Point(132, 48);
             this.Chain_Selection_From.Name = "Chain_Selection_From";
-            this.Chain_Selection_From.Size = new System.Drawing.Size(176, 23);
+            this.Chain_Selection_From.Size = new System.Drawing.Size(186, 23);
             this.Chain_Selection_From.TabIndex = 59;
             // 
             // label21
@@ -699,20 +817,21 @@
             this.label21.TabIndex = 36;
             this.label21.Text = "Seleziona Coin: ";
             // 
-            // txt_Coin_Deposit
+            // txt_Coin_From_Importo
             // 
-            this.txt_Coin_Deposit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Coin_From_Importo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Coin_Deposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txt_Coin_Deposit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Coin_Deposit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txt_Coin_Deposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txt_Coin_Deposit.Location = new System.Drawing.Point(132, 81);
-            this.txt_Coin_Deposit.Name = "txt_Coin_Deposit";
-            this.txt_Coin_Deposit.Size = new System.Drawing.Size(103, 18);
-            this.txt_Coin_Deposit.TabIndex = 37;
-            this.txt_Coin_Deposit.Text = "Inserisci Importo";
-            this.txt_Coin_Deposit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Coin_From_Importo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Coin_From_Importo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Coin_From_Importo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.txt_Coin_From_Importo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.txt_Coin_From_Importo.Location = new System.Drawing.Point(132, 81);
+            this.txt_Coin_From_Importo.Name = "txt_Coin_From_Importo";
+            this.txt_Coin_From_Importo.Size = new System.Drawing.Size(113, 18);
+            this.txt_Coin_From_Importo.TabIndex = 37;
+            this.txt_Coin_From_Importo.Text = "Inserisci Importo";
+            this.txt_Coin_From_Importo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Coin_From_Importo.TextChanged += new System.EventHandler(this.txt_Coin_From_Importo_TextChanged);
             // 
             // Coin_Selection_From
             // 
@@ -726,107 +845,86 @@
             this.Coin_Selection_From.FormattingEnabled = true;
             this.Coin_Selection_From.Location = new System.Drawing.Point(132, 9);
             this.Coin_Selection_From.Name = "Coin_Selection_From";
-            this.Coin_Selection_From.Size = new System.Drawing.Size(176, 23);
+            this.Coin_Selection_From.Size = new System.Drawing.Size(186, 23);
             this.Coin_Selection_From.TabIndex = 58;
             this.Coin_Selection_From.SelectedIndexChanged += new System.EventHandler(this.Coin_Selection_From_SelectedIndexChanged);
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(509, 0);
+            this.panel2.Location = new System.Drawing.Point(522, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 402);
+            this.panel2.Size = new System.Drawing.Size(321, 414);
             this.panel2.TabIndex = 6;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox6.Location = new System.Drawing.Point(2, 226);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(314, 20);
+            this.textBox6.TabIndex = 65;
+            this.textBox6.Text = "Protocol Fee";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox4.Location = new System.Drawing.Point(2, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(314, 20);
+            this.textBox4.TabIndex = 40;
+            this.textBox4.Text = "Coin To";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox5.Location = new System.Drawing.Point(2, 154);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(314, 20);
+            this.textBox5.TabIndex = 64;
+            this.textBox5.Text = "Select Withdrawal Address";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.panel7.Controls.Add(this.txtlbl_Slippage_Fee);
-            this.panel7.Controls.Add(this.txtlbl_Protocol_Fee);
-            this.panel7.Controls.Add(this.txtlbl_Bridge_Fee);
-            this.panel7.Controls.Add(this.txtlbl_Transaction_Fee);
             this.panel7.Controls.Add(this.txt_Bridge_Fee);
             this.panel7.Controls.Add(this.label20);
-            this.panel7.Controls.Add(this.txt_Tansaction_Fee);
+            this.panel7.Controls.Add(this.txt_Transaction_Fee);
             this.panel7.Controls.Add(this.label19);
             this.panel7.Controls.Add(this.txt_Protocol_Fee);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Controls.Add(this.txt_Slippage);
             this.panel7.Controls.Add(this.label17);
-            this.panel7.Location = new System.Drawing.Point(2, 252);
+            this.panel7.Location = new System.Drawing.Point(-2, 252);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(311, 99);
+            this.panel7.Size = new System.Drawing.Size(321, 99);
             this.panel7.TabIndex = 63;
-            // 
-            // txtlbl_Slippage_Fee
-            // 
-            this.txtlbl_Slippage_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtlbl_Slippage_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txtlbl_Slippage_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtlbl_Slippage_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtlbl_Slippage_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txtlbl_Slippage_Fee.Location = new System.Drawing.Point(270, 3);
-            this.txtlbl_Slippage_Fee.Name = "txtlbl_Slippage_Fee";
-            this.txtlbl_Slippage_Fee.Size = new System.Drawing.Size(38, 18);
-            this.txtlbl_Slippage_Fee.TabIndex = 67;
-            this.txtlbl_Slippage_Fee.Text = "%";
-            this.txtlbl_Slippage_Fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtlbl_Protocol_Fee
-            // 
-            this.txtlbl_Protocol_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtlbl_Protocol_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txtlbl_Protocol_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtlbl_Protocol_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtlbl_Protocol_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txtlbl_Protocol_Fee.Location = new System.Drawing.Point(270, 25);
-            this.txtlbl_Protocol_Fee.Name = "txtlbl_Protocol_Fee";
-            this.txtlbl_Protocol_Fee.Size = new System.Drawing.Size(38, 18);
-            this.txtlbl_Protocol_Fee.TabIndex = 66;
-            this.txtlbl_Protocol_Fee.Text = "%";
-            this.txtlbl_Protocol_Fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtlbl_Bridge_Fee
-            // 
-            this.txtlbl_Bridge_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtlbl_Bridge_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txtlbl_Bridge_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtlbl_Bridge_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtlbl_Bridge_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txtlbl_Bridge_Fee.Location = new System.Drawing.Point(252, 68);
-            this.txtlbl_Bridge_Fee.Name = "txtlbl_Bridge_Fee";
-            this.txtlbl_Bridge_Fee.Size = new System.Drawing.Size(56, 18);
-            this.txtlbl_Bridge_Fee.TabIndex = 65;
-            this.txtlbl_Bridge_Fee.Text = "USDT";
-            this.txtlbl_Bridge_Fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtlbl_Transaction_Fee
-            // 
-            this.txtlbl_Transaction_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtlbl_Transaction_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txtlbl_Transaction_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtlbl_Transaction_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txtlbl_Transaction_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txtlbl_Transaction_Fee.Location = new System.Drawing.Point(252, 47);
-            this.txtlbl_Transaction_Fee.Name = "txtlbl_Transaction_Fee";
-            this.txtlbl_Transaction_Fee.Size = new System.Drawing.Size(56, 18);
-            this.txtlbl_Transaction_Fee.TabIndex = 64;
-            this.txtlbl_Transaction_Fee.Text = "axlUSDT";
-            this.txtlbl_Transaction_Fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_Bridge_Fee
             // 
@@ -836,10 +934,10 @@
             this.txt_Bridge_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Bridge_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txt_Bridge_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txt_Bridge_Fee.Location = new System.Drawing.Point(137, 68);
+            this.txt_Bridge_Fee.Location = new System.Drawing.Point(117, 69);
             this.txt_Bridge_Fee.Name = "txt_Bridge_Fee";
             this.txt_Bridge_Fee.ReadOnly = true;
-            this.txt_Bridge_Fee.Size = new System.Drawing.Size(118, 18);
+            this.txt_Bridge_Fee.Size = new System.Drawing.Size(199, 18);
             this.txt_Bridge_Fee.TabIndex = 44;
             this.txt_Bridge_Fee.Text = "Brigde Fee 1.50$";
             // 
@@ -856,19 +954,20 @@
             this.label20.TabIndex = 43;
             this.label20.Text = "Bridge Fee:";
             // 
-            // txt_Tansaction_Fee
+            // txt_Transaction_Fee
             // 
-            this.txt_Tansaction_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Transaction_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Tansaction_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txt_Tansaction_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Tansaction_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.txt_Tansaction_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txt_Tansaction_Fee.Location = new System.Drawing.Point(137, 46);
-            this.txt_Tansaction_Fee.Name = "txt_Tansaction_Fee";
-            this.txt_Tansaction_Fee.Size = new System.Drawing.Size(118, 18);
-            this.txt_Tansaction_Fee.TabIndex = 42;
-            this.txt_Tansaction_Fee.Text = "Transaction Fee";
+            this.txt_Transaction_Fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Transaction_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Transaction_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.txt_Transaction_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.txt_Transaction_Fee.Location = new System.Drawing.Point(117, 47);
+            this.txt_Transaction_Fee.Name = "txt_Transaction_Fee";
+            this.txt_Transaction_Fee.ReadOnly = true;
+            this.txt_Transaction_Fee.Size = new System.Drawing.Size(199, 18);
+            this.txt_Transaction_Fee.TabIndex = 42;
+            this.txt_Transaction_Fee.Text = "Transaction Fee";
             // 
             // label19
             // 
@@ -891,10 +990,9 @@
             this.txt_Protocol_Fee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Protocol_Fee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txt_Protocol_Fee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txt_Protocol_Fee.Location = new System.Drawing.Point(137, 24);
+            this.txt_Protocol_Fee.Location = new System.Drawing.Point(117, 27);
             this.txt_Protocol_Fee.Name = "txt_Protocol_Fee";
-            this.txt_Protocol_Fee.ReadOnly = true;
-            this.txt_Protocol_Fee.Size = new System.Drawing.Size(118, 18);
+            this.txt_Protocol_Fee.Size = new System.Drawing.Size(199, 18);
             this.txt_Protocol_Fee.TabIndex = 40;
             this.txt_Protocol_Fee.Text = "Protocol Fee 0.75%";
             // 
@@ -919,10 +1017,10 @@
             this.txt_Slippage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Slippage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txt_Slippage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.txt_Slippage.Location = new System.Drawing.Point(137, 2);
+            this.txt_Slippage.Location = new System.Drawing.Point(117, 6);
             this.txt_Slippage.Name = "txt_Slippage";
             this.txt_Slippage.ReadOnly = true;
-            this.txt_Slippage.Size = new System.Drawing.Size(118, 18);
+            this.txt_Slippage.Size = new System.Drawing.Size(199, 18);
             this.txt_Slippage.TabIndex = 38;
             this.txt_Slippage.Text = "Slippage 0.50%";
             // 
@@ -939,34 +1037,6 @@
             this.label17.TabIndex = 36;
             this.label17.Text = "Slippage:";
             // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(112, 229);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 20);
-            this.label16.TabIndex = 62;
-            this.label16.Text = "Protocol Fee";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(62, 154);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(196, 20);
-            this.label13.TabIndex = 61;
-            this.label13.Text = "Select Withdrawal Address";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -974,9 +1044,9 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.panel6.Controls.Add(this.txt_Wallet_Withdrawal);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Location = new System.Drawing.Point(2, 181);
+            this.panel6.Location = new System.Drawing.Point(-2, 181);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(311, 41);
+            this.panel6.Size = new System.Drawing.Size(321, 41);
             this.panel6.TabIndex = 60;
             // 
             // txt_Wallet_Withdrawal
@@ -989,7 +1059,7 @@
             this.txt_Wallet_Withdrawal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.txt_Wallet_Withdrawal.Location = new System.Drawing.Point(127, 11);
             this.txt_Wallet_Withdrawal.Name = "txt_Wallet_Withdrawal";
-            this.txt_Wallet_Withdrawal.Size = new System.Drawing.Size(181, 18);
+            this.txt_Wallet_Withdrawal.Size = new System.Drawing.Size(191, 18);
             this.txt_Wallet_Withdrawal.TabIndex = 38;
             this.txt_Wallet_Withdrawal.Text = "Inserisci Wallet Ricezione";
             this.txt_Wallet_Withdrawal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1012,8 +1082,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.panel3.Controls.Add(this.lbl_Disponibile);
-            this.panel3.Controls.Add(this.txt_Coin_Disponibili);
+            this.panel3.Controls.Add(this.txt_Coin_Disponibili_To);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.lbl_Importo_To);
@@ -1021,41 +1090,25 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txt_Coin_Recived);
             this.panel3.Controls.Add(this.Coin_Selection_To);
-            this.panel3.Location = new System.Drawing.Point(3, 29);
+            this.panel3.Location = new System.Drawing.Point(-1, 29);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 119);
+            this.panel3.Size = new System.Drawing.Size(321, 119);
             this.panel3.TabIndex = 59;
             // 
-            // lbl_Disponibile
+            // txt_Coin_Disponibili_To
             // 
-            this.lbl_Disponibile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Disponibile.AutoSize = true;
-            this.lbl_Disponibile.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.lbl_Disponibile.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_Disponibile.Location = new System.Drawing.Point(135, 33);
-            this.lbl_Disponibile.Name = "lbl_Disponibile";
-            this.lbl_Disponibile.Size = new System.Drawing.Size(69, 13);
-            this.lbl_Disponibile.TabIndex = 65;
-            this.lbl_Disponibile.Text = "Disponibile:";
-            this.lbl_Disponibile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_Disponibile.Visible = false;
-            // 
-            // txt_Coin_Disponibili
-            // 
-            this.txt_Coin_Disponibili.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Coin_Disponibili_To.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Coin_Disponibili.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
-            this.txt_Coin_Disponibili.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Coin_Disponibili.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.txt_Coin_Disponibili.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txt_Coin_Disponibili.Location = new System.Drawing.Point(207, 33);
-            this.txt_Coin_Disponibili.Name = "txt_Coin_Disponibili";
-            this.txt_Coin_Disponibili.ReadOnly = true;
-            this.txt_Coin_Disponibili.Size = new System.Drawing.Size(101, 15);
-            this.txt_Coin_Disponibili.TabIndex = 64;
-            this.txt_Coin_Disponibili.Text = "1234567.1234";
-            this.txt_Coin_Disponibili.Visible = false;
+            this.txt_Coin_Disponibili_To.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
+            this.txt_Coin_Disponibili_To.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Coin_Disponibili_To.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.txt_Coin_Disponibili_To.ForeColor = System.Drawing.Color.ForestGreen;
+            this.txt_Coin_Disponibili_To.Location = new System.Drawing.Point(132, 33);
+            this.txt_Coin_Disponibili_To.Name = "txt_Coin_Disponibili_To";
+            this.txt_Coin_Disponibili_To.ReadOnly = true;
+            this.txt_Coin_Disponibili_To.Size = new System.Drawing.Size(186, 15);
+            this.txt_Coin_Disponibili_To.TabIndex = 64;
+            this.txt_Coin_Disponibili_To.Text = "Disponibile: 0";
             // 
             // label3
             // 
@@ -1077,11 +1130,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Coral;
-            this.label7.Location = new System.Drawing.Point(0, 51);
+            this.label7.Location = new System.Drawing.Point(0, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 20);
+            this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 47;
-            this.label7.Text = "Seleziona Chain: ";
+            this.label7.Text = "Chain: ";
             // 
             // lbl_Importo_To
             // 
@@ -1092,9 +1145,9 @@
             this.lbl_Importo_To.ForeColor = System.Drawing.Color.Coral;
             this.lbl_Importo_To.Location = new System.Drawing.Point(241, 79);
             this.lbl_Importo_To.Name = "lbl_Importo_To";
-            this.lbl_Importo_To.Size = new System.Drawing.Size(67, 20);
+            this.lbl_Importo_To.Size = new System.Drawing.Size(68, 20);
             this.lbl_Importo_To.TabIndex = 46;
-            this.lbl_Importo_To.Text = "axlUSDT";
+            this.lbl_Importo_To.Text = "axlUSDC";
             // 
             // Chain_Selection_To
             // 
@@ -1102,13 +1155,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Chain_Selection_To.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.Chain_Selection_To.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Chain_Selection_To.Enabled = false;
             this.Chain_Selection_To.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Chain_Selection_To.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chain_Selection_To.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.Chain_Selection_To.FormattingEnabled = true;
             this.Chain_Selection_To.Location = new System.Drawing.Point(132, 48);
             this.Chain_Selection_To.Name = "Chain_Selection_To";
-            this.Chain_Selection_To.Size = new System.Drawing.Size(176, 23);
+            this.Chain_Selection_To.Size = new System.Drawing.Size(186, 23);
             this.Chain_Selection_To.TabIndex = 59;
             // 
             // label11
@@ -1135,7 +1189,7 @@
             this.txt_Coin_Recived.Location = new System.Drawing.Point(132, 81);
             this.txt_Coin_Recived.Name = "txt_Coin_Recived";
             this.txt_Coin_Recived.ReadOnly = true;
-            this.txt_Coin_Recived.Size = new System.Drawing.Size(103, 18);
+            this.txt_Coin_Recived.Size = new System.Drawing.Size(113, 18);
             this.txt_Coin_Recived.TabIndex = 37;
             this.txt_Coin_Recived.Text = "0";
             this.txt_Coin_Recived.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1146,29 +1200,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Coin_Selection_To.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(7)))), ((int)(((byte)(33)))));
             this.Coin_Selection_To.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Coin_Selection_To.Enabled = false;
             this.Coin_Selection_To.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Coin_Selection_To.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coin_Selection_To.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
             this.Coin_Selection_To.FormattingEnabled = true;
             this.Coin_Selection_To.Location = new System.Drawing.Point(132, 9);
             this.Coin_Selection_To.Name = "Coin_Selection_To";
-            this.Coin_Selection_To.Size = new System.Drawing.Size(176, 23);
+            this.Coin_Selection_To.Size = new System.Drawing.Size(186, 23);
             this.Coin_Selection_To.TabIndex = 58;
             this.Coin_Selection_To.SelectedIndexChanged += new System.EventHandler(this.Coin_Selection_To_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(133, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 20);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "Coin To";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_Swap_NOT_USE
             // 
@@ -1182,23 +1223,165 @@
             this.Btn_Swap_NOT_USE.IconColor = System.Drawing.Color.ForestGreen;
             this.Btn_Swap_NOT_USE.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Btn_Swap_NOT_USE.IconSize = 58;
-            this.Btn_Swap_NOT_USE.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Btn_Swap_NOT_USE.Location = new System.Drawing.Point(357, 186);
+            this.Btn_Swap_NOT_USE.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Swap_NOT_USE.Location = new System.Drawing.Point(329, 173);
             this.Btn_Swap_NOT_USE.Name = "Btn_Swap_NOT_USE";
             this.Btn_Swap_NOT_USE.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Btn_Swap_NOT_USE.Size = new System.Drawing.Size(117, 60);
+            this.Btn_Swap_NOT_USE.Size = new System.Drawing.Size(184, 60);
             this.Btn_Swap_NOT_USE.TabIndex = 22;
             this.Btn_Swap_NOT_USE.Text = " ";
-            this.Btn_Swap_NOT_USE.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Btn_Swap_NOT_USE.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Btn_Swap_NOT_USE.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Btn_Swap_NOT_USE.UseVisualStyleBackColor = true;
+            this.Btn_Swap_NOT_USE.Click += new System.EventHandler(this.Btn_Swap_NOT_USE_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(44)))), ((int)(((byte)(38)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(133)))), ((int)(((byte)(0)))));
+            this.textBox2.Location = new System.Drawing.Point(2, 156);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(314, 20);
+            this.textBox2.TabIndex = 39;
+            this.textBox2.Text = "Select Deposit Address";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.datagrid_Unstake);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Location = new System.Drawing.Point(0, 417);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(842, 173);
+            this.groupBox3.TabIndex = 68;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Swap Transaction";
+            // 
+            // datagrid_Unstake
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Control;
+            this.datagrid_Unstake.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.datagrid_Unstake.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.datagrid_Unstake.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datagrid_Unstake.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Unstake.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.datagrid_Unstake.ColumnHeadersHeight = 20;
+            this.datagrid_Unstake.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_ID,
+            this.Col_Value_From,
+            this.Col_Coin_From,
+            this.Col_Coin_Price_From,
+            this.Col_Value_To,
+            this.Col_Price_To,
+            this.Col_Plot,
+            this.Colwallet,
+            this.Col_Data});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_Unstake.DefaultCellStyle = dataGridViewCellStyle4;
+            this.datagrid_Unstake.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datagrid_Unstake.EnableHeadersVisualStyles = false;
+            this.datagrid_Unstake.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.datagrid_Unstake.Location = new System.Drawing.Point(3, 16);
+            this.datagrid_Unstake.Name = "datagrid_Unstake";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Unstake.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.datagrid_Unstake.RowHeadersVisible = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Control;
+            this.datagrid_Unstake.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.datagrid_Unstake.Size = new System.Drawing.Size(836, 154);
+            this.datagrid_Unstake.TabIndex = 0;
+            // 
+            // col_ID
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            this.col_ID.DefaultCellStyle = dataGridViewCellStyle3;
+            this.col_ID.HeaderText = "ID";
+            this.col_ID.Name = "col_ID";
+            this.col_ID.Width = 40;
+            // 
+            // Col_Value_From
+            // 
+            this.Col_Value_From.HeaderText = "Value";
+            this.Col_Value_From.Name = "Col_Value_From";
+            this.Col_Value_From.Width = 75;
+            // 
+            // Col_Coin_From
+            // 
+            this.Col_Coin_From.HeaderText = "From";
+            this.Col_Coin_From.Name = "Col_Coin_From";
+            this.Col_Coin_From.Width = 50;
+            // 
+            // Col_Coin_Price_From
+            // 
+            this.Col_Coin_Price_From.HeaderText = "Price";
+            this.Col_Coin_Price_From.Name = "Col_Coin_Price_From";
+            this.Col_Coin_Price_From.Width = 50;
+            // 
+            // Col_Value_To
+            // 
+            this.Col_Value_To.HeaderText = "Value";
+            this.Col_Value_To.Name = "Col_Value_To";
+            this.Col_Value_To.Width = 75;
+            // 
+            // Col_Price_To
+            // 
+            this.Col_Price_To.HeaderText = "To";
+            this.Col_Price_To.Name = "Col_Price_To";
+            this.Col_Price_To.Width = 50;
+            // 
+            // Col_Plot
+            // 
+            this.Col_Plot.HeaderText = "Price";
+            this.Col_Plot.Name = "Col_Plot";
+            this.Col_Plot.Width = 50;
+            // 
+            // Colwallet
+            // 
+            this.Colwallet.HeaderText = "Wallet";
+            this.Colwallet.Name = "Colwallet";
+            this.Colwallet.Width = 370;
+            // 
+            // Col_Data
+            // 
+            this.Col_Data.HeaderText = "Data";
+            this.Col_Data.Name = "Col_Data";
+            this.Col_Data.Width = 120;
             // 
             // Swap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(830, 430);
+            this.ClientSize = new System.Drawing.Size(842, 618);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
@@ -1211,6 +1394,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Panel_Credito_Utente.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -1239,7 +1426,10 @@
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datagrid_Unstake)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1255,14 +1445,11 @@
         private FontAwesome.Sharp.IconButton Btn_Swap_NOT_USE;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txt_Coin_Deposit;
+        private System.Windows.Forms.TextBox txt_Coin_From_Importo;
         private System.Windows.Forms.Label lbl_Importo_From;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox Coin_Selection_From;
         private System.Windows.Forms.ComboBox Chain_Selection_From;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txt_Wallet_Deposit;
         private System.Windows.Forms.Label label15;
@@ -1275,7 +1462,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_Coin_Recived;
         private System.Windows.Forms.ComboBox Coin_Selection_To;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txt_Wallet_Withdrawal;
         private System.Windows.Forms.Label label14;
@@ -1284,13 +1470,10 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_Slippage;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txt_Bridge_Fee;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txt_Tansaction_Fee;
+        private System.Windows.Forms.TextBox txt_Transaction_Fee;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lbl_Disponibile;
-        private System.Windows.Forms.TextBox txt_Coin_Disponibili;
         private System.Windows.Forms.Panel Panel_Credito_Utente;
         private System.Windows.Forms.CheckBox checkB_Show_Client_Balance;
         private System.Windows.Forms.Panel panel9;
@@ -1298,28 +1481,49 @@
         private System.Windows.Forms.TextBox txt_Chia_Balance;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_USDC_Balance;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_USDT_Balance;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_axlUSDC_Balance;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_Cro_Balance;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_Luna_Balance;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_Atom_Balance;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox txtlbl_Slippage_Fee;
-        private System.Windows.Forms.TextBox txtlbl_Protocol_Fee;
-        private System.Windows.Forms.TextBox txtlbl_Bridge_Fee;
-        private System.Windows.Forms.TextBox txtlbl_Transaction_Fee;
+        private System.Windows.Forms.TextBox txt_Tia_Balance;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_XUSDT_Balance;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_XDLS_Balance;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Coin_Disponibili_From;
+        private System.Windows.Forms.TextBox txt_Coin_Disponibili_To;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView datagrid_Unstake;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Value_From;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Coin_From;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Coin_Price_From;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Value_To;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Price_To;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Plot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colwallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col_Data;
     }
 }

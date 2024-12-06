@@ -53,8 +53,15 @@ namespace Client_V3.Forms
             this.txt_USDT_Anteprima = new System.Windows.Forms.TextBox();
             this.lbl_Euro_Anteprima = new System.Windows.Forms.Label();
             this.lbl_USDT_Anteprima = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Txt_XUSDT_Reward = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Txt_XDLS_Reward = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.Txt_Totale = new System.Windows.Forms.TextBox();
@@ -87,9 +94,8 @@ namespace Client_V3.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_Chia_Reward_1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Prezzo_Chia_USDT = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txt_Prezzo_Chia_Euro = new System.Windows.Forms.TextBox();
@@ -104,13 +110,13 @@ namespace Client_V3.Forms
             this.panel6 = new System.Windows.Forms.Panel();
             this.Txt_Giorni_Noleggio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.goupbox_Acquisto_Plot.SuspendLayout();
             this.panel_Plot_Manuali.SuspendLayout();
             this.panel_Numero_Plot_TrackBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBar_NumeroPlot)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -119,7 +125,6 @@ namespace Client_V3.Forms
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -167,19 +172,17 @@ namespace Client_V3.Forms
             // 
             // goupbox_Acquisto_Plot
             // 
-            this.goupbox_Acquisto_Plot.Controls.Add(this.btn_Aggiorna);
             this.goupbox_Acquisto_Plot.Controls.Add(this.label2);
             this.goupbox_Acquisto_Plot.Controls.Add(this.panel_Plot_Manuali);
             this.goupbox_Acquisto_Plot.Controls.Add(this.panel_Numero_Plot_TrackBar);
             this.goupbox_Acquisto_Plot.Controls.Add(this.checkB_Plot_Manuale);
-            this.goupbox_Acquisto_Plot.Controls.Add(this.btn_Conferma);
             this.goupbox_Acquisto_Plot.ForeColor = System.Drawing.SystemColors.Control;
             this.goupbox_Acquisto_Plot.Location = new System.Drawing.Point(12, 12);
             this.goupbox_Acquisto_Plot.Name = "goupbox_Acquisto_Plot";
-            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(331, 231);
+            this.goupbox_Acquisto_Plot.Size = new System.Drawing.Size(389, 193);
             this.goupbox_Acquisto_Plot.TabIndex = 28;
             this.goupbox_Acquisto_Plot.TabStop = false;
-            this.goupbox_Acquisto_Plot.Text = "Simulazione Mining";
+            this.goupbox_Acquisto_Plot.Text = "Simulazione Mining Chia";
             // 
             // btn_Aggiorna
             // 
@@ -189,7 +192,7 @@ namespace Client_V3.Forms
             this.btn_Aggiorna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Aggiorna.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Aggiorna.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Aggiorna.Location = new System.Drawing.Point(224, 187);
+            this.btn_Aggiorna.Location = new System.Drawing.Point(151, 280);
             this.btn_Aggiorna.Name = "btn_Aggiorna";
             this.btn_Aggiorna.Size = new System.Drawing.Size(82, 31);
             this.btn_Aggiorna.TabIndex = 16;
@@ -202,7 +205,7 @@ namespace Client_V3.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(15, 22);
+            this.label2.Location = new System.Drawing.Point(15, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(305, 19);
             this.label2.TabIndex = 15;
@@ -214,7 +217,7 @@ namespace Client_V3.Forms
             this.panel_Plot_Manuali.Controls.Add(this.label8);
             this.panel_Plot_Manuali.Controls.Add(this.txt_Plot_Manuale);
             this.panel_Plot_Manuali.Controls.Add(this.lbl_Plot_Manuale_Selezionato);
-            this.panel_Plot_Manuali.Location = new System.Drawing.Point(54, 165);
+            this.panel_Plot_Manuali.Location = new System.Drawing.Point(150, 134);
             this.panel_Plot_Manuali.Name = "panel_Plot_Manuali";
             this.panel_Plot_Manuali.Size = new System.Drawing.Size(144, 50);
             this.panel_Plot_Manuali.TabIndex = 14;
@@ -236,9 +239,9 @@ namespace Client_V3.Forms
             this.txt_Plot_Manuale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Plot_Manuale.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Plot_Manuale.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Plot_Manuale.Location = new System.Drawing.Point(11, 8);
+            this.txt_Plot_Manuale.Location = new System.Drawing.Point(4, 6);
             this.txt_Plot_Manuale.Name = "txt_Plot_Manuale";
-            this.txt_Plot_Manuale.Size = new System.Drawing.Size(109, 20);
+            this.txt_Plot_Manuale.Size = new System.Drawing.Size(137, 20);
             this.txt_Plot_Manuale.TabIndex = 11;
             this.txt_Plot_Manuale.Text = "0";
             this.txt_Plot_Manuale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -262,9 +265,9 @@ namespace Client_V3.Forms
             this.panel_Numero_Plot_TrackBar.Controls.Add(this.lbl_Plot_Current_Selection);
             this.panel_Numero_Plot_TrackBar.Controls.Add(this.trkBar_NumeroPlot);
             this.panel_Numero_Plot_TrackBar.Controls.Add(this.label21);
-            this.panel_Numero_Plot_TrackBar.Location = new System.Drawing.Point(24, 52);
+            this.panel_Numero_Plot_TrackBar.Location = new System.Drawing.Point(12, 40);
             this.panel_Numero_Plot_TrackBar.Name = "panel_Numero_Plot_TrackBar";
-            this.panel_Numero_Plot_TrackBar.Size = new System.Drawing.Size(282, 88);
+            this.panel_Numero_Plot_TrackBar.Size = new System.Drawing.Size(366, 88);
             this.panel_Numero_Plot_TrackBar.TabIndex = 13;
             // 
             // lbl_Plot_MIN
@@ -283,7 +286,7 @@ namespace Client_V3.Forms
             this.lbl_Plot_MAX.AutoSize = true;
             this.lbl_Plot_MAX.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_Plot_MAX.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_Plot_MAX.Location = new System.Drawing.Point(243, 62);
+            this.lbl_Plot_MAX.Location = new System.Drawing.Point(326, 62);
             this.lbl_Plot_MAX.Name = "lbl_Plot_MAX";
             this.lbl_Plot_MAX.Size = new System.Drawing.Size(15, 17);
             this.lbl_Plot_MAX.TabIndex = 14;
@@ -294,7 +297,7 @@ namespace Client_V3.Forms
             this.lbl_Plot_Current_Selection.AutoSize = true;
             this.lbl_Plot_Current_Selection.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_Plot_Current_Selection.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_Plot_Current_Selection.Location = new System.Drawing.Point(243, 13);
+            this.lbl_Plot_Current_Selection.Location = new System.Drawing.Point(326, 13);
             this.lbl_Plot_Current_Selection.Name = "lbl_Plot_Current_Selection";
             this.lbl_Plot_Current_Selection.Size = new System.Drawing.Size(15, 17);
             this.lbl_Plot_Current_Selection.TabIndex = 13;
@@ -303,9 +306,12 @@ namespace Client_V3.Forms
             // trkBar_NumeroPlot
             // 
             this.trkBar_NumeroPlot.Location = new System.Drawing.Point(2, 30);
+            this.trkBar_NumeroPlot.Maximum = 200;
             this.trkBar_NumeroPlot.Name = "trkBar_NumeroPlot";
-            this.trkBar_NumeroPlot.Size = new System.Drawing.Size(264, 45);
+            this.trkBar_NumeroPlot.Size = new System.Drawing.Size(361, 45);
             this.trkBar_NumeroPlot.TabIndex = 12;
+            this.trkBar_NumeroPlot.TickFrequency = 5;
+            this.trkBar_NumeroPlot.Value = 1;
             this.trkBar_NumeroPlot.Scroll += new System.EventHandler(this.trkBar_NumeroPlot_Scroll);
             // 
             // label21
@@ -323,7 +329,7 @@ namespace Client_V3.Forms
             // 
             this.checkB_Plot_Manuale.AutoSize = true;
             this.checkB_Plot_Manuale.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkGreen;
-            this.checkB_Plot_Manuale.Location = new System.Drawing.Point(61, 146);
+            this.checkB_Plot_Manuale.Location = new System.Drawing.Point(19, 134);
             this.checkB_Plot_Manuale.Name = "checkB_Plot_Manuale";
             this.checkB_Plot_Manuale.Size = new System.Drawing.Size(124, 17);
             this.checkB_Plot_Manuale.TabIndex = 4;
@@ -339,7 +345,7 @@ namespace Client_V3.Forms
             this.btn_Conferma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Conferma.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Conferma.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Conferma.Location = new System.Drawing.Point(224, 149);
+            this.btn_Conferma.Location = new System.Drawing.Point(63, 280);
             this.btn_Conferma.Name = "btn_Conferma";
             this.btn_Conferma.Size = new System.Drawing.Size(82, 31);
             this.btn_Conferma.TabIndex = 4;
@@ -383,21 +389,10 @@ namespace Client_V3.Forms
             this.lbl_USDT_Anteprima.TabIndex = 33;
             this.lbl_USDT_Anteprima.Text = "USDT";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(349, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 406);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Simulazione";
-            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.panel12);
+            this.groupBox4.Controls.Add(this.panel11);
             this.groupBox4.Controls.Add(this.panel10);
             this.groupBox4.Controls.Add(this.panel8);
             this.groupBox4.Controls.Add(this.panel7);
@@ -407,12 +402,109 @@ namespace Client_V3.Forms
             this.groupBox4.Controls.Add(this.panel1);
             this.groupBox4.Controls.Add(this.panel2);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(6, 140);
+            this.groupBox4.Location = new System.Drawing.Point(407, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(396, 260);
+            this.groupBox4.Size = new System.Drawing.Size(379, 320);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Rendimento";
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
+            this.panel12.Controls.Add(this.label25);
+            this.panel12.Controls.Add(this.Txt_XUSDT_Reward);
+            this.panel12.Controls.Add(this.label26);
+            this.panel12.Location = new System.Drawing.Point(2, 134);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(371, 26);
+            this.panel12.TabIndex = 60;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label25.Location = new System.Drawing.Point(4, 3);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(114, 20);
+            this.label25.TabIndex = 41;
+            this.label25.Text = "XUSDT Reward";
+            // 
+            // Txt_XUSDT_Reward
+            // 
+            this.Txt_XUSDT_Reward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(40)))));
+            this.Txt_XUSDT_Reward.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_XUSDT_Reward.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Txt_XUSDT_Reward.ForeColor = System.Drawing.Color.YellowGreen;
+            this.Txt_XUSDT_Reward.Location = new System.Drawing.Point(183, 4);
+            this.Txt_XUSDT_Reward.Name = "Txt_XUSDT_Reward";
+            this.Txt_XUSDT_Reward.ReadOnly = true;
+            this.Txt_XUSDT_Reward.Size = new System.Drawing.Size(134, 18);
+            this.Txt_XUSDT_Reward.TabIndex = 45;
+            this.Txt_XUSDT_Reward.Text = "0";
+            this.Txt_XUSDT_Reward.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label26.Location = new System.Drawing.Point(313, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(57, 20);
+            this.label26.TabIndex = 50;
+            this.label26.Text = "XUSDT";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.label14);
+            this.panel11.Controls.Add(this.Txt_XDLS_Reward);
+            this.panel11.Controls.Add(this.label24);
+            this.panel11.Location = new System.Drawing.Point(2, 104);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(371, 26);
+            this.panel11.TabIndex = 59;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label14.Location = new System.Drawing.Point(3, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 20);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "XDLS Reward";
+            // 
+            // Txt_XDLS_Reward
+            // 
+            this.Txt_XDLS_Reward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.Txt_XDLS_Reward.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_XDLS_Reward.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Txt_XDLS_Reward.ForeColor = System.Drawing.Color.YellowGreen;
+            this.Txt_XDLS_Reward.Location = new System.Drawing.Point(183, 4);
+            this.Txt_XDLS_Reward.Name = "Txt_XDLS_Reward";
+            this.Txt_XDLS_Reward.ReadOnly = true;
+            this.Txt_XDLS_Reward.Size = new System.Drawing.Size(135, 18);
+            this.Txt_XDLS_Reward.TabIndex = 45;
+            this.Txt_XDLS_Reward.Text = "0";
+            this.Txt_XDLS_Reward.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label24.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label24.Location = new System.Drawing.Point(322, 3);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(46, 20);
+            this.label24.TabIndex = 50;
+            this.label24.Text = "XDLS";
             // 
             // panel10
             // 
@@ -421,9 +513,9 @@ namespace Client_V3.Forms
             this.panel10.Controls.Add(this.label16);
             this.panel10.Controls.Add(this.Txt_Totale);
             this.panel10.Controls.Add(this.label17);
-            this.panel10.Location = new System.Drawing.Point(2, 227);
+            this.panel10.Location = new System.Drawing.Point(2, 290);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(393, 26);
+            this.panel10.Size = new System.Drawing.Size(371, 26);
             this.panel10.TabIndex = 58;
             // 
             // label16
@@ -443,10 +535,10 @@ namespace Client_V3.Forms
             this.Txt_Totale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Totale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Totale.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Totale.Location = new System.Drawing.Point(226, 4);
+            this.Txt_Totale.Location = new System.Drawing.Point(183, 4);
             this.Txt_Totale.Name = "Txt_Totale";
             this.Txt_Totale.ReadOnly = true;
-            this.Txt_Totale.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Totale.Size = new System.Drawing.Size(134, 18);
             this.Txt_Totale.TabIndex = 45;
             this.Txt_Totale.Text = "0";
             this.Txt_Totale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -456,7 +548,7 @@ namespace Client_V3.Forms
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label17.Location = new System.Drawing.Point(351, 3);
+            this.label17.Location = new System.Drawing.Point(336, 3);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(18, 20);
             this.label17.TabIndex = 50;
@@ -470,9 +562,9 @@ namespace Client_V3.Forms
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.Txt_Bonus);
             this.panel8.Controls.Add(this.label13);
-            this.panel8.Location = new System.Drawing.Point(1, 196);
+            this.panel8.Location = new System.Drawing.Point(1, 259);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(393, 26);
+            this.panel8.Size = new System.Drawing.Size(372, 26);
             this.panel8.TabIndex = 57;
             // 
             // label7
@@ -492,10 +584,10 @@ namespace Client_V3.Forms
             this.Txt_Bonus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Bonus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Bonus.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Bonus.Location = new System.Drawing.Point(227, 4);
+            this.Txt_Bonus.Location = new System.Drawing.Point(184, 4);
             this.Txt_Bonus.Name = "Txt_Bonus";
             this.Txt_Bonus.ReadOnly = true;
-            this.Txt_Bonus.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Bonus.Size = new System.Drawing.Size(134, 18);
             this.Txt_Bonus.TabIndex = 45;
             this.Txt_Bonus.Text = "0";
             this.Txt_Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -505,7 +597,7 @@ namespace Client_V3.Forms
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label13.Location = new System.Drawing.Point(352, 3);
+            this.label13.Location = new System.Drawing.Point(337, 3);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 20);
             this.label13.TabIndex = 50;
@@ -521,7 +613,7 @@ namespace Client_V3.Forms
             this.panel7.Controls.Add(this.label15);
             this.panel7.Location = new System.Drawing.Point(2, 74);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(393, 26);
+            this.panel7.Size = new System.Drawing.Size(371, 26);
             this.panel7.TabIndex = 56;
             // 
             // lbl_2000_Giorni
@@ -541,10 +633,10 @@ namespace Client_V3.Forms
             this.Txt_Chia_Reward_2000.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_2000.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_2000.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_2000.Location = new System.Drawing.Point(225, 4);
+            this.Txt_Chia_Reward_2000.Location = new System.Drawing.Point(183, 4);
             this.Txt_Chia_Reward_2000.Name = "Txt_Chia_Reward_2000";
             this.Txt_Chia_Reward_2000.ReadOnly = true;
-            this.Txt_Chia_Reward_2000.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Chia_Reward_2000.Size = new System.Drawing.Size(134, 18);
             this.Txt_Chia_Reward_2000.TabIndex = 42;
             this.Txt_Chia_Reward_2000.Text = "0";
             this.Txt_Chia_Reward_2000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -554,7 +646,7 @@ namespace Client_V3.Forms
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label15.Location = new System.Drawing.Point(342, 3);
+            this.label15.Location = new System.Drawing.Point(327, 3);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 20);
             this.label15.TabIndex = 47;
@@ -567,9 +659,9 @@ namespace Client_V3.Forms
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.Txt_Deposito_Bonus);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Location = new System.Drawing.Point(1, 166);
+            this.panel5.Location = new System.Drawing.Point(1, 229);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(393, 26);
+            this.panel5.Size = new System.Drawing.Size(372, 26);
             this.panel5.TabIndex = 55;
             // 
             // label6
@@ -589,10 +681,10 @@ namespace Client_V3.Forms
             this.Txt_Deposito_Bonus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Deposito_Bonus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Deposito_Bonus.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Deposito_Bonus.Location = new System.Drawing.Point(227, 4);
+            this.Txt_Deposito_Bonus.Location = new System.Drawing.Point(184, 4);
             this.Txt_Deposito_Bonus.Name = "Txt_Deposito_Bonus";
             this.Txt_Deposito_Bonus.ReadOnly = true;
-            this.Txt_Deposito_Bonus.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Deposito_Bonus.Size = new System.Drawing.Size(134, 18);
             this.Txt_Deposito_Bonus.TabIndex = 44;
             this.Txt_Deposito_Bonus.Text = "0";
             this.Txt_Deposito_Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -602,7 +694,7 @@ namespace Client_V3.Forms
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label12.Location = new System.Drawing.Point(352, 3);
+            this.label12.Location = new System.Drawing.Point(337, 3);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(18, 20);
             this.label12.TabIndex = 49;
@@ -616,9 +708,9 @@ namespace Client_V3.Forms
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.txt_Rendita);
             this.panel4.Controls.Add(this.label23);
-            this.panel4.Location = new System.Drawing.Point(1, 135);
+            this.panel4.Location = new System.Drawing.Point(1, 198);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(393, 26);
+            this.panel4.Size = new System.Drawing.Size(372, 26);
             this.panel4.TabIndex = 54;
             // 
             // label22
@@ -638,10 +730,10 @@ namespace Client_V3.Forms
             this.txt_Rendita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Rendita.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.txt_Rendita.ForeColor = System.Drawing.Color.YellowGreen;
-            this.txt_Rendita.Location = new System.Drawing.Point(227, 4);
+            this.txt_Rendita.Location = new System.Drawing.Point(184, 4);
             this.txt_Rendita.Name = "txt_Rendita";
             this.txt_Rendita.ReadOnly = true;
-            this.txt_Rendita.Size = new System.Drawing.Size(111, 18);
+            this.txt_Rendita.Size = new System.Drawing.Size(134, 18);
             this.txt_Rendita.TabIndex = 45;
             this.txt_Rendita.Text = "0";
             this.txt_Rendita.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -651,7 +743,7 @@ namespace Client_V3.Forms
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label23.Location = new System.Drawing.Point(352, 3);
+            this.label23.Location = new System.Drawing.Point(337, 3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(18, 20);
             this.label23.TabIndex = 50;
@@ -664,9 +756,9 @@ namespace Client_V3.Forms
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.Txt_Daily_Reward);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(2, 104);
+            this.panel3.Location = new System.Drawing.Point(2, 167);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(393, 26);
+            this.panel3.Size = new System.Drawing.Size(371, 26);
             this.panel3.TabIndex = 53;
             // 
             // label5
@@ -686,10 +778,10 @@ namespace Client_V3.Forms
             this.Txt_Daily_Reward.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Daily_Reward.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Daily_Reward.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Daily_Reward.Location = new System.Drawing.Point(225, 3);
+            this.Txt_Daily_Reward.Location = new System.Drawing.Point(183, 3);
             this.Txt_Daily_Reward.Name = "Txt_Daily_Reward";
             this.Txt_Daily_Reward.ReadOnly = true;
-            this.Txt_Daily_Reward.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Daily_Reward.Size = new System.Drawing.Size(134, 18);
             this.Txt_Daily_Reward.TabIndex = 43;
             this.Txt_Daily_Reward.Text = "0";
             this.Txt_Daily_Reward.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -699,7 +791,7 @@ namespace Client_V3.Forms
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(350, 3);
+            this.label11.Location = new System.Drawing.Point(335, 3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(18, 20);
             this.label11.TabIndex = 48;
@@ -714,7 +806,7 @@ namespace Client_V3.Forms
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(2, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 26);
+            this.panel1.Size = new System.Drawing.Size(371, 26);
             this.panel1.TabIndex = 52;
             // 
             // label4
@@ -734,10 +826,10 @@ namespace Client_V3.Forms
             this.Txt_Chia_Reward_7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_7.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_7.Location = new System.Drawing.Point(225, 4);
+            this.Txt_Chia_Reward_7.Location = new System.Drawing.Point(183, 4);
             this.Txt_Chia_Reward_7.Name = "Txt_Chia_Reward_7";
             this.Txt_Chia_Reward_7.ReadOnly = true;
-            this.Txt_Chia_Reward_7.Size = new System.Drawing.Size(111, 18);
+            this.Txt_Chia_Reward_7.Size = new System.Drawing.Size(134, 18);
             this.Txt_Chia_Reward_7.TabIndex = 42;
             this.Txt_Chia_Reward_7.Text = "0";
             this.Txt_Chia_Reward_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -747,7 +839,7 @@ namespace Client_V3.Forms
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label10.Location = new System.Drawing.Point(342, 3);
+            this.label10.Location = new System.Drawing.Point(327, 3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 20);
             this.label10.TabIndex = 47;
@@ -763,7 +855,7 @@ namespace Client_V3.Forms
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(2, 14);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(393, 26);
+            this.panel2.Size = new System.Drawing.Size(371, 26);
             this.panel2.TabIndex = 51;
             // 
             // label3
@@ -783,10 +875,10 @@ namespace Client_V3.Forms
             this.Txt_Chia_Reward_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_Chia_Reward_1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.Txt_Chia_Reward_1.ForeColor = System.Drawing.Color.YellowGreen;
-            this.Txt_Chia_Reward_1.Location = new System.Drawing.Point(224, 4);
+            this.Txt_Chia_Reward_1.Location = new System.Drawing.Point(183, 4);
             this.Txt_Chia_Reward_1.Name = "Txt_Chia_Reward_1";
             this.Txt_Chia_Reward_1.ReadOnly = true;
-            this.Txt_Chia_Reward_1.Size = new System.Drawing.Size(112, 18);
+            this.Txt_Chia_Reward_1.Size = new System.Drawing.Size(134, 18);
             this.Txt_Chia_Reward_1.TabIndex = 37;
             this.Txt_Chia_Reward_1.Text = "0";
             this.Txt_Chia_Reward_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -796,50 +888,37 @@ namespace Client_V3.Forms
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(342, 3);
+            this.label9.Location = new System.Drawing.Point(327, 3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 20);
             this.label9.TabIndex = 46;
             this.label9.Text = "XCH";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.panel9);
-            this.groupBox3.Controls.Add(this.groupBox6);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(126, 17);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(276, 123);
-            this.groupBox3.TabIndex = 36;
-            this.groupBox3.TabStop = false;
-            // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.Controls.Add(this.textBox2);
+            this.panel9.Controls.Add(this.txt_Prezzo_Chia_USDT);
             this.panel9.Controls.Add(this.label20);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.txt_Prezzo_Chia_Euro);
             this.panel9.Controls.Add(this.label19);
-            this.panel9.Location = new System.Drawing.Point(3, 11);
+            this.panel9.Location = new System.Drawing.Point(12, 246);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(272, 26);
+            this.panel9.Size = new System.Drawing.Size(264, 26);
             this.panel9.TabIndex = 52;
             // 
-            // textBox2
+            // txt_Prezzo_Chia_USDT
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox2.ForeColor = System.Drawing.Color.YellowGreen;
-            this.textBox2.Location = new System.Drawing.Point(93, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(40, 18);
-            this.textBox2.TabIndex = 47;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Prezzo_Chia_USDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.txt_Prezzo_Chia_USDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Prezzo_Chia_USDT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.txt_Prezzo_Chia_USDT.ForeColor = System.Drawing.Color.YellowGreen;
+            this.txt_Prezzo_Chia_USDT.Location = new System.Drawing.Point(93, 4);
+            this.txt_Prezzo_Chia_USDT.Name = "txt_Prezzo_Chia_USDT";
+            this.txt_Prezzo_Chia_USDT.ReadOnly = true;
+            this.txt_Prezzo_Chia_USDT.Size = new System.Drawing.Size(40, 18);
+            this.txt_Prezzo_Chia_USDT.TabIndex = 47;
+            this.txt_Prezzo_Chia_USDT.Text = "0";
+            this.txt_Prezzo_Chia_USDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
             // 
@@ -896,7 +975,7 @@ namespace Client_V3.Forms
             this.groupBox6.Controls.Add(this.radioButton_D);
             this.groupBox6.Controls.Add(this.radioButton_E);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox6.Location = new System.Drawing.Point(6, 80);
+            this.groupBox6.Location = new System.Drawing.Point(12, 209);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(264, 37);
             this.groupBox6.TabIndex = 37;
@@ -976,9 +1055,9 @@ namespace Client_V3.Forms
             this.groupBox2.Controls.Add(this.lbl_Euro_Anteprima);
             this.groupBox2.Controls.Add(this.lbl_Plot_Anteprima);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(6, 17);
+            this.groupBox2.Location = new System.Drawing.Point(282, 209);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(117, 123);
+            this.groupBox2.Size = new System.Drawing.Size(119, 123);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Costo Noleggio";
@@ -990,7 +1069,7 @@ namespace Client_V3.Forms
             this.panel6.Controls.Add(this.Txt_Giorni_Noleggio);
             this.panel6.Location = new System.Drawing.Point(2, 98);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(112, 22);
+            this.panel6.Size = new System.Drawing.Size(114, 22);
             this.panel6.TabIndex = 56;
             // 
             // Txt_Giorni_Noleggio
@@ -1018,26 +1097,19 @@ namespace Client_V3.Forms
             this.label1.TabIndex = 34;
             this.label1.Text = "Giorni Noleggio";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox5.Location = new System.Drawing.Point(12, 249);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(331, 169);
-            this.groupBox5.TabIndex = 35;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Simulazione Staking";
-            this.groupBox5.Visible = false;
-            // 
             // Simulate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(769, 430);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(795, 335);
+            this.Controls.Add(this.btn_Aggiorna);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.goupbox_Acquisto_Plot);
+            this.Controls.Add(this.btn_Conferma);
             this.Name = "Simulate";
             this.Text = "Simulate";
             this.Load += new System.EventHandler(this.Simulate_Load_1);
@@ -1048,8 +1120,11 @@ namespace Client_V3.Forms
             this.panel_Numero_Plot_TrackBar.ResumeLayout(false);
             this.panel_Numero_Plot_TrackBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBar_NumeroPlot)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1066,7 +1141,6 @@ namespace Client_V3.Forms
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1100,9 +1174,7 @@ namespace Client_V3.Forms
         private Label lbl_Euro_Anteprima;
         private Label lbl_USDT_Anteprima;
         private Label label2;
-        private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private GroupBox groupBox3;
         private TextBox Txt_Chia_Reward_1;
         private Label label3;
         private TextBox Txt_Giorni_Noleggio;
@@ -1118,7 +1190,6 @@ namespace Client_V3.Forms
         private TextBox Txt_Chia_Reward_7;
         private RadioButton radioButton_B;
         private RadioButton radioButton_C;
-        private GroupBox groupBox5;
         private GroupBox groupBox6;
         private Label label11;
         private Label label10;
@@ -1144,7 +1215,7 @@ namespace Client_V3.Forms
         private Label label18;
         private TextBox txt_Prezzo_Chia_Euro;
         private Label label19;
-        private TextBox textBox2;
+        private TextBox txt_Prezzo_Chia_USDT;
         private Label label20;
         private Panel panel10;
         private Label label22;
@@ -1153,5 +1224,13 @@ namespace Client_V3.Forms
         private Button btn_Aggiorna;
         private RadioButton radioButton_E;
         private RadioButton radioButton_D;
+        private Panel panel11;
+        private Label label14;
+        private TextBox Txt_XDLS_Reward;
+        private Label label24;
+        private Panel panel12;
+        private Label label25;
+        private TextBox Txt_XUSDT_Reward;
+        private Label label26;
     }
 }

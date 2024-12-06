@@ -15,6 +15,7 @@ namespace Client_V3.Forms
 {
     public partial class SeedPhrase : Form
     {
+
         int contatore_Timer_Avvisi = 0;
         public SeedPhrase()
         {
@@ -23,12 +24,13 @@ namespace Client_V3.Forms
 
         private async void SeedPhrase_Load(object sender, EventArgs e)
         {
-            await load_data();
             lbl_PopUp_Main_Conferma.Visible = true;
-            lbl_PopUp_Main_Conferma.Text = "Grazie per la registrazione, hai pieno accesso al client";
             lbl_Avviso_Password.Visible = false;
-            lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
             lbl_PopUp_Main_XCH_Address.Visible = true;
+            lbl_PopUp_Main_Password.Visible = true;
+            lbl_PopUp_Main_Conferma.Text = "Grazie per la registrazione, hai pieno accesso al client";
+            lbl_PopUp_Main_XCH_Address.Text = "Wallet: " + Variabili.wallet;
+            lbl_PopUp_Main_Password.Text = $"Password: {Variabili.password} | Invito Referal: {Variabili.invito_Referal}";
         }
         private async void btn_Load_Wallet_Click(object sender, EventArgs e) {
 
@@ -40,8 +42,7 @@ namespace Client_V3.Forms
                 {
                     Variabili.wallet = dati[0];
                     Variabili.password = dati[1];
-                    Variabili.seed = dati[2];
-                    Variabili.invito_Referal = dati[3];
+                    Variabili.invito_Referal = dati[2];
                 }
             }
             lbl_PopUp_Main_XCH_Address.Text = Variabili.wallet;
@@ -50,6 +51,7 @@ namespace Client_V3.Forms
         }
         private async void btn_Add_Wallet_Click(object sender, EventArgs e) {
 
+            Variabili.login_Stato = false;
             lbl_Erroe.Visible = false;
             int a = conta_numero__transazioni();
             if (a >= 10) return;

@@ -12,11 +12,165 @@ namespace Client_V3
         public static Queue<string> queue_Payment_Command { get; } = new Queue<string>(); //Code
         public static Queue<string> queue_Simulate_Command { get; } = new Queue<string>();
 
+        public static List<string[]> unstake_TRansaction = new List<string[]>();
+        public static List<string[]> cloudMining_TRansaction = new List<string[]>();
+        public static List<string[]> swap_TRansaction = new List<string[]>();
+
+        public static List<string> coins = new List<string> { "CHIA", "ATOM", "CRO", "LUNA", "TIA", "USDT", "USDC", "axlUSDC", "XDLS", "XUSDT" };
+
+        public class Bilanci
+        {
+            public string XCH { get; set; }
+            public string ATOM { get; set; }
+            public string CRO { get; set; }
+            public string LUNA { get; set; }
+            public string TIA { get; set; }
+            public string USDT { get; set; }
+            public string USDC { get; set; }
+            public string axlUSDC { get; set; }
+            public string XDLS { get; set; }
+            public string XUSDT { get; set; }
+            public string DMP { get; set; }
+
+            public static Bilanci Swap = new Bilanci //Bilancio utente
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Bilanci Swap_Pending = new Bilanci //Bilancio utente
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Bilanci Protocol = new Bilanci //Coin disponibili nel bilancio del protocollo
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Bilanci Protocol_Swap = new Bilanci //Coin disponibili x lo Swap
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Bilanci Staking = new Bilanci //Coin in staking messi dall'utente
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Bilanci Unstake = new Bilanci //Coin in Unstake
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+        }
+        public class Prezzi : Bilanci
+        {
+            public static Prezzi Protocol = new Prezzi
+            {
+                XCH = "0",
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Prezzi APR = new Prezzi
+            {
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+            public static Prezzi Unlock_Days = new Prezzi
+            {
+                ATOM = "0",
+                CRO = "0",
+                LUNA = "0",
+                TIA = "0",
+                USDT = "0",
+                USDC = "0",
+                axlUSDC = "0",
+                XDLS = "0",
+                XUSDT = "0",
+                DMP = "0"
+            };
+        }
+
+
 
         // -------------------- Fee Xch -----------------------
         public static string fee_A = "Null";
         public static string fee_B = "Null";
         public static string fee_C = "Null";
+
+        // -------------------- Slippage Swap -----------------------
+        public static string slippage = "0";
+        public static string protocol_Fee = "0";
 
         // -------------------- Rendita -----------------------
         public static double Rendita_Base_A = 0.00;
@@ -28,65 +182,32 @@ namespace Client_V3
         public static double bonus_Innvito_Ref = 0.00;
         public static double bonus_Invitato_Ref = 0.00;
 
+        public static double xdls_Rendita = 0;
+        public static double xusdt_Rendita = 0;
+
         // -------------------- xxx -----------------------
 
-        public static string xch_Prelevabili    = "0.0000000000";
-        public static string xch_Pending        = "0.0000000000";
-        public static string chia_prelevati     = "0.0000000000";
-        public static string Credito_Rimasto    = "0.0000000000";
+        public static string xch_Prelevabili        = "0";
+        public static string xch_Pending            = "0";
+        public static string chia_prelevati         = "0";
+        public static string Credito_Rimasto        = "0";
+        public static string totale_Utenti          = "0";
+        public static string totale_Deposito_Euro   = "0";
+        public static string totale_Deposito_USDT   = "0";
+        public static string totale_Bonus_Pagato    = "0";
+        public static string giorni_Rimasti         = "0";
 
-        public static string status_Pagamento   = "Stato pagamento: Nessuno";
-        public static string id_Client          = "not connected";
-        public static string importo_USDT       = "";
-        public static string plot_Euro          = "0";
+        public static string status_Pagamento       = "Stato pagamento: Nessuno";
+        public static string id_Client              = "not connected";
+        public static string importo_USDT           = "";
+        public static string plot_Euro              = "0";
+        public static string swap_Result    = "0";
 
 
         // -------------------- Protocol Login -----------------------
         public static bool login_Stato          = false; // Se il pulsante login è stato premuto
         public static bool login_Approved       = false; // Se l'autenticazione dei dati è avvenuta ed è stata confermata
         public static bool seedPhrase_Approved  = false; // Se il seedPhrase corrisponde abilita il reset della password
-
-        // -------------------- Protocol Balance -----------------------
-
-        public static string CHIA       = "0.0000000000";
-        public static string ATOM       = "0.0000000000";
-        public static string CRO        = "0.0000000000";
-        public static string LUNA       = "0.0000000000";
-        public static string TIA        = "0.0000000000";
-        public static string USDT       = "0.0000000000";
-        public static string USDC       = "0.0000000000";
-        public static string axlUSDC    = "0.0000000000";
-
-        public static string XDLS       = "0.0000000000";
-        public static string XUSDT      = "0.0000000000";
-
-        // -------------------- Protocol Swap Price -----------------------
-
-        public static string price_CHIA     = "0.0000000000";
-        public static string price_ATOM     = "0.0000000000";
-        public static string price_CRO      = "0.0000000000";
-        public static string price_LUNA     = "0.0000000000";
-        public static string price_TIA      = "0.0000000000";
-        public static string price_USDT     = "0.0000000000";
-        public static string price_USDC     = "0.0000000000";
-        public static string price_axlUSDC  = "0.0000000000";
-
-        public static string price_XDLS     = "0.0000000000";
-        public static string price_XUSDT    = "0.0000000000";
-
-        // -------------------- Protocol Balance Swap ----------------------- (Unicamente le coin disponibili o con un unlock rapido )
-        public static string CHIA_Swap      = "0.0000000000";   //no-Unlock
-        public static string ATOM_Swap      = "0.0000000000";
-        public static string CRO_Swap       = "0.0000000000";
-        public static string LUNA_Swap      = "0.0000000000";
-        public static string TIA_Swap       = "0.0000000000";
-        public static string USDT_Swap      = "0.0000000000";   //Unlock Rapido
-        public static string USDC_Swap      = "0.0000000000";   //Unlock Rapido
-        public static string axlUSDC_Swap   = "0.0000000000";   //Unlock Rapido
-
-        public static string XDLS_Swap      = "0.0000000000";   //no-Unlock
-        public static string XUSDT_Swap     = "0.0000000000";   //no-Unlock
-
         public static bool loop_Command_Payment = false;
 
         // -------------------- User Data Client -----------------------
@@ -100,7 +221,6 @@ namespace Client_V3
         public static string chain                  = "Null";
         public static string plot_Noleggiati        = "Plot Noleggiati: 0";
         public static string plot_Disponibile       = "Plot Disponibili: 0";
-        public static string info                   = "Totale Deposito: 0 Euro Numero Utenti: 0";
 
         // -------------------- User Data Client -----------------------
         public static double eur_usd = 0;
@@ -146,10 +266,8 @@ namespace Client_V3
 
         public static string[] carica_contenuto_elementi()
         {
-
             string[] elementi_trovati = System.IO.Directory.GetFiles(percorso_database);
             return elementi_trovati;
-
         }
 
     }

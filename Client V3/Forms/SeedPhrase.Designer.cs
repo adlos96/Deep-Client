@@ -50,6 +50,7 @@
             this.comboBox_Load_Wallet = new System.Windows.Forms.ComboBox();
             this.btn_Load_Wallet = new System.Windows.Forms.Button();
             this.lbl_Erroe = new System.Windows.Forms.Label();
+            this.lbl_PopUp_Main_Password = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.Gbox_New_Password_Request.SuspendLayout();
             this.Gbox_Reset_Password_Post.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel8.Controls.Add(this.lbl_PopUp_Main_Password);
             this.panel8.Controls.Add(this.lbl_Avviso_Password);
             this.panel8.Location = new System.Drawing.Point(13, 273);
             this.panel8.Name = "panel8";
@@ -241,7 +243,7 @@
             this.lbl_PopUp_Main_Conferma.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_PopUp_Main_Conferma.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_PopUp_Main_Conferma.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_PopUp_Main_Conferma.Location = new System.Drawing.Point(3, 2);
+            this.lbl_PopUp_Main_Conferma.Location = new System.Drawing.Point(2, 2);
             this.lbl_PopUp_Main_Conferma.Name = "lbl_PopUp_Main_Conferma";
             this.lbl_PopUp_Main_Conferma.Size = new System.Drawing.Size(293, 20);
             this.lbl_PopUp_Main_Conferma.TabIndex = 24;
@@ -261,9 +263,9 @@
             // 
             this.lbl_PopUp_Main_XCH_Address.AutoSize = true;
             this.lbl_PopUp_Main_XCH_Address.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbl_PopUp_Main_XCH_Address.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lbl_PopUp_Main_XCH_Address.ForeColor = System.Drawing.Color.Gainsboro;
             this.lbl_PopUp_Main_XCH_Address.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_PopUp_Main_XCH_Address.Location = new System.Drawing.Point(3, 3);
+            this.lbl_PopUp_Main_XCH_Address.Location = new System.Drawing.Point(2, 2);
             this.lbl_PopUp_Main_XCH_Address.Name = "lbl_PopUp_Main_XCH_Address";
             this.lbl_PopUp_Main_XCH_Address.Size = new System.Drawing.Size(293, 20);
             this.lbl_PopUp_Main_XCH_Address.TabIndex = 24;
@@ -284,6 +286,7 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Load Wallet";
+            this.groupBox1.Visible = false;
             // 
             // btn_Clear_Data_Post
             // 
@@ -368,6 +371,19 @@
             this.lbl_Erroe.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
             this.lbl_Erroe.Visible = false;
             // 
+            // lbl_PopUp_Main_Password
+            // 
+            this.lbl_PopUp_Main_Password.AutoSize = true;
+            this.lbl_PopUp_Main_Password.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lbl_PopUp_Main_Password.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_PopUp_Main_Password.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_PopUp_Main_Password.Location = new System.Drawing.Point(2, 2);
+            this.lbl_PopUp_Main_Password.Name = "lbl_PopUp_Main_Password";
+            this.lbl_PopUp_Main_Password.Size = new System.Drawing.Size(293, 20);
+            this.lbl_PopUp_Main_Password.TabIndex = 25;
+            this.lbl_PopUp_Main_Password.Text = "Accetta EULA ed Insierisci indirizzo CHIA";
+            this.lbl_PopUp_Main_Password.Visible = false;
+            // 
             // SeedPhrase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,5 +439,6 @@
         private System.Windows.Forms.ComboBox comboBox_Load_Wallet;
         private System.Windows.Forms.Button btn_Load_Wallet;
         private System.Windows.Forms.Label lbl_Erroe;
+        private System.Windows.Forms.Label lbl_PopUp_Main_Password;
     }
 }

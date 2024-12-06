@@ -103,6 +103,7 @@ namespace Client.Forms
             int contatore = 0;
             int controlli = 2;
 
+            if (await Indirizzo_USDT_Invio(4) == true) return;
 
             if (checkB_Plot_Manuale.Checked == true) numero_Plot = Convert.ToInt32(txt_Plot_Manuali.Text);
             else numero_Plot = Convert.ToInt32(lbl_Plot_Current_Selection.Text);
@@ -187,7 +188,6 @@ namespace Client.Forms
                 txt_Plot_Anteprima.Text = numero_Plot.ToString();
                 lbl_Referal_Code_Anteprima.Text = Variabili.invito_Referal;
 
-                await ClientsConnection.TestClient.Send_Server($"auth|{Variabili.wallet}"); // Autenticazione
                 await ClientsConnection.TestClient.Send_Server("plotPrice" + "|" + numero_Plot.ToString() +"|" + Variabili.wallet);
                 await Conferma_btn(); //Connessione al server
 
@@ -230,7 +230,7 @@ namespace Client.Forms
                         txt_Plot_Noleggiati.Visible = true;
                         txt_Plot_Disponibili.Visible = true;
                     }
-                    else MessageBox.Show("Qualcosa è andato storto!...");
+                    else MessageBox.Show("Qualcosa è andato storto!... Riprovare...");
                 else Console.WriteLine("[ERRORE] Messaggio Ricevuto" + ClientsConnection.argomento_Ricevuto);
             }
 
@@ -261,9 +261,6 @@ namespace Client.Forms
             //Invia i dati dell'untente al server
             string argomento = "register" + "|" + Variabili.numero_Plot + "|" + Variabili.pagamento_Somma_USDT + "|" + Variabili.wallet + "|" + Variabili.invito_Referal + "|" + Variabili.wallet_USDT + "|" + Variabili.chain + "|" + Variabili.password + "|" + Variabili.seed;
             await ClientsConnection.TestClient.ClientSend(argomento);
-
-
-            Console.WriteLine(ClientsConnection.argomento_Ricevuto);
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
@@ -302,23 +299,6 @@ namespace Client.Forms
                 txt_Plot_Manuali.Visible = false;
                 lbl_Anteprima_Manuale.Visible = false;
             }
-        }
-
-        string path = "data_table.db";
-        string cs = @"URI=file:" + Application.StartupPath + "\\data_table.db";
-
-        SqliteConnection con;
-        SqliteCommand cmd;
-        SqliteDataReader dr;
-        private void Data_show()
-        {
-            var con = new SqliteConnection(cs);
-            con.Open();
-
-            string stm = "SELECT * FROM test";
-            var cmd = new SqliteCommand(stm, con);
-            dr = cmd.ExecuteReader();
-            while (dr.Read()) { Console.WriteLine(dr.GetString(0), dr.GetString(1)); }
         }
 
         private async void button1_Click(object sender, EventArgs e) // Connetti
@@ -364,7 +344,7 @@ namespace Client.Forms
                     Console.WriteLine($"[Payment] > Argomento Split: {args[1]}");
 
                     if (args[0] == "plotSwap") txt_USDT_Anteprima.Text = args[1];
-                    if (args[0] == "timerUSDT") lbl_Stato_Pagamento_Timer.Text = $"Age for make USDT payment: {args[1]} Minutes";
+                    if (args[0] == "timerUSDT") lbl_Stato_Pagamento_Timer.Text = $"Age for make {args[2]} USDT payment: {args[1]} Minutes";
                     if (args[0] == "ID") lbl_ID.Text = args[1];
                     if (args[0] == "TxnSuccesso")
                     {
@@ -385,6 +365,29 @@ namespace Client.Forms
                 Console.WriteLine($"Codice saltato, Comandi attuali: [{Variabili.queue_Payment_Command.Count}]");
 
             Console.WriteLine("Fine loop");
+        }
+        private async Task<bool> Indirizzo_USDT_Invio(int secondi)
+        {
+            int contatore_Timer_Avvisi = 0;
+            while (true)
+                if (txt_Wallet_USDT_User.Text.Length != 42)
+                {
+                    txt_Wallet_USDT_User.BackColor = Color.FromArgb(39, 45, 61);
+                    await Task.Delay(125);
+                    if (secondi * 4 == contatore_Timer_Avvisi)
+                    {
+                        contatore_Timer_Avvisi = 0;
+                        txt_Wallet_USDT_User.BackColor = Color.FromArgb(39, 45, 61);
+                        return true;
+                    }
+                    else
+                    {
+                        contatore_Timer_Avvisi++;
+                        txt_Wallet_USDT_User.BackColor = Color.FromArgb(196, 12, 24);
+                        await Task.Delay(125);
+                    }
+                }
+                else return false;
         }
     }
 }

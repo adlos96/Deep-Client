@@ -45,25 +45,25 @@ namespace Client_V3.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbl_Bonus_Invitato_Ref = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.lbl_Bonus_Invito_Ref = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbl_Rendimento = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_Bonus_Deposito = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -204,7 +204,7 @@ namespace Client_V3.Forms
             this.groupBox3.Controls.Add(this.lbl_Bonus_Invitato_Ref);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.lbl_Bonus_Invito_Ref);
-            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.lbl_Rendimento);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lbl_Bonus_Deposito);
@@ -232,17 +232,6 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Invitato_Ref.TabIndex = 18;
             this.lbl_Bonus_Invitato_Ref.Text = "4% (ADS)";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(26, 87);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(107, 19);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "- Bonus invitato";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -265,16 +254,16 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Invito_Ref.TabIndex = 15;
             this.lbl_Bonus_Invito_Ref.Text = "9% (ADS)";
             // 
-            // label20
+            // lbl_Rendimento
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(239, 108);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(99, 19);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "0,87% - 2,75%";
+            this.lbl_Rendimento.AutoSize = true;
+            this.lbl_Rendimento.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbl_Rendimento.ForeColor = System.Drawing.Color.White;
+            this.lbl_Rendimento.Location = new System.Drawing.Point(239, 108);
+            this.lbl_Rendimento.Name = "lbl_Rendimento";
+            this.lbl_Rendimento.Size = new System.Drawing.Size(99, 19);
+            this.lbl_Rendimento.TabIndex = 13;
+            this.lbl_Rendimento.Text = "0,87% - 2,75%";
             // 
             // label16
             // 
@@ -286,28 +275,6 @@ namespace Client_V3.Forms
             this.label16.Size = new System.Drawing.Size(67, 19);
             this.label16.TabIndex = 11;
             this.label16.Text = "Deposito:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(26, 65);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 19);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "- Bonus invito";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(26, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(157, 19);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "- Rendimento annuo sul";
             // 
             // label12
             // 
@@ -331,17 +298,6 @@ namespace Client_V3.Forms
             this.lbl_Bonus_Deposito.TabIndex = 10;
             this.lbl_Bonus_Deposito.Text = "22% (Tantum)";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 43);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 19);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "- Bonus sul";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -352,6 +308,50 @@ namespace Client_V3.Forms
             this.label11.Size = new System.Drawing.Size(67, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Deposito:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(26, 87);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(107, 19);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "- Bonus invitato";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(26, 65);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 19);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "- Bonus invito";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(26, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(157, 19);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "- Rendimento annuo sul";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(26, 43);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 19);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "- Bonus sul";
             // 
             // label3
             // 
@@ -378,6 +378,28 @@ namespace Client_V3.Forms
             this.groupBox2.Size = new System.Drawing.Size(482, 218);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(13, 126);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(391, 19);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "- Non smarrire la Seed Phrase, essa non può essere recuperata";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(13, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(272, 19);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "- Lo staff non chiederà mai i dati di accesso";
             // 
             // label6
             // 
@@ -423,28 +445,6 @@ namespace Client_V3.Forms
             this.label2.TabIndex = 8;
             this.label2.Text = "Rischi legati all\'utilizzo del software:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(13, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(272, 19);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "- Lo staff non chiederà mai i dati di accesso";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(13, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(391, 19);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "- Non smarrire la Seed Phrase, essa non può essere recuperata";
-            // 
             // EULA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,7 +482,7 @@ namespace Client_V3.Forms
         private Label label15;
         private Label label11;
         private Label lbl_Bonus_Invito_Ref;
-        private Label label20;
+        private Label lbl_Rendimento;
         private Label label16;
         private Label label12;
         private Label lbl_Bonus_Deposito;

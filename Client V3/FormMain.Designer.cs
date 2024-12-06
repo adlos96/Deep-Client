@@ -41,9 +41,11 @@ namespace Client_V3
             this.btn_EULA = new FontAwesome.Sharp.IconButton();
             this.btn_Home = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_Logo = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel_Superiore = new System.Windows.Forms.Panel();
-            btn_Login = new System.Windows.Forms.Button();
+            this.txt_User = new System.Windows.Forms.TextBox();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Login = new System.Windows.Forms.Button();
             label_Form_Selected = new System.Windows.Forms.Label();
             icon_Current_Selection = new FontAwesome.Sharp.IconPictureBox();
             panel_Desktop = new System.Windows.Forms.Panel();
@@ -120,7 +122,7 @@ namespace Client_V3
             this.panel_Menu_Laterale.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Menu_Laterale.Location = new System.Drawing.Point(0, 0);
             this.panel_Menu_Laterale.Name = "panel_Menu_Laterale";
-            this.panel_Menu_Laterale.Size = new System.Drawing.Size(189, 521);
+            this.panel_Menu_Laterale.Size = new System.Drawing.Size(154, 521);
             this.panel_Menu_Laterale.TabIndex = 0;
             // 
             // btn_Wallet
@@ -138,7 +140,7 @@ namespace Client_V3
             this.btn_Wallet.Location = new System.Drawing.Point(0, 332);
             this.btn_Wallet.Name = "btn_Wallet";
             this.btn_Wallet.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Wallet.Size = new System.Drawing.Size(189, 43);
+            this.btn_Wallet.Size = new System.Drawing.Size(154, 43);
             this.btn_Wallet.TabIndex = 9;
             this.btn_Wallet.Text = "Wallet";
             this.btn_Wallet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +155,7 @@ namespace Client_V3
             this.btn_Simulate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Simulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_Simulate.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btn_Simulate.IconChar = FontAwesome.Sharp.IconChar.Hotjar;
+            this.btn_Simulate.IconChar = FontAwesome.Sharp.IconChar.Instalod;
             this.btn_Simulate.IconColor = System.Drawing.Color.Gainsboro;
             this.btn_Simulate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Simulate.IconSize = 32;
@@ -161,7 +163,7 @@ namespace Client_V3
             this.btn_Simulate.Location = new System.Drawing.Point(0, 289);
             this.btn_Simulate.Name = "btn_Simulate";
             this.btn_Simulate.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Simulate.Size = new System.Drawing.Size(189, 43);
+            this.btn_Simulate.Size = new System.Drawing.Size(154, 43);
             this.btn_Simulate.TabIndex = 5;
             this.btn_Simulate.Text = "Simulate";
             this.btn_Simulate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,7 +186,7 @@ namespace Client_V3
             this.btn_Staking.Location = new System.Drawing.Point(0, 246);
             this.btn_Staking.Name = "btn_Staking";
             this.btn_Staking.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Staking.Size = new System.Drawing.Size(189, 43);
+            this.btn_Staking.Size = new System.Drawing.Size(154, 43);
             this.btn_Staking.TabIndex = 7;
             this.btn_Staking.Text = "Staking";
             this.btn_Staking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,7 +209,7 @@ namespace Client_V3
             this.btn_Dashboard.Location = new System.Drawing.Point(0, 203);
             this.btn_Dashboard.Name = "btn_Dashboard";
             this.btn_Dashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Dashboard.Size = new System.Drawing.Size(189, 43);
+            this.btn_Dashboard.Size = new System.Drawing.Size(154, 43);
             this.btn_Dashboard.TabIndex = 4;
             this.btn_Dashboard.Text = "Dashboard";
             this.btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +233,7 @@ namespace Client_V3
             this.btn_Payment.Location = new System.Drawing.Point(0, 160);
             this.btn_Payment.Name = "btn_Payment";
             this.btn_Payment.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Payment.Size = new System.Drawing.Size(189, 43);
+            this.btn_Payment.Size = new System.Drawing.Size(154, 43);
             this.btn_Payment.TabIndex = 3;
             this.btn_Payment.Text = "Payment";
             this.btn_Payment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,7 +256,7 @@ namespace Client_V3
             this.Btn_Swap.Location = new System.Drawing.Point(0, 117);
             this.Btn_Swap.Name = "Btn_Swap";
             this.Btn_Swap.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Btn_Swap.Size = new System.Drawing.Size(189, 43);
+            this.Btn_Swap.Size = new System.Drawing.Size(154, 43);
             this.Btn_Swap.TabIndex = 8;
             this.Btn_Swap.Text = "Swap";
             this.Btn_Swap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,7 +279,7 @@ namespace Client_V3
             this.btn_EULA.Location = new System.Drawing.Point(0, 478);
             this.btn_EULA.Name = "btn_EULA";
             this.btn_EULA.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_EULA.Size = new System.Drawing.Size(189, 43);
+            this.btn_EULA.Size = new System.Drawing.Size(154, 43);
             this.btn_EULA.TabIndex = 6;
             this.btn_EULA.Text = "EULA";
             this.btn_EULA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,7 +302,7 @@ namespace Client_V3
             this.btn_Home.Location = new System.Drawing.Point(0, 74);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Home.Size = new System.Drawing.Size(189, 43);
+            this.btn_Home.Size = new System.Drawing.Size(154, 43);
             this.btn_Home.TabIndex = 2;
             this.btn_Home.Text = "Home";
             this.btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,55 +313,87 @@ namespace Client_V3
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.panel1.Controls.Add(this.label_Logo);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 74);
+            this.panel1.Size = new System.Drawing.Size(154, 74);
             this.panel1.TabIndex = 0;
             // 
-            // label_Logo
+            // panel3
             // 
-            this.label_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Logo.AutoSize = true;
-            this.label_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.label_Logo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label_Logo.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_Logo.Location = new System.Drawing.Point(43, 25);
-            this.label_Logo.Name = "label_Logo";
-            this.label_Logo.Size = new System.Drawing.Size(111, 21);
-            this.label_Logo.TabIndex = 1;
-            this.label_Logo.Text = "Login Protocol";
-            this.label_Logo.Click += new System.EventHandler(label_Logo_Click);
+            this.panel3.BackgroundImage = global::Client_V3.Properties.Resources.out_0;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(155, 74);
+            this.panel3.TabIndex = 37;
             // 
             // panel_Superiore
             // 
             this.panel_Superiore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.panel_Superiore.Controls.Add(btn_Login);
+            this.panel_Superiore.Controls.Add(this.txt_User);
+            this.panel_Superiore.Controls.Add(this.btn_Update);
+            this.panel_Superiore.Controls.Add(this.btn_Login);
             this.panel_Superiore.Controls.Add(label_Form_Selected);
             this.panel_Superiore.Controls.Add(icon_Current_Selection);
             this.panel_Superiore.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Superiore.Location = new System.Drawing.Point(189, 0);
+            this.panel_Superiore.Location = new System.Drawing.Point(154, 0);
             this.panel_Superiore.Name = "panel_Superiore";
-            this.panel_Superiore.Size = new System.Drawing.Size(864, 74);
+            this.panel_Superiore.Size = new System.Drawing.Size(899, 74);
             this.panel_Superiore.TabIndex = 1;
+            // 
+            // txt_User
+            // 
+            this.txt_User.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
+            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_User.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_User.ForeColor = System.Drawing.Color.DarkOrange;
+            this.txt_User.Location = new System.Drawing.Point(731, 46);
+            this.txt_User.Name = "txt_User";
+            this.txt_User.Size = new System.Drawing.Size(164, 20);
+            this.txt_User.TabIndex = 36;
+            this.txt_User.Text = "ID: Guest";
+            this.txt_User.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Update.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Update.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btn_Update.Location = new System.Drawing.Point(656, 40);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(72, 29);
+            this.btn_Update.TabIndex = 35;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Visible = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Login
             // 
-            btn_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
-            btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btn_Login.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            btn_Login.ForeColor = System.Drawing.Color.Aqua;
-            btn_Login.Location = new System.Drawing.Point(693, 25);
-            btn_Login.Name = "btn_Login";
-            btn_Login.Size = new System.Drawing.Size(149, 30);
-            btn_Login.TabIndex = 34;
-            btn_Login.Text = "Login";
-            btn_Login.UseVisualStyleBackColor = false;
-            btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            this.btn_Login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+            this.btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
+            this.btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Login.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Login.ForeColor = System.Drawing.Color.Aqua;
+            this.btn_Login.Location = new System.Drawing.Point(656, 5);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(72, 29);
+            this.btn_Login.TabIndex = 34;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label_Form_Selected
             // 
@@ -397,9 +431,9 @@ namespace Client_V3
             | System.Windows.Forms.AnchorStyles.Right)));
             panel_Desktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
             panel_Desktop.Controls.Add(goupB_Main_Form);
-            panel_Desktop.Location = new System.Drawing.Point(189, 74);
+            panel_Desktop.Location = new System.Drawing.Point(154, 74);
             panel_Desktop.Name = "panel_Desktop";
-            panel_Desktop.Size = new System.Drawing.Size(864, 447);
+            panel_Desktop.Size = new System.Drawing.Size(899, 447);
             panel_Desktop.TabIndex = 3;
             // 
             // goupB_Main_Form
@@ -423,7 +457,7 @@ namespace Client_V3
             goupB_Main_Form.ForeColor = System.Drawing.Color.CornflowerBlue;
             goupB_Main_Form.Location = new System.Drawing.Point(3, -1);
             goupB_Main_Form.Name = "goupB_Main_Form";
-            goupB_Main_Form.Size = new System.Drawing.Size(858, 446);
+            goupB_Main_Form.Size = new System.Drawing.Size(893, 446);
             goupB_Main_Form.TabIndex = 22;
             goupB_Main_Form.TabStop = false;
             // 
@@ -433,7 +467,7 @@ namespace Client_V3
             this.groupBox_Riscrivi_Seed.Controls.Add(this.label17);
             this.groupBox_Riscrivi_Seed.Controls.Add(this.txt_Inserisci_Seed_Phrase_1);
             this.groupBox_Riscrivi_Seed.Controls.Add(this.txt_Inserisci_Seed_Phrase_2);
-            this.groupBox_Riscrivi_Seed.Location = new System.Drawing.Point(636, 235);
+            this.groupBox_Riscrivi_Seed.Location = new System.Drawing.Point(660, 235);
             this.groupBox_Riscrivi_Seed.Name = "groupBox_Riscrivi_Seed";
             this.groupBox_Riscrivi_Seed.Size = new System.Drawing.Size(211, 118);
             this.groupBox_Riscrivi_Seed.TabIndex = 33;
@@ -502,10 +536,10 @@ namespace Client_V3
             this.txt_Avviso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Avviso.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.txt_Avviso.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Avviso.Location = new System.Drawing.Point(206, 270);
+            this.txt_Avviso.Location = new System.Drawing.Point(230, 270);
             this.txt_Avviso.Name = "txt_Avviso";
             this.txt_Avviso.ReadOnly = true;
-            this.txt_Avviso.Size = new System.Drawing.Size(363, 32);
+            this.txt_Avviso.Size = new System.Drawing.Size(398, 32);
             this.txt_Avviso.TabIndex = 27;
             this.txt_Avviso.Text = "AAAA-BBBB-CCCC-DDDD";
             this.txt_Avviso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -517,7 +551,7 @@ namespace Client_V3
             this.lbl_Avviso.AutoSize = true;
             this.lbl_Avviso.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.lbl_Avviso.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Avviso.Location = new System.Drawing.Point(143, 230);
+            this.lbl_Avviso.Location = new System.Drawing.Point(184, 230);
             this.lbl_Avviso.Name = "lbl_Avviso";
             this.lbl_Avviso.Size = new System.Drawing.Size(478, 32);
             this.lbl_Avviso.TabIndex = 28;
@@ -535,7 +569,7 @@ namespace Client_V3
             this.Btn_Sync.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Sync.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_Sync.ForeColor = System.Drawing.Color.Yellow;
-            this.Btn_Sync.Location = new System.Drawing.Point(6, 403);
+            this.Btn_Sync.Location = new System.Drawing.Point(14, 401);
             this.Btn_Sync.Name = "Btn_Sync";
             this.Btn_Sync.Size = new System.Drawing.Size(128, 30);
             this.Btn_Sync.TabIndex = 23;
@@ -551,7 +585,7 @@ namespace Client_V3
             this.Gbox_New_Password.Controls.Add(this.textBox1);
             this.Gbox_New_Password.Controls.Add(this.label11);
             this.Gbox_New_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbox_New_Password.Location = new System.Drawing.Point(140, 316);
+            this.Gbox_New_Password.Location = new System.Drawing.Point(164, 316);
             this.Gbox_New_Password.Name = "Gbox_New_Password";
             this.Gbox_New_Password.Size = new System.Drawing.Size(250, 121);
             this.Gbox_New_Password.TabIndex = 26;
@@ -564,8 +598,7 @@ namespace Client_V3
             this.btn_New_Password_Request.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_New_Password_Request.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_New_Password_Request.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btn_New_Password_Request.FlatAppearance.BorderSize = 0;
+            this.btn_New_Password_Request.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.btn_New_Password_Request.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.btn_New_Password_Request.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_New_Password_Request.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -626,7 +659,7 @@ namespace Client_V3
             this.txt_Password.ForeColor = System.Drawing.Color.DarkOrange;
             this.txt_Password.Location = new System.Drawing.Point(5, 67);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(848, 27);
+            this.txt_Password.Size = new System.Drawing.Size(883, 27);
             this.txt_Password.TabIndex = 25;
             this.txt_Password.Text = "Inserisci Password";
             this.txt_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -638,7 +671,7 @@ namespace Client_V3
             this.Gbox_Reset_Password.Controls.Add(this.txt_Reset_Seed_Phrase);
             this.Gbox_Reset_Password.Controls.Add(this.label8);
             this.Gbox_Reset_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbox_Reset_Password.Location = new System.Drawing.Point(389, 316);
+            this.Gbox_Reset_Password.Location = new System.Drawing.Point(413, 316);
             this.Gbox_Reset_Password.Name = "Gbox_Reset_Password";
             this.Gbox_Reset_Password.Size = new System.Drawing.Size(241, 121);
             this.Gbox_Reset_Password.TabIndex = 24;
@@ -651,8 +684,7 @@ namespace Client_V3
             this.btn_Reset_Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Reset_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
-            this.btn_Reset_Password.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btn_Reset_Password.FlatAppearance.BorderSize = 0;
+            this.btn_Reset_Password.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.btn_Reset_Password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
             this.btn_Reset_Password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reset_Password.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -709,7 +741,7 @@ namespace Client_V3
             this.Gbox_Seed_Phrase.Controls.Add(this.txt_Seed_Phrase);
             this.Gbox_Seed_Phrase.Controls.Add(this.label6);
             this.Gbox_Seed_Phrase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Gbox_Seed_Phrase.Location = new System.Drawing.Point(629, 371);
+            this.Gbox_Seed_Phrase.Location = new System.Drawing.Point(653, 371);
             this.Gbox_Seed_Phrase.Name = "Gbox_Seed_Phrase";
             this.Gbox_Seed_Phrase.Size = new System.Drawing.Size(224, 66);
             this.Gbox_Seed_Phrase.TabIndex = 23;
@@ -755,9 +787,9 @@ namespace Client_V3
             this.btn_Conferma_Main.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Conferma_Main.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_Conferma_Main.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Conferma_Main.Location = new System.Drawing.Point(5, 193);
+            this.btn_Conferma_Main.Location = new System.Drawing.Point(14, 193);
             this.btn_Conferma_Main.Name = "btn_Conferma_Main";
-            this.btn_Conferma_Main.Size = new System.Drawing.Size(848, 30);
+            this.btn_Conferma_Main.Size = new System.Drawing.Size(860, 30);
             this.btn_Conferma_Main.TabIndex = 19;
             this.btn_Conferma_Main.Text = "Conferma";
             this.btn_Conferma_Main.UseVisualStyleBackColor = false;
@@ -773,7 +805,7 @@ namespace Client_V3
             this.panel_Referal.Controls.Add(this.label5);
             this.panel_Referal.Location = new System.Drawing.Point(5, 163);
             this.panel_Referal.Name = "panel_Referal";
-            this.panel_Referal.Size = new System.Drawing.Size(848, 27);
+            this.panel_Referal.Size = new System.Drawing.Size(883, 27);
             this.panel_Referal.TabIndex = 22;
             // 
             // txt_Referal_Code
@@ -783,7 +815,7 @@ namespace Client_V3
             this.txt_Referal_Code.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Referal_Code.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_Referal_Code.ForeColor = System.Drawing.Color.DarkOrange;
-            this.txt_Referal_Code.Location = new System.Drawing.Point(379, 3);
+            this.txt_Referal_Code.Location = new System.Drawing.Point(396, 3);
             this.txt_Referal_Code.Name = "txt_Referal_Code";
             this.txt_Referal_Code.Size = new System.Drawing.Size(88, 20);
             this.txt_Referal_Code.TabIndex = 23;
@@ -839,7 +871,7 @@ namespace Client_V3
             this.GroupBox_Eula.ForeColor = System.Drawing.SystemColors.Control;
             this.GroupBox_Eula.Location = new System.Drawing.Point(5, 94);
             this.GroupBox_Eula.Name = "GroupBox_Eula";
-            this.GroupBox_Eula.Size = new System.Drawing.Size(848, 61);
+            this.GroupBox_Eula.Size = new System.Drawing.Size(883, 61);
             this.GroupBox_Eula.TabIndex = 21;
             this.GroupBox_Eula.TabStop = false;
             this.GroupBox_Eula.Text = "EULA";
@@ -851,7 +883,7 @@ namespace Client_V3
             this.lbl_Avviso_Main_Titolo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_Avviso_Main_Titolo.ForeColor = System.Drawing.Color.Red;
             this.lbl_Avviso_Main_Titolo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_Avviso_Main_Titolo.Location = new System.Drawing.Point(439, 13);
+            this.lbl_Avviso_Main_Titolo.Location = new System.Drawing.Point(456, 13);
             this.lbl_Avviso_Main_Titolo.Name = "lbl_Avviso_Main_Titolo";
             this.lbl_Avviso_Main_Titolo.Size = new System.Drawing.Size(115, 20);
             this.lbl_Avviso_Main_Titolo.TabIndex = 24;
@@ -865,7 +897,7 @@ namespace Client_V3
             this.lbl_Avviso_Main.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbl_Avviso_Main.ForeColor = System.Drawing.Color.Red;
             this.lbl_Avviso_Main.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_Avviso_Main.Location = new System.Drawing.Point(439, 34);
+            this.lbl_Avviso_Main.Location = new System.Drawing.Point(456, 34);
             this.lbl_Avviso_Main.Name = "lbl_Avviso_Main";
             this.lbl_Avviso_Main.Size = new System.Drawing.Size(293, 20);
             this.lbl_Avviso_Main.TabIndex = 23;
@@ -925,7 +957,7 @@ namespace Client_V3
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(5, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(848, 29);
+            this.panel2.Size = new System.Drawing.Size(883, 29);
             this.panel2.TabIndex = 20;
             // 
             // label7
@@ -933,7 +965,7 @@ namespace Client_V3
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label7.Location = new System.Drawing.Point(307, 4);
+            this.label7.Location = new System.Drawing.Point(324, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 20);
             this.label7.TabIndex = 6;
@@ -945,7 +977,7 @@ namespace Client_V3
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(383, 4);
+            this.label1.Location = new System.Drawing.Point(400, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 7;
@@ -956,7 +988,7 @@ namespace Client_V3
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label2.Location = new System.Drawing.Point(462, 4);
+            this.label2.Location = new System.Drawing.Point(479, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 8;
@@ -971,7 +1003,7 @@ namespace Client_V3
             this.txt_User_Address.ForeColor = System.Drawing.Color.DarkOrange;
             this.txt_User_Address.Location = new System.Drawing.Point(5, 42);
             this.txt_User_Address.Name = "txt_User_Address";
-            this.txt_User_Address.Size = new System.Drawing.Size(848, 27);
+            this.txt_User_Address.Size = new System.Drawing.Size(883, 27);
             this.txt_User_Address.TabIndex = 18;
             this.txt_User_Address.Text = "Inserisci wallet XCH";
             this.txt_User_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -984,14 +1016,13 @@ namespace Client_V3
             this.Controls.Add(panel_Desktop);
             this.Controls.Add(this.panel_Superiore);
             this.Controls.Add(this.panel_Menu_Laterale);
-            this.MinimumSize = new System.Drawing.Size(900, 425);
+            this.MinimumSize = new System.Drawing.Size(950, 495);
             this.Name = "FormMain";
             this.Text = "Deep Mining Protocol";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel_Menu_Laterale.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel_Superiore.ResumeLayout(false);
             this.panel_Superiore.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(icon_Current_Selection)).EndInit();
@@ -1073,11 +1104,13 @@ namespace Client_V3
         private Label label17;
         private GroupBox groupBox_Riscrivi_Seed;
         private FontAwesome.Sharp.IconButton btn_Wallet;
-        public Label label_Logo;
-        private static FontAwesome.Sharp.IconPictureBox icon_Current_Selection;
-        private static Label label_Form_Selected;
-        private static Panel panel_Desktop;
-        public static GroupBox goupB_Main_Form;
-        public static Button btn_Login;
+        public Button btn_Login;
+        public Button btn_Update;
+        private TextBox txt_User;
+        private Panel panel3;
+        static private FontAwesome.Sharp.IconPictureBox icon_Current_Selection;
+        static private Label label_Form_Selected;
+        static private Panel panel_Desktop;
+        static public GroupBox goupB_Main_Form;
     }
 }

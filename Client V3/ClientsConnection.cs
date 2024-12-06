@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using WatsonTcp;
+using static Client_V3.Variabili;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Client_V3
@@ -17,8 +19,8 @@ namespace Client_V3
 
         internal class TestClient
         {
-            //public static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
-            public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
+            public static string _ServerIp = "127.1"; // adly.xed.im 185.229.236.183
+            //public static string _ServerIp = "185.229.236.183"; // adly.xed.im 185.229.236.183
             private static int _ServerPort = 8443;
             private static bool _Ssl = true;
             private static string _CertFile = "";
@@ -167,24 +169,40 @@ namespace Client_V3
                         Variabili.fee_C = msgArgs[3];
                         break;
                     case "balance_P_Update":
-                        Variabili.CHIA              = msgArgs[1];
-                        Variabili.ATOM              = msgArgs[2];
-                        Variabili.CRO               = msgArgs[3];
-                        Variabili.LUNA              = msgArgs[4];
-                        Variabili.TIA               = msgArgs[5];
-                        Variabili.USDT              = msgArgs[6];
-                        Variabili.USDC              = msgArgs[7];
-                        Variabili.axlUSDC           = msgArgs[8];
-                        Variabili.XDLS              = msgArgs[9];
-                        Variabili.XUSDT             = msgArgs[10];
+                        Variabili.Bilanci.Protocol.XCH               = msgArgs[1];
+                        Variabili.Bilanci.Protocol.ATOM              = msgArgs[2];
+                        Variabili.Bilanci.Protocol.CRO               = msgArgs[3];
+                        Variabili.Bilanci.Protocol.LUNA              = msgArgs[4];
+                        Variabili.Bilanci.Protocol.TIA               = msgArgs[5];
+                        Variabili.Bilanci.Protocol.USDT              = msgArgs[6];
+                        Variabili.Bilanci.Protocol.USDC              = msgArgs[7];
+                        Variabili.Bilanci.Protocol.axlUSDC           = msgArgs[8];
+                        Variabili.Bilanci.Protocol.XDLS              = msgArgs[9];
+                        Variabili.Bilanci.Protocol.XUSDT             = msgArgs[10];
+
                         Variabili.xch_Prelevabili   = Convert.ToDouble(msgArgs[11]).ToString("0.0000000000");
                         Variabili.xch_Pending       = Convert.ToDouble(msgArgs[12]).ToString("0.0000000000");
                         Variabili.chia_prelevati    = msgArgs[13];
                         Variabili.Credito_Rimasto   = msgArgs[14];
+                        Variabili.giorni_Rimasti    = msgArgs[15];
+                        break;
+                    case "balance_Swap_Update":
+                        Variabili.Bilanci.Protocol_Swap.XCH = msgArgs[1];
+                        Variabili.Bilanci.Protocol_Swap.ATOM = msgArgs[2];
+                        Variabili.Bilanci.Protocol_Swap.CRO = msgArgs[3];
+                        Variabili.Bilanci.Protocol_Swap.LUNA = msgArgs[4];
+                        Variabili.Bilanci.Protocol_Swap.TIA = msgArgs[5];
+                        Variabili.Bilanci.Protocol_Swap.USDT = msgArgs[6];
+                        Variabili.Bilanci.Protocol_Swap.USDC = msgArgs[7];
+                        Variabili.Bilanci.Protocol_Swap.axlUSDC = msgArgs[8];
+                        Variabili.Bilanci.Protocol_Swap.XDLS = msgArgs[9];
+                        Variabili.Bilanci.Protocol_Swap.XUSDT = msgArgs[10];
+                        Variabili.Bilanci.Protocol_Swap.DMP = msgArgs[11];
                         break;
                     case "timerUSDT":
                         Variabili.status_Pagamento = msgArgs[1];
                         Variabili.importo_USDT = msgArgs[2].ToString();
+                        Variabili.queue_Payment_Command.Enqueue(messaggio_Ricevuto);
                         break;
                     case "ID":
                         Variabili.id_Client = msgArgs[1];
@@ -203,6 +221,111 @@ namespace Client_V3
                         break;
                     case "validate": // Imposta true o false a seconda di se corrisponde o meno
                         Variabili.seedPhrase_Approved = Convert.ToBoolean(msgArgs[1]);
+                        break;
+                    case "Protocollo": // Imposta true o false a seconda di se corrisponde o meno
+                        Variabili.totale_Utenti = msgArgs[1];
+                        Variabili.totale_Deposito_Euro = msgArgs[2];
+                        Variabili.totale_Deposito_USDT = msgArgs[3];
+                        Variabili.totale_Bonus_Pagato = msgArgs[4];
+                        Variabili.Prezzi.APR.XDLS = msgArgs[5];
+                        Variabili.Prezzi.APR.XUSDT = msgArgs[6];
+                        Variabili.Prezzi.Unlock_Days.XDLS = msgArgs[7];
+                        Variabili.Prezzi.Unlock_Days.XUSDT = msgArgs[8];
+                        break;
+                    case "Login": // Imposta true o false a seconda di se corrisponde o meno
+                        if (msgArgs[1] == "Approved") Variabili.login_Approved = true;
+                        else Variabili.login_Approved = false;
+                        break;
+                    case "update_user_balance": // Aggiorna il bilancio cripto dell'utente
+                        Variabili.Bilanci.Swap.XCH          = msgArgs[1];
+                        Variabili.Bilanci.Swap.ATOM         = msgArgs[2];
+                        Variabili.Bilanci.Swap.CRO          = msgArgs[3];
+                        Variabili.Bilanci.Swap.LUNA         = msgArgs[4];
+                        Variabili.Bilanci.Swap.TIA          = msgArgs[5];
+                        Variabili.Bilanci.Swap.USDT         = msgArgs[6];
+                        Variabili.Bilanci.Swap.USDC         = msgArgs[7];
+                        Variabili.Bilanci.Swap.axlUSDC      = msgArgs[8];
+                        Variabili.Bilanci.Swap.XDLS         = msgArgs[9];
+                        Variabili.Bilanci.Swap.XUSDT        = msgArgs[10];
+
+                        Variabili.Bilanci.Staking.XDLS      = msgArgs[11];
+                        Variabili.Bilanci.Staking.XUSDT     = msgArgs[12];
+                        Variabili.Bilanci.Staking.ATOM      = msgArgs[13];
+                        Variabili.Bilanci.Staking.CRO       = msgArgs[14];
+                        Variabili.Bilanci.Staking.LUNA      = msgArgs[15];
+                        Variabili.Bilanci.Staking.USDT      = msgArgs[16];
+                        Variabili.Bilanci.Staking.USDC      = msgArgs[17];
+                        Variabili.Bilanci.Staking.axlUSDC   = msgArgs[18];
+
+                        Variabili.Bilanci.Swap_Pending.XCH  = msgArgs[19];
+                        break;
+                    case "update_coin_price": // Aggiorna i prezzi delle cripto dell'utente
+                        Variabili.Prezzi.Protocol.XCH        = msgArgs[1];
+                        Variabili.Prezzi.Protocol.ATOM       = msgArgs[2];
+                        Variabili.Prezzi.Protocol.CRO        = msgArgs[3];
+                        Variabili.Prezzi.Protocol.LUNA       = msgArgs[4];
+                        Variabili.Prezzi.Protocol.TIA        = msgArgs[5];
+                        Variabili.Prezzi.Protocol.USDT       = msgArgs[6];
+                        Variabili.Prezzi.Protocol.USDC       = msgArgs[7];
+                        Variabili.Prezzi.Protocol.axlUSDC    = msgArgs[8];
+                        Variabili.Prezzi.Protocol.XDLS       = msgArgs[9];
+                        Variabili.Prezzi.Protocol.XUSDT      = msgArgs[10];
+                        Variabili.slippage                   = msgArgs[11];
+                        Variabili.protocol_Fee               = msgArgs[12];
+                        break;
+                    case "swap_coin_value":
+                        Variabili.swap_Result = msgArgs[1];
+                        break;
+                    case "unstake":
+                        Variabili.unstake_TRansaction.Clear();
+                        var transazione = new List<string[]>();
+
+                        var dati = msgArgs[1].Split('-');
+                        int a = Convert.ToInt32(dati[0]); //Numero transazioni
+                        int b = 0;
+
+                        for (int i = 0; i < a; i++)
+                        {
+                            if (i > 0)
+                                b += Convert.ToInt32(dati[1]);
+                            var tx_Data = new string[] { (i + 1).ToString(), dati[2 + b], dati[3 + b], dati[4 + b], dati[5 + b], dati[6 + b], dati[7 + b], dati[8 + b] };
+                            transazione.Add(tx_Data);
+                            Variabili.unstake_TRansaction.Add(tx_Data);
+                        }
+                        break;
+                    case "cloudMining":
+                        Variabili.cloudMining_TRansaction.Clear();
+                        var transazione1 = new List<string[]>();
+
+                        var data = msgArgs[1].Split('-');
+                        int a1 = Convert.ToInt32(data[0]); //Numero transazioni
+                        int b1 = 0;
+
+                        for (int i = 0; i < a1; i++)
+                        {
+                            if (i > 0)
+                                b1 += Convert.ToInt32(data[1]);
+                            var tx_Data = new string[] { (i + 1).ToString(), data[3 + b1], data[6 + b1], data[5 + b1], data[4 + b1], data[2 + b1] };
+                            transazione1.Add(tx_Data);
+                            Variabili.cloudMining_TRansaction.Add(tx_Data);
+                        }
+                        break;
+                    case "swap":
+                        Variabili.swap_TRansaction.Clear();
+                        var transazione2 = new List<string[]>();
+
+                        var data2 = msgArgs[1].Split('-');
+                        int a2 = Convert.ToInt32(data2[0]); //Numero transazioni
+                        int b2 = 0;
+
+                        for (int i = 0; i < a2; i++)
+                        {
+                            if (i > 0)
+                                b2 += Convert.ToInt32(data2[1]);
+                            var tx_Data = new string[] { (i + 1).ToString(), data2[4 + b2], data2[3 + b2], data2[5 + b2], data2[7 + b2], data2[6 + b2], data2[8 + b2], data2[2 + b2], data2[9 + b2] };
+                            transazione2.Add(tx_Data);
+                            Variabili.swap_TRansaction.Add(tx_Data);
+                        }
                         break;
 
                     default: Console.WriteLine($"[Errore] >> [{messaggio_Ricevuto}] Comando non riconosciuto"); break;

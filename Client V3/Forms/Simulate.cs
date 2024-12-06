@@ -44,6 +44,58 @@ namespace Client_V3.Forms
             btn_Conferma.Enabled = true;
             btn_Aggiorna.Enabled = true;
 
+            int x = 0;
+            if (Variabili.queue_Simulate_Command.Count != 0)
+            {
+                while (x <= Variabili.queue_Simulate_Command.Count)
+                {
+                    string messaggio = Variabili.queue_Simulate_Command.Dequeue();
+                    string[] args = messaggio.Split('|');
+
+                    if (args[0] == "simulazione")
+                    {
+                        string prezzo_Chia_Euro = args[1];
+                        string prezzo_Chia_USDT = args[2];
+                        string xch_Pay = args[3];
+                        string daily_Payment = args[4];
+                        string rendita = args[5];
+                        string credito = args[6];
+                        string bonus_Deposito = args[7];
+                        string totale = args[8];
+                        string giorni = args[9];
+                        string plot_Price = args[10];
+                        Variabili.plot_Euro = args[11];
+                        Variabili.xdls_Rendita = Convert.ToDouble(args[12]);
+                        Variabili.xusdt_Rendita = Convert.ToDouble(args[13]);
+
+                        txt_USDT_Anteprima.Text = plot_Price;
+                        txt_EUR_Anteprima.Text = (Convert.ToDouble(Variabili.plot_Euro) * Convert.ToDouble(txt_Plot_Anteprima.Text)).ToString();
+                        Txt_Giorni_Noleggio.Text = giorni;
+                        txt_Prezzo_Chia_Euro.Text = prezzo_Chia_Euro;
+                        txt_Prezzo_Chia_USDT.Text = prezzo_Chia_USDT;
+                        Txt_Chia_Reward_1.Text = xch_Pay.ToString();
+                        Txt_Chia_Reward_7.Text = (Convert.ToDouble(xch_Pay) * 7).ToString();
+                        Txt_Chia_Reward_2000.Text = (Convert.ToDouble(xch_Pay) * Convert.ToDouble(giorni)).ToString();
+
+                        Txt_Daily_Reward.Text = daily_Payment;
+                        txt_Rendita.Text = rendita;
+                        Txt_Deposito_Bonus.Text = credito;
+                        Txt_Bonus.Text = bonus_Deposito;
+                        Txt_Totale.Text = totale;
+                        lbl_2000_Giorni.Text = "Chia Reward " + giorni + " days";
+                        Txt_XDLS_Reward.Text = (Variabili.xdls_Rendita * Convert.ToInt32(txt_Plot_Anteprima.Text)).ToString("0.00000000");
+                        Txt_XUSDT_Reward.Text = (Variabili.xusdt_Rendita * Convert.ToInt32(txt_Plot_Anteprima.Text)).ToString("0.00000000");
+
+
+                    }
+                    x++;
+                }
+            }
+            else
+                Console.WriteLine($"Codice saltato, Comandi attuali: [{Variabili.queue_Simulate_Command.Count}]");
+
+            Console.WriteLine("Fine loop");
+
         }
         private void Simulate_Load_1(object sender, EventArgs e)
         {
@@ -53,7 +105,7 @@ namespace Client_V3.Forms
             radioButton_D.Text = Variabili.Rendita_Base_D.ToString() + "%";
             radioButton_E.Text = Variabili.Rendita_Base_E.ToString() + "%";
 
-            trkBar_NumeroPlot.Maximum = 100;
+            trkBar_NumeroPlot.Maximum = 200;
             trkBar_NumeroPlot.Minimum = 1;
 
             lbl_Plot_MAX.Text = trkBar_NumeroPlot.Maximum.ToString();
@@ -98,50 +150,7 @@ namespace Client_V3.Forms
 
         private void btn_Aggiorna_Click(object sender, EventArgs e)
         {
-            int x = 0;
-            if (Variabili.queue_Simulate_Command.Count != 0)
-            {
-                while (x <= Variabili.queue_Simulate_Command.Count)
-                {
-                    string messaggio = Variabili.queue_Simulate_Command.Dequeue();
-                    string[] args = messaggio.Split('|');
-
-                    if (args[0] == "simulazione")
-                    {
-                        string prezzo_Chia_Euro = args[1];
-                        string prezzo_Chia_USDT = args[2];
-                        string xch_Pay = args[3];
-                        string daily_Payment = args[4];
-                        string rendita = args[5];
-                        string credito = args[6];
-                        string bonus_Deposito = args[7];
-                        string totale = args[8];
-                        string giorni = args[9];
-                        string plot_Price = args[10];
-                        Variabili.plot_Euro = args[11];
-
-                        txt_USDT_Anteprima.Text = plot_Price;
-                        txt_EUR_Anteprima.Text = (Convert.ToDouble(Variabili.plot_Euro) * Convert.ToDouble(txt_Plot_Anteprima.Text)).ToString();
-                        Txt_Giorni_Noleggio.Text = giorni;
-                        txt_Prezzo_Chia_Euro.Text = prezzo_Chia_Euro;
-                        Txt_Chia_Reward_1.Text = xch_Pay.ToString();
-                        Txt_Chia_Reward_7.Text = (Convert.ToDouble(xch_Pay) * 7).ToString();
-                        Txt_Chia_Reward_2000.Text = (Convert.ToDouble(xch_Pay) * Convert.ToDouble(giorni)).ToString();
-
-                        Txt_Daily_Reward.Text = daily_Payment;
-                        txt_Rendita.Text = rendita;
-                        Txt_Deposito_Bonus.Text = credito;
-                        Txt_Bonus.Text = bonus_Deposito;
-                        Txt_Totale.Text = totale;
-                        lbl_2000_Giorni.Text = "Chia Reward " + giorni + " days";
-                    }
-                    x++;
-                }
-            }
-            else
-                Console.WriteLine($"Codice saltato, Comandi attuali: [{Variabili.queue_Simulate_Command.Count}]");
             
-            Console.WriteLine("Fine loop");
         }
         public static Task Wait() {
             return Task.Run(() => //Crea un task e gli assegna un blocco istruzioni da eseguire.
